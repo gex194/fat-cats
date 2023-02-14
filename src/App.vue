@@ -1,19 +1,23 @@
 <template>
   <v-app full-height class="app__container">
     <TopBar />
-    <v-main class="main__container">
-      <v-container fluid class="content__container">
-        <RouterView />
-      </v-container>
-    </v-main>
-    <FooterComponent />
-    <v-overlay v-model="overlay" class="align-center justify-center">
+    <v-overlay
+      scroll-strategy="block"
+      v-model="overlay"
+      class="align-center justify-center bg-black overlay__container"
+    >
       <v-progress-circular
         size="64"
         indeterminate
         color="gold"
       ></v-progress-circular>
     </v-overlay>
+    <v-main class="main__container">
+      <v-container fluid class="content__container">
+        <RouterView />
+      </v-container>
+    </v-main>
+    <FooterComponent />
   </v-app>
 </template>
 
@@ -49,5 +53,9 @@ export default {
 .main__container {
   width: 100%;
   padding-top: 0 !important;
+}
+.overlay__container {
+  background: black !important;
+  opacity: 1;
 }
 </style>

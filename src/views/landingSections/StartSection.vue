@@ -3,6 +3,7 @@
     <video
       preload="auto"
       id="video_background"
+      v-on:loadeddata="on_video_load"
       autoplay
       muted
       playsinline
@@ -22,8 +23,23 @@
 </template>
 
 <script>
+import { useLoader } from "@/stores/loader";
+import { onBeforeMount } from "vue";
+
 export default {
   name: "StartSection",
+  setup() {
+    const store = useLoader();
+    onBeforeMount(() => {
+      store.enable_loader();
+    });
+    return { store };
+  },
+  methods: {
+    on_video_load() {
+      this.store.disable_loader();
+    },
+  },
 };
 </script>
 

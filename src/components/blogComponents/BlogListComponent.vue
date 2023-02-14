@@ -17,6 +17,7 @@
 <script>
 import { useBlogPosts } from "@/stores/blog";
 import BlogListItemComponent from "@/components/blogComponents/BlogListItemComponent.vue";
+import { onBeforeMount } from "vue";
 
 export default {
   name: "BlogListComponent",
@@ -24,9 +25,6 @@ export default {
   setup() {
     const store = useBlogPosts();
     return { store };
-  },
-  created() {
-    this.store.get_publication_feed("fat-cats");
   },
   computed: {
     publication_feed() {

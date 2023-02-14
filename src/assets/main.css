@@ -7,7 +7,6 @@
   margin: 0 auto;
   font-weight: normal;
   overflow: hidden;
-  transition: width 1s, height 1s;
 }
 
 .card-black-gradient {
@@ -23,6 +22,10 @@
   /*background-image: url("src/assets/black_background_no_border.png");*/
   /*background-size: 200%;*/
   /*background-repeat: repeat-y;*/
+}
+
+.v-overlay__scrim {
+  background: black;
 }
 
 a,
@@ -45,5 +48,6 @@ a,
   #app {
     display: grid;
     grid-template-columns: 1fr;
+    transition: width 1s, height 1s, transform 2s, display 1s, flex-grow 1s, flex 1s, flex-basis 1s;
   }
 }

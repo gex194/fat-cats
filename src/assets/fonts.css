@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Cinzel";
+    src: local("Cinzel"),
+    url(src/assets/fonts/Cinzel/Cinzel-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: local("Cinzel Bold"),
+    url(src/assets/fonts/Cinzel/Cinzel-Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: local("Cinzel Black"),
+    url(src/assets/fonts/Cinzel/Cinzel-Black.ttf) format("truetype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"),
+    url(src/assets/fonts/Montserrat/Montserrat-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat Bold"),
+    url(src/assets/fonts/Montserrat/Montserrat-Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat Extra Bold"),
+    url(src/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf) format("truetype");
+    font-weight: 900;
+}
+

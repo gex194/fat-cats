@@ -17,8 +17,8 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import "./assets/main.css";
 import { aliases, fa } from "vuetify/iconsets/fa";
 import VueAnimateOnScroll from "vue3-animate-onscroll";
-import 'animate.css';
-
+import "animate.css";
+import emailjs from "@emailjs/browser";
 
 const vuetify = createVuetify({
   components,
@@ -64,7 +64,8 @@ app.use(createPinia());
 app.use(router);
 app.use(vuetify);
 app.use(VueKinesis);
-app.use(VueAnimateOnScroll)
+app.use(VueAnimateOnScroll);
 app.directive("scroll", directives.Scroll);
 app.directive("intersect", directives.Intersect);
 app.mount("#app");
+emailjs.init("YmRWsyH6_yXsIJgEB");

@@ -57,6 +57,7 @@
 </template>
 
 <script>
+
 export default {
   name: "TopbarComponent",
   data() {
@@ -67,13 +68,12 @@ export default {
           title: "Project",
           children: [
             { id: 1, title: "Team", action: () => this.go_to("/team") },
-            { id: 2, title: "Newsletter", action: () => {} },
           ],
         },
         { id: 2, title: "Lore", href: "" },
         { id: 3, title: "Blog", href: "/blog" },
         { id: 4, title: "Forums", href: "" },
-        { id: 5, title: "FAQ", href: "" },
+        { id: 5, title: "FAQ", href: "/faq" },
       ],
     };
   },
@@ -107,16 +107,8 @@ export default {
 .tab--text {
   font-size: 25px;
 }
-.tab--selected {
-  text-decoration: none !important;
-  opacity: 1;
-  color: #e5ad00;
-}
 .v-btn:hover > .v-btn__overlay {
   background: unset;
   opacity: 1 !important;
-}
-.v-btn__overlay {
-  opacity: unset !important;
 }
 </style>

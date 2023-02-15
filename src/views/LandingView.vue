@@ -13,7 +13,11 @@
       <v-lazy>
         <SliderSection />
       </v-lazy>
-
+    </section>
+    <section id="token_section">
+      <v-lazy>
+        <TokenSection />
+      </v-lazy>
     </section>
     <section id="feature_section">
         <FeatureSection />
@@ -26,10 +30,11 @@ import StartSection from "@/views/landingSections/StartSection.vue";
 import SliderSection from "@/views/landingSections/SliderSection.vue";
 import FeatureSection from "@/views/landingSections/FeatureSection.vue";
 import IntroSection from "@/views/landingSections/IntroSection.vue";
+import TokenSection from "@/views/landingSections/TokenSection.vue";
 
 export default {
   name: "LandingView",
-  components: { IntroSection, FeatureSection, StartSection, SliderSection },
+  components: { TokenSection, IntroSection, FeatureSection, StartSection, SliderSection },
 };
 </script>
 

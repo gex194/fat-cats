@@ -1,20 +1,30 @@
 <template>
   <v-footer app class="d-flex text-center flex-column" absolute>
-    <v-row justify="space-between" no-gutters>
+    <v-row align="stretch" justify="space-evenly" no-gutters>
       <v-btn
         v-for="link in links"
         :key="link.value"
         :href="link.href"
-        color="white"
-        variant="text"
-        class="mx-2"
+        variant="elevated"
+        class="mx-2 ma-2"
         rounded="xl"
       >
         {{ link.name }}
       </v-btn>
     </v-row>
     <v-divider></v-divider>
-    <div>
+    <div class="mt-2">
+      <v-btn
+        @click="overlay = !overlay"
+        variant="elevated"
+        class="mx-2"
+        rounded="xl"
+      >
+        Sign up for newsletter
+      </v-btn>
+    </div>
+    <v-divider></v-divider>
+    <div class="mt-2">
       <v-btn
         v-for="icon in icons"
         :key="icon.id"
@@ -26,17 +36,22 @@
       </v-btn>
     </div>
     <div class="pt-0">
-      Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
+      Nothing is set in stone and everything is subject to change
     </div>
     <v-divider></v-divider>
     <div><strong>Fat Cats</strong> {{ new Date().getFullYear() }}</div>
   </v-footer>
+  <NewsletterComponent :overlay="overlay" @close="overlay = !overlay" />
 </template>
 
 <script>
+import NewsletterComponent from "@/components/landingComponents/NewsletterComponent.vue";
+
 export default {
   name: "FooterComponent",
+  components: { NewsletterComponent },
   data: () => ({
+    overlay: false,
     icons: [
       {
         id: 1,
@@ -62,7 +77,6 @@ export default {
     links: [
       { name: "Contact", value: "contact" },
       { name: "Media kit", value: "kit" },
-      { name: "Privacy policy", value: "policy" },
     ],
   }),
 };

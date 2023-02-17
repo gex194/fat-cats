@@ -7,6 +7,7 @@ import StartSection from "@/views/landingSections/StartSection.vue";
 import SliderSection from "@/views/landingSections/SliderSection.vue";
 import FeatureSection from "@/views/landingSections/FeatureSection.vue";
 import FAQView from "@/views/FAQView.vue";
+import CatPaperView from "@/views/CatPaperView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -59,6 +60,11 @@ const router = createRouter({
       path: "/faq",
       name: "faq",
       component: FAQView,
+    },
+    {
+      path: "/deck",
+      name: "deck",
+      component: CatPaperView,
     },
   ],
 });

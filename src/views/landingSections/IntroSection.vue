@@ -4,32 +4,19 @@
     class="d-flex flex-column align-center justify-center bg-transparent pa-15 mt-10"
   >
     <div class="text-center intro-title"><h1>Luxury powered by AI</h1></div>
-    <div
-      v-animate-onscroll="{down: 'animated fadeInDown delay-2s'}"
-      :class="'text-center intro-text mt-10'"
-    >
-      {{ constants.intro.max_util.title }}
-    </div>
-    <div
-      v-animate-onscroll="{down: 'animated fadeInDown delay-2s'}"
-      class="text-center intro-text mt-10"
-    >
-      {{ constants.intro.model_ai.title }}
-    </div>
-    <div
-      v-animate-onscroll="{down: 'animated fadeInDown delay-2s'}"
-      class="text-center intro-text mt-10"
-    >
-      {{ constants.intro.member.title }}
+    <div class="d-flex justify-space-evenly align-center">
+      <IntroItemComponent v-for="item in constants.intro" :key="item.id" v-bind="item" />
     </div>
   </v-sheet>
 </template>
 
 <script>
 import constants from "../../constants/constants";
+import IntroItemComponent from "@/components/landingComponents/IntroItemComponent.vue";
 
 export default {
   name: "IntroSection",
+  components: { IntroItemComponent },
   computed: {
     constants() {
       return constants;
@@ -40,8 +27,8 @@ export default {
     isIntersecting: false,
   }),
   methods: {
-    onIntersect (isIntersecting, entries, observer) {
-      this.isIntersecting = isIntersecting
+    onIntersect(isIntersecting, entries, observer) {
+      this.isIntersecting = isIntersecting;
     },
   },
 };
@@ -50,10 +37,6 @@ export default {
 <style scoped>
 .intro-title {
   font-family: Cinzel, serif;
-  font-size: 50px
-}
-.intro-text {
-  font-family: Cinzel, serif;
-  font-size: 40px
+  font-size: 50px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <v-sheet
     v-if="publication_feed.items.length > 0"
-    class="d-flex align-center flex-column pa-3 blog-list__container"
+    class="d-flex align-center flex-column pa-3 bg-transparent"
   >
     <blog-list-item-component
       v-for="post in publication_feed.items"
@@ -35,7 +35,4 @@ export default {
 </script>
 
 <style scoped>
-.blog-list__container {
-  background-color: black;
-}
 </style>

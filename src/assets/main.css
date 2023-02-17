@@ -14,14 +14,9 @@
 }
 
 .section-background {
-  background-color: #210d00;
-  opacity: 0.9;
-  background-image:  radial-gradient(#4e1b00 0.75px, transparent 0.75px), radial-gradient(#4e1b00 0.75px, #210d00 0.75px);
-  background-size: 30px 30px;
-  background-position: 0 0,15px 15px;
-  /*background-image: url("src/assets/black_background_no_border.png");*/
-  /*background-size: 200%;*/
-  /*background-repeat: repeat-y;*/
+  background-image: url("/src/assets/Seamless-background.jpg");
+  background-size: 100%;
+  background-repeat: repeat-y;
 }
 
 .v-overlay__scrim {
@@ -32,6 +27,22 @@ a,
 .green {
   text-decoration: none;
   transition: 0.4s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.splide__arrows {
+  position: absolute;
+  top:50%;
+  width:100%;
 }
 
 @media (hover: hover) {

@@ -67,7 +67,8 @@ export default {
           id: 1,
           title: "Project",
           children: [
-            { id: 1, title: "Team", action: () => this.go_to("/team") },
+            { id: 1, title: "CatPaper Deck", action: () => this.go_to("/deck") },
+            { id: 2, title: "Team", action: () => this.go_to("/team") },
           ],
         },
         { id: 2, title: "Lore", href: "" },

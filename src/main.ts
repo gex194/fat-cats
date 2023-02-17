@@ -20,6 +20,11 @@ import VueAnimateOnScroll from "vue3-animate-onscroll";
 import "animate.css";
 import emailjs from "@emailjs/browser";
 
+import VueSplide from '@splidejs/vue-splide';
+import { Video } from '@splidejs/splide-extension-video';
+import '@splidejs/vue-splide/css'
+import '@splidejs/splide-extension-video/dist/css/splide-extension-video.min.css';
+
 const vuetify = createVuetify({
   components,
   directives,
@@ -65,6 +70,7 @@ app.use(router);
 app.use(vuetify);
 app.use(VueKinesis);
 app.use(VueAnimateOnScroll);
+app.use(VueSplide);
 app.directive("scroll", directives.Scroll);
 app.directive("intersect", directives.Intersect);
 app.mount("#app");

@@ -33,7 +33,7 @@ export default {
         },
         {
           id: 2,
-          title: "Stacking",
+          title: "Staking",
           description: "Stake your Fat Cat via our platform to get $DUCATS on a monthly basis\n",
           src: "src/assets/stacking_block_2.png",
           delay: 200,

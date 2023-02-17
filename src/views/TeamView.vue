@@ -1,7 +1,7 @@
 <template>
-  <v-sheet class="d-flex justify-center align-center flex-column team__container">
-    <div class="text-center mt-3 team-text-h1">Fat Cats Team</div>
-    <div class="text-center mt-3 mb-3 team-text-h4">Meet our fantastic team</div>
+  <v-sheet class="d-flex justify-center align-center flex-column team__container section-background">
+    <div class="text-center mt-3 team-text-h1">Fat Cats</div>
+    <div class="text-center mt-3 mb-3 team-text-h4">Meet our team</div>
     <TeamListComponent  />
   </v-sheet>
 </template>
@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 .team__container {
-  margin-top: 150px;
+  padding-top: 150px;
 }
 
 .team-text-h1 {

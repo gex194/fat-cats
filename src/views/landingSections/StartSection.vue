@@ -8,7 +8,7 @@
       muted
       playsinline
       loop
-      src="src/assets/webm_animations/Banner_Castle_alpha.webm"
+      src="/src/assets/webm_animations/Banner_Castle_alpha.webm"
       style="max-width: 100%"
     />
     <video
@@ -16,7 +16,7 @@
       autoplay
       muted
       playsinline
-      src="src/assets/webm_animations/Enter_cat_world_alpha.webm"
+      src="/src/assets/webm_animations/Enter_cat_world_alpha.webm"
       style="max-width: 40%; position: absolute; top: 60%"
     />
   </v-sheet>

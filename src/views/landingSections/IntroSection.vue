@@ -5,52 +5,18 @@
   >
     <div class="text-center intro-title"><h1>Luxury powered by AI</h1></div>
     <div class="d-flex justify-space-evenly align-center">
-      <v-sheet
-        height="300"
-        style="background-color: rgb(41, 31, 28)"
-        v-animate-onscroll="{ down: 'animated fadeInDown delay-2s' }"
-        elevation="10"
-        class="d-flex rounded-xl align-center v-col-3"
-      >
-        <div
-          class="text-center intro-text"
-        >
-          {{ constants.intro.max_util.title }}
-        </div>
-      </v-sheet>
-      <v-sheet
-        height="300"
-        style="background-color: rgb(41, 31, 28)"
-        v-animate-onscroll="{ down: 'animated fadeInDown delay-2s' }"
-        elevation="10"
-        class="d-flex rounded-xl align-center v-col-3"
-      >
-        <div class="text-center intro-text">
-          {{ constants.intro.model_ai.title }}
-        </div>
-      </v-sheet>
-      <v-sheet
-        height="300"
-        style="background-color: rgb(41, 31, 28)"
-        v-animate-onscroll="{ down: 'animated fadeInDown delay-2s' }"
-        elevation="10"
-        class="d-flex rounded-xl align-center v-col-3"
-      >
-        <div
-          class="text-center intro-text"
-        >
-          {{ constants.intro.member.title }}
-        </div>
-      </v-sheet>
+      <IntroItemComponent v-for="item in constants.intro" :key="item.id" v-bind="item" />
     </div>
   </v-sheet>
 </template>
 
 <script>
 import constants from "../../constants/constants";
+import IntroItemComponent from "@/components/landingComponents/IntroItemComponent.vue";
 
 export default {
   name: "IntroSection",
+  components: { IntroItemComponent },
   computed: {
     constants() {
       return constants;
@@ -72,9 +38,5 @@ export default {
 .intro-title {
   font-family: Cinzel, serif;
   font-size: 50px;
-}
-.intro-text {
-  font-family: Cinzel-black, serif;
-  font-size: 30px;
 }
 </style>

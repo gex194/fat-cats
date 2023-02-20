@@ -9,11 +9,13 @@
       :class="is_even_or_zero(index) ? 'flex-row-reverse' : ''"
     >
       <div class="v-col-6 d-flex align-center">
-        <img
-          class="mx-auto rounded-xl"
-          style="max-width: 500px; height: 500px"
-          :src="img"
-        />
+        <Transition name="fade" mode="out-in" appear>
+          <img
+            class="mx-auto rounded-xl"
+            style="max-width: 500px; height: 500px"
+            :src="img"
+          />
+        </Transition>
       </div>
       <div
         class="v-col-6 d-flex flex-column"

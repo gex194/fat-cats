@@ -24,18 +24,15 @@ const gaming_platform = {
 };
 
 const max_util = {
-  id: 1,
   title:
     "Maximal utilization of multiple AI technologies in the Fat Cats ecosystem",
 };
 const model_ai = {
-  id: 2,
   title:
     "Completely new model of Artificial Intelligence is being developed that " +
     "will change the world of luxury forever",
 };
 const member = {
-  id: 3,
   title:
     "By becoming a member of our luxury web3 brand - " +
     "one gets full access to our Artificial Intelligence",
@@ -369,7 +366,7 @@ const faq = [
   {
     id: "faq_13",
     title: "Where can I find the $DUCATS tokenomics table?",
-    text: "The $DUCATS tokenomics table is available within our <a href='link'>deck</a> at page 15.",
+    text: "The $DUCATS tokenomics table is available within our deck (link) at page 15.",
   },
   {
     id: "faq_14",

@@ -20,7 +20,6 @@ export default {
 <style scoped>
 .feature-item__title {
   font-family: Cinzel Bold;
-  color: lightgoldenrodyellow;
   font-size: 30px;
 }
 

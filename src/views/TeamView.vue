@@ -1,9 +1,6 @@
 <template>
   <v-sheet class="d-flex justify-center align-center flex-column team__container section-background">
-    <Transition name="fade" mode="out-in" appear>
-      <v-img src="/src/assets/gold_titles/FAT_CATS_2.png" height="200" width="900" />
-    </Transition>
-
+    <div class="text-center mt-3 team-text-h1">Fat Cats</div>
     <div class="text-center mt-3 mb-3 team-text-h4">Meet our team</div>
     <TeamListComponent  />
   </v-sheet>

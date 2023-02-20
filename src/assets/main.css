@@ -29,22 +29,6 @@ a,
   transition: 0.4s;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
-.splide__arrows {
-  position: absolute;
-  top:50%;
-  width:100%;
-}
-
 @media (hover: hover) {
   a:hover {
   }

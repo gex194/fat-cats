@@ -3,23 +3,22 @@
     <section id="start_section">
       <StartSection />
     </section>
-    <section id="intro_section">
+    <section id="intro_section" class="section__container">
       <v-lazy>
         <IntroSection />
       </v-lazy>
-
     </section>
-    <section id="slide_section">
+    <section id="slide_section" class="section__container" >
       <v-lazy>
         <SliderSection />
       </v-lazy>
     </section>
-    <section id="token_section">
+    <section id="token_section" class="section__container">
       <v-lazy>
         <TokenSection />
       </v-lazy>
     </section>
-    <section id="feature_section">
+    <section id="feature_section" class="section__container">
         <FeatureSection />
     </section>
   </v-sheet>
@@ -38,4 +37,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.section__container {
+  margin-top: 120px;
+}
+</style>

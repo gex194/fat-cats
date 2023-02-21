@@ -24,6 +24,6 @@ export default {
 
 <style scoped>
 .blog__container {
-  padding-top: 150px;
+  padding-top: 175px;
 }
 </style>

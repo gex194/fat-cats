@@ -22,6 +22,7 @@
         <v-tab
           v-if="!tab?.children"
           selected-class="tab--selected"
+          :disabled="!tab.href"
           :ripple="false"
           :value="tab.id"
           class="tab"

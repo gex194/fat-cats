@@ -17,6 +17,6 @@ export default {
 
 <style scoped>
 .faq__container {
-  padding-top: 150px;
+  padding-top: 175px;
 }
 </style>

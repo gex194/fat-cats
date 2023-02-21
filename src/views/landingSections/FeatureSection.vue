@@ -1,7 +1,7 @@
 <template>
   <v-sheet
     max-height="960"
-    class="d-flex flex-column bg-transparent justify-center align-center pa-3"
+    class="d-flex flex-column bg-transparent justify-center align-center pa-15"
   >
     <v-img src="src/assets/fat_cats_nfts_title.png" width="60%" v-animate-onscroll="'animated fadeInUp'" />
     <div class="d-flex justify-space-evenly mt-15 v-col-12">

@@ -74,7 +74,6 @@ export default {
         },
         { id: 2, title: "Lore", href: "" },
         { id: 3, title: "Blog", href: "/blog" },
-        { id: 4, title: "Forums", href: "" },
         { id: 5, title: "FAQ", href: "/faq" },
       ],
     };

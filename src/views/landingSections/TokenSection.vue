@@ -18,22 +18,6 @@
 
     <div class="d-flex justify-space-evenly w-100">
       <div class="v-col-6">
-        <div class="sketchfab-embed-wrapper w-100 h-100">
-          <iframe
-            title="Token Texture Center"
-            class="w-100 h-100 bg-transparent"
-            frameborder="0"
-            allowfullscreen
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            xr-spatial-tracking
-            execution-while-out-of-viewport
-            execution-while-not-rendered
-            web-share
-            src="https://sketchfab.com/models/5c9a356ccaa84d9fb5d83773405666d7/embed?autostart=1&ui_hint=0&ui_theme=dark&dnt=1"
-          ></iframe>
-        </div>
       </div>
       <div class="v-col-6 d-flex justify-start flex-column">
         <div v-animate-onscroll="'animated fadeInRight'">

@@ -1,6 +1,16 @@
 <template>
   <v-footer app class="d-flex text-center flex-column" absolute>
     <v-row align="stretch" justify="space-evenly" no-gutters>
+      <div class="mt-2">
+        <v-btn
+          @click="contact_overlay = !contact_overlay"
+          variant="elevated"
+          class="mx-2"
+          rounded="xl"
+        >
+          Contact
+        </v-btn>
+      </div>
       <v-btn
         v-for="link in links"
         :key="link.value"
@@ -42,16 +52,19 @@
     <div><strong>Fat Cats</strong> {{ new Date().getFullYear() }}</div>
   </v-footer>
   <NewsletterComponent :overlay="overlay" @close="overlay = !overlay" />
+  <ContactComponent :overlay="contact_overlay" @close="contact_overlay = !contact_overlay" />
 </template>
 
 <script>
 import NewsletterComponent from "@/components/landingComponents/NewsletterComponent.vue";
+import ContactComponent from "@/components/landingComponents/ContactComponent.vue";
 
 export default {
   name: "FooterComponent",
-  components: { NewsletterComponent },
+  components: { ContactComponent, NewsletterComponent },
   data: () => ({
     overlay: false,
+    contact_overlay: false,
     icons: [
       {
         id: 1,
@@ -75,8 +88,7 @@ export default {
       },
     ],
     links: [
-      { name: "Contact", value: "contact" },
-      { name: "Media kit", value: "kit" },
+      { name: "Media kit", value: "kit", href: "https://drive.google.com/drive/folders/1WT_LrpGoc39pDGTAtBPRm_cMomH-OkOw?usp=sharing" },
     ],
   }),
 };

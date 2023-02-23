@@ -1,7 +1,7 @@
 <template>
   <v-sheet width="400" class="d-flex bg-transparent flex-column pa-5">
     <KinesisContainer>
-      <KinesisElement type="depth" strength="15">
+      <KinesisElement type="depth" :strength="15">
         <v-img :src="src" width="100%" class="feature-item__img" />
       </KinesisElement>
     </KinesisContainer>

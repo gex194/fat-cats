@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="d-flex align-center flex-column pa-3 bg-transparent"
+    class="d-flex flex-wrap flex-shrink-0 justify-space-evenly align-center pa-3 bg-transparent"
   >
     <blog-list-item-component
       v-for="post in publication_feed.items"

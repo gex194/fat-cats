@@ -7,9 +7,9 @@
       <kinesis-container event="scroll">
         <kinesis-element
           type="translate"
-          originX="0"
-          originY="90"
-          strength="-900"
+          :originX="0"
+          :originY="90"
+          :strength="-900"
         >
           <video
             autoplay
@@ -46,9 +46,9 @@
       <kinesis-container event="scroll">
         <kinesis-element
           type="translate"
-          originX="0"
-          originY="30"
-          strength="-700"
+          :originX="0"
+          :originY="30"
+          :strength="-700"
         >
           <video
             autoplay

@@ -4,14 +4,23 @@
     @click:outside="close_overlay"
     class="justify-center align-center"
   >
-    <v-card>
+    <v-card width="100%" min-width="400">
       <v-card-item>
-        <v-card-title>Newsletter</v-card-title>
+        <v-card-title>Contact Form</v-card-title>
       </v-card-item>
       <v-card-item>
-        <v-card-subtitle>Subscribe to get news about Fat Cats</v-card-subtitle>
+        <v-card-subtitle>Send us a massage!</v-card-subtitle>
       </v-card-item>
       <v-card-item>
+        <v-text-field
+          class="pt-2"
+          clearable
+          label="Name*"
+          variant="outlined"
+          type="text"
+          name="name"
+          v-model="user_name"
+        />
         <v-text-field
           class="pt-2"
           clearable
@@ -21,10 +30,17 @@
           name="email"
           v-model="user_email"
         />
+        <v-textarea
+          class="pt-2"
+          label="Message"
+          variant="outlined"
+          name="message"
+          v-model="user_message"
+        />
         <div class="d-flex justify-center align-center mt-2">
           <v-btn
             class="mr-5"
-            :disabled="!user_email || loading"
+            :disabled="!user_email || !user_name || loading"
             @click="send_email"
             >Submit</v-btn
           >
@@ -44,20 +60,24 @@
 import emailjs from "@emailjs/browser";
 
 export default {
-  name: "NewsletterComponent",
+  name: "ContactComponent",
   props: ["overlay"],
   data() {
     return {
       loading: false,
       user_email: "",
+      user_name: "",
+      user_message: "",
     };
   },
   methods: {
     send_email() {
       this.loading = true;
       emailjs
-        .send("service_rjk7m3g", "template_6vdt9tt", {
+        .send("service_rjk7m3g", "template_8fol8sl", {
+          from_name: this.user_name,
           from_email: this.user_email,
+          message: this.user_message,
         })
         .then(() => this.close_overlay())
         .finally(() => (this.loading = false));
@@ -68,6 +88,8 @@ export default {
     },
     clear_fields() {
       this.user_email = "";
+      this.user_name = "";
+      this.user_message = "";
     },
   },
 };

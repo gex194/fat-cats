@@ -5,13 +5,12 @@
 </template>
 
 <script>
-import FAQLinkListComponent from "@/components/faqComponents/linkList/FAQLinkListComponent.vue";
 import FAQContentListComponent from "@/components/faqComponents/contentList/FAQContentListComponent.vue";
 import constants from "@/constants/constants"
 
 export default {
   name: "FAQListComponent",
-  components: { FAQContentListComponent, FAQLinkListComponent },
+  components: { FAQContentListComponent },
   computed: {
     constants() {
       return constants;

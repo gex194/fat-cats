@@ -33,6 +33,16 @@ const cardano_visualized = {
     "Modify parameters with algorithms for additional insight\n",
 };
 
+const ada_bnb_bridge = {
+  title_src: "/src/assets/gold_titles/ADA_BNB_Bridge.png",
+  text:
+    "Transfer Fat Cats assets between ADA and BNB\n" +
+    "\n" +
+    "List your NFTs on either jpg.store or OpenSea\n" +
+    "\n" +
+    "Centralized bridge ensures maximal security\n",
+};
+
 const max_util = {
   id: 1,
   title:
@@ -488,6 +498,7 @@ export default {
     art_patronage,
     gaming_platform,
     cardano_visualized,
+    ada_bnb_bridge,
   },
   intro: {
     max_util,

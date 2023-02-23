@@ -81,12 +81,19 @@ export default {
       {
         id: 3,
         width: 600,
-        title_src: constants.slides.cardano_visualized.title_src,
-        text: constants.slides.cardano_visualized.text,
-        src: "src/assets/webm_animations/Cardano Visualised.webm",
+        title_src: constants.slides.ada_bnb_bridge.title_src,
+        text: constants.slides.ada_bnb_bridge.text,
+        src: "/src/assets/webm_animations/ADA_-BNB_Bridge.webm",
       },
       {
         id: 4,
+        width: 600,
+        title_src: constants.slides.cardano_visualized.title_src,
+        text: constants.slides.cardano_visualized.text,
+        src: "/src/assets/webm_animations/Cardano Visualised.webm",
+      },
+      {
+        id: 5,
         width: 600,
         title_src: constants.slides.gaming_platform.title_src,
         text: constants.slides.gaming_platform.text,

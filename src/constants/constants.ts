@@ -43,22 +43,20 @@ const ada_bnb_bridge = {
     "Centralized bridge ensures maximal security\n",
 };
 
-const max_util = {
+const card_one = {
   id: 1,
+  title:
+    "Changing the world of luxury with a new AI model",
+};
+const card_two = {
+  id: 2,
   title:
     "Maximal utilization of multiple AI technologies in the Fat Cats ecosystem",
 };
-const model_ai = {
-  id: 2,
-  title:
-    "Completely new model of Artificial Intelligence is being developed that " +
-    "will change the world of luxury forever",
-};
-const member = {
+const card_three = {
   id: 3,
   title:
-    "By becoming a member of our luxury web3 brand - " +
-    "one gets full access to our Artificial Intelligence",
+    "Helping teams & brands with AI tooling",
 };
 
 const team = [
@@ -501,9 +499,9 @@ export default {
     ada_bnb_bridge,
   },
   intro: {
-    max_util,
-    model_ai,
-    member,
+    max_util: card_one,
+    model_ai: card_two,
+    member: card_three,
   },
   team,
   faq,

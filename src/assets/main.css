@@ -14,9 +14,19 @@
 }
 
 .section-background {
-  background-image: url("/src/assets/Seamless-background.jpg");
-  background-size: 100%;
-  background-repeat: repeat-y;
+  /*background-image: url("/src/assets/Seamless-background.jpg");*/
+  /*background-size: 100%;*/
+  /*background-repeat: repeat-y;*/
+  background:
+          conic-gradient(at 62.5% 12.5%, #0d0d0d 25%, #0000 0) calc(17px/-8) calc(17px/2),
+          conic-gradient(at 62.5% 12.5%, #0d0d0d 25%, #0000 0) calc(-317px/8) calc(17px/4),
+          conic-gradient(at 87.5% 62.5%, #0d0d0d 25%, #0000 0) calc(317px/8) calc(17px/4),
+          conic-gradient(at 87.5% 62.5%, #0d0d0d 25%, #0000 0) calc(17px/-8) 0,
+          conic-gradient(at 25% 12.5%, #0d0d0d 25%, #0000 0) 0 calc(17px/-4),
+          conic-gradient(at 25% 12.5%, #0d0d0d 25%, #0000 0) calc(17px/-4) 0,
+          conic-gradient(at 87.5% 87.5%, #0d0d0d 25%, #0000 0) calc(17px/8) 0
+          #000000;
+  background-size: 17px 17px;
 }
 
 .v-overlay__scrim {

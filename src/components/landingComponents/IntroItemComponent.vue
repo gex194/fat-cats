@@ -1,14 +1,15 @@
 <template>
   <v-sheet
-    class="d-flex justify-center align-center pa-5 ma-5 v-col-4 rounded-xl"
+    :rounded="150"
+    class="d-flex justify-center align-center pa-5 ma-5 v-col-4 border-t intro-card-outterbox"
     v-animate-onscroll="{ down: 'animated fadeInUp delay-2s' }"
     elevation="10"
   >
     <v-sheet
       height="300"
-      style="background-color: rgb(41, 31, 28)"
       elevation="10"
-      class="d-flex align-center pa-5 rounded-xl"
+      width="100%"
+      class="d-flex align-center pa-5 rounded-xl intro-card-background"
     >
       <div class="text-center intro-text">
         {{ title }}
@@ -28,5 +29,19 @@ export default {
 .intro-text {
   font-family: Cinzel-black, serif;
   font-size: 30px;
+}
+
+.intro-card-background {
+  background:
+    radial-gradient(27% 29% at right, #0000 83%,#310707 85% 99%,#0000 101%) calc(30px/2) 30px,
+    radial-gradient(27% 29% at left, #0000 83%,#310707 85% 99%,#0000 101%) calc(30px/-2) 30px,
+    radial-gradient(29% 27% at top, #0000 83%,#310707 85% 99%,#0000 101%) 0 calc(30px/2),
+    radial-gradient(29% 27% at bottom, #0000 83%,#310707 85% 99%,#0000 101%) 0 calc(30px/-2)
+    #350808;
+  background-size: 60px 60px;
+}
+
+.intro-card-outterbox {
+  background-color: #260707; border-radius: 40px
 }
 </style>

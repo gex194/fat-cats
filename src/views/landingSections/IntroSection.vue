@@ -25,7 +25,7 @@
     <v-lazy
       class="d-flex justify-center align-center"
       :min-height="200"
-      width="90%"
+      width="85%"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
       v-animate-onscroll="'animated fadeInUp'"

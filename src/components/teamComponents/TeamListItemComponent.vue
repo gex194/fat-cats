@@ -9,28 +9,24 @@
       :class="is_even_or_zero(index) ? 'flex-row-reverse' : ''"
     >
       <div class="v-col-lg-6 v-col-sm-12 d-flex align-center">
-        <v-lazy min-height="500" width="100%">
+        <v-sheet class="bg-transparent" min-height="500" width="100%">
           <v-img
             class="mx-auto rounded-xl"
             style="max-width: 500px; height: 500px"
             :src="img"
           />
-        </v-lazy>
+        </v-sheet>
       </div>
       <div
         class="v-col-lg-6 v-col-sm-12 d-flex flex-column align-sm-center"
         :class="is_even_or_zero(index) ? 'align-lg-end' : 'align-lg-start'"
       >
         <v-card-item class="d-flex">
-          <v-card-title
-
-            >
-            <div class="text-amber-accent-1 text-lg-h3 text-md-h4 text-sm-h5">
+          <v-card-title>
+            <div class="text-amber-accent-1 text-lg-h4 text-md-h4 text-sm-h5">
               {{ name }}
             </div>
-
-          </v-card-title
-          >
+          </v-card-title>
         </v-card-item>
         <v-card-item>
           <v-card-subtitle

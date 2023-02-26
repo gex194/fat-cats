@@ -1,13 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import LandingView from "../views/LandingView.vue";
-import BlogView from "@/views/BlogView.vue";
-import TeamView from "@/views/TeamView.vue";
 import { useLoader } from "@/stores/loader";
-import StartSection from "@/views/landingSections/StartSection.vue";
-import SliderSection from "@/views/landingSections/SliderSection.vue";
-import FeatureSection from "@/views/landingSections/FeatureSection.vue";
-import FAQView from "@/views/FAQView.vue";
-import CatPaperView from "@/views/CatPaperView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,50 +13,30 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: LandingView,
+      component: () => import("@/views/LandingView.vue"),
       meta: {
         transition: "fade",
       },
-      children: [
-        {
-          path: "start",
-          component: StartSection,
-          meta: {
-            transition: "fade",
-            hash: "start",
-          },
-        },
-        {
-          path: "slides",
-          component: SliderSection,
-          meta: { transition: "fade" },
-        },
-        {
-          path: "features",
-          component: FeatureSection,
-          meta: { transition: "fade" },
-        },
-      ],
     },
     {
       path: "/blog",
       name: "blog",
-      component: BlogView,
+      component: () => import("@/views/BlogView.vue"),
     },
     {
       path: "/cats",
       name: "team",
-      component: TeamView,
+      component: () => import("@/views/TeamView.vue"),
     },
     {
       path: "/faq",
       name: "faq",
-      component: FAQView,
+      component: () => import("@/views/FAQView.vue"),
     },
     {
       path: "/deck",
       name: "deck",
-      component: CatPaperView,
+      component: () => import("@/views/CatPaperView.vue"),
     },
   ],
 });

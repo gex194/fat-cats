@@ -16,7 +16,6 @@
     </v-lazy>
     <div class="d-flex justify-space-evenly flex-wrap w-100">
       <div class="v-col-lg-6 v-col-sm-12">
-        <Token3DViewer />
       </div>
       <div class="v-col-lg-6 v-col-sm-12 d-flex justify-start flex-column">
         <div v-animate-onscroll="'animated fadeInRight'">
@@ -40,11 +39,8 @@
 
 <script>
 
-import Token3DViewer from "@/components/landingComponents/Token3DViewer.vue";
-
 export default {
   name: "TokenSection",
-  components: { Token3DViewer },
   data() {
     return {
     }

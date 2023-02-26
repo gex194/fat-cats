@@ -74,13 +74,11 @@ import SliderSection from "@/views/landingSections/SliderSection.vue";
 import FeatureSection from "@/views/landingSections/FeatureSection.vue";
 import IntroSection from "@/views/landingSections/IntroSection.vue";
 import TokenSection from "@/views/landingSections/TokenSection.vue";
-import CrownSection from "@/views/landingSections/CrownSection.vue";
 import { useDisplay } from "vuetify";
 
 export default {
   name: "LandingView",
   components: {
-    CrownSection,
     TokenSection,
     IntroSection,
     FeatureSection,

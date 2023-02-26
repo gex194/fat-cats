@@ -31,13 +31,13 @@ export default {
   setup() {
     const store = useLoader();
     onBeforeMount(() => {
-      store.enable_loader();
+      // store.enable_loader();
     });
     return { store };
   },
   methods: {
     on_video_load() {
-      this.store.disable_loader();
+      // this.store.disable_loader();
     },
   },
 };

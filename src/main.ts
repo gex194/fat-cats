@@ -23,8 +23,6 @@ import emailjs from "@emailjs/browser";
 import { aliases, fa } from "vuetify/iconsets/fa";
 import { mdi } from "vuetify/iconsets/mdi";
 
-import vue3dLoader from "vue-3d-loader";
-
 const vuetify = createVuetify({
   components,
   directives,
@@ -82,7 +80,6 @@ app.use(vuetify);
 app.use(VueKinesis);
 // @ts-ignore
 app.use(VueAnimateOnScroll);
-app.use(vue3dLoader);
 app.directive("scroll", directives.Scroll);
 app.directive("intersect", directives.Intersect);
 app.mount("#app");

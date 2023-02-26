@@ -22,6 +22,7 @@
         >
           <div class="d-flex align-content-center v-col-6 justify-end">
             <video
+              preload="metadata"
               :src="item.src"
               autoplay
               loop
@@ -32,26 +33,20 @@
           </div>
           <div class="v-col-6">
             <div class="d-flex flex-column align-baseline">
-                <v-lazy
-                  class="mb-10"
-                  height="100%"
-                  width="100%"
-                  :options="{ threshold: 0.5 }"
-                  transition="slide-x-reverse-transition"
-                >
-                  <v-img
-                    :src="item.title_src"
-                    :key="item.id"
-                  />
-                </v-lazy>
+              <v-sheet
+                class="mb-10 bg-transparent"
+                height="100%"
+                width="100%"
+                transition="slide-x-reverse-transition"
+              >
+                <v-img
+                  eager
+                  :src="item.title_src"
+                  :key="item.id"
+                />
+              </v-sheet>
               <div class="carousel-text__text">
-                <v-lazy
-                  :min-height="50"
-                  :options="{ threshold: 0.5 }"
-                  transition="slide-x-reverse-transition"
-                >
-                  <span class="text-lg-h5 text-md-h6 text-sm-body-1">{{ item.text }}</span>
-                </v-lazy>
+                <span class="text-lg-h5 text-md-h6 text-sm-body-1">{{ item.text }}</span>
               </div>
             </div>
           </div>
@@ -76,38 +71,38 @@ export default {
         width: 600,
         title_src: constants.slides.nft_collection.title_src,
         text: constants.slides.nft_collection.text,
-        src: "/webm_animations/nft_collection.webm",
+        src: "/webm_animations/nft_collection.webm"
       },
       {
         id: 2,
         width: 600,
         title_src: constants.slides.art_patronage.title_src,
         text: constants.slides.art_patronage.text,
-        src: "/webm_animations/art_patronage.webm",
+        src: "/webm_animations/art_patronage.webm"
       },
       {
         id: 3,
         width: 600,
         title_src: constants.slides.ada_bnb_bridge.title_src,
         text: constants.slides.ada_bnb_bridge.text,
-        src: "/webm_animations/ada_bnb_bridge.webm",
+        src: "/webm_animations/ada_bnb_bridge.webm"
       },
       {
         id: 4,
         width: 600,
         title_src: constants.slides.cardano_visualized.title_src,
         text: constants.slides.cardano_visualized.text,
-        src: "/webm_animations/cardano_visualised.webm",
+        src: "/webm_animations/cardano_visualised.webm"
       },
       {
         id: 5,
         width: 600,
         title_src: constants.slides.gaming_platform.title_src,
         text: constants.slides.gaming_platform.text,
-        src: "/webm_animations/controller.webm",
-      },
-    ],
-  }),
+        src: "/webm_animations/controller.webm"
+      }
+    ]
+  })
 };
 </script>
 

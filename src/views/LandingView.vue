@@ -4,28 +4,22 @@
       <StartSection />
     </section>
     <section id="intro_section" class="section__container">
-      <v-lazy>
-        <IntroSection />
-      </v-lazy>
+      <IntroSection />
     </section>
     <section id="slide_section" class="section__container">
-      <v-lazy>
-        <SliderSection />
-      </v-lazy>
+      <SliderSection />
     </section>
     <section id="token_section" class="section__container">
-      <v-lazy>
-        <TokenSection />
-      </v-lazy>
+      <TokenSection />
     </section>
     <section id="feature_section" class="section__container">
       <FeatureSection />
     </section>
-<!--    <section id="crown_section" class="section__container">-->
-<!--      <v-lazy :options="{ threshold: 0.5 }" :min-height="600">-->
-<!--        <CrownSection />-->
-<!--      </v-lazy>-->
-<!--    </section>-->
+    <!--    <section id="crown_section" class="section__container">-->
+    <!--      <v-lazy :options="{ threshold: 0.5 }" :min-height="600">-->
+    <!--        <CrownSection />-->
+    <!--      </v-lazy>-->
+    <!--    </section>-->
   </v-sheet>
   <v-sheet
     class="section-background section__container-mobile d-flex flex-column align-center justify-center"
@@ -40,31 +34,36 @@
       href="/deck"
       prepend-icon="mdi:mdi-cards-outline"
       class="mt-10"
-      >Deck</v-btn
+    >Deck
+    </v-btn
     >
     <v-btn
       width="80%"
       href="/cats"
       prepend-icon="mdi:mdi-account-group-outline"
       class="mt-10"
-      >Team</v-btn
+    >Team
+    </v-btn
     >
     <v-btn width="80%" disabled href="/" prepend-icon="mdi:mdi-book-open" class="mt-10"
-      >Lore</v-btn
+    >Lore
+    </v-btn
     >
     <v-btn
       width="80%"
       href="/blog"
       prepend-icon="mdi:mdi-post-outline"
       class="mt-10"
-      >Blog</v-btn
+    >Blog
+    </v-btn
     >
     <v-btn
       width="80%"
       href="/faq"
       prepend-icon="mdi:mdi-help-rhombus-outline"
       class="mt-10 mb-10"
-      >FAQ</v-btn
+    >FAQ
+    </v-btn
     >
   </v-sheet>
 </template>
@@ -86,12 +85,12 @@ export default {
     IntroSection,
     FeatureSection,
     StartSection,
-    SliderSection,
+    SliderSection
   },
   setup() {
     const { mobile } = useDisplay();
     return { mobile };
-  },
+  }
 };
 </script>
 

@@ -3,6 +3,7 @@
     :href="link"
     elevation="10"
     class="v-col-3 ma-10"
+    style="z-index: 2"
     min-width="300"
     max-width="100%"
   >

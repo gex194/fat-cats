@@ -52,7 +52,7 @@ const router = createRouter({
       component: BlogView,
     },
     {
-      path: "/team",
+      path: "/cats",
       name: "team",
       component: TeamView,
     },

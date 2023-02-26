@@ -6,6 +6,7 @@
     absolute
     dark
     elevation="0"
+    style="z-index: 1"
     class="appbar__container"
   >
     <v-tabs fixed-tabs grow class="tabs__container" v-model="selected_tab">
@@ -79,7 +80,7 @@
             <v-list-item-title>Deck</v-list-item-title>
           </v-list-item>
           <v-list-item
-            href="/team"
+            href="/cats"
             prepend-icon="mdi:mdi-account-group-outline"
           >
             <v-list-item-title>Team</v-list-item-title>
@@ -122,7 +123,7 @@ export default {
               title: "CatPaper Deck",
               action: () => this.go_to("/deck"),
             },
-            { id: 2, title: "Team", action: () => this.go_to("/team") },
+            { id: 2, title: "Team", action: () => this.go_to("/cats") },
           ],
         },
         { id: 2, title: "Lore", href: "" },

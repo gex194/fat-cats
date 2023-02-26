@@ -44,7 +44,7 @@
     >
     <v-btn
       width="80%"
-      href="/team"
+      href="/cats"
       prepend-icon="mdi:mdi-account-group-outline"
       class="mt-10"
       >Team</v-btn

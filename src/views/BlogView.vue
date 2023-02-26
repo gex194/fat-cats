@@ -1,5 +1,5 @@
 <template>
-  <v-sheet width="100%" class="blog__container section-background">
+  <v-sheet width="100%" class="section-background">
     <blog-list-component />
   </v-sheet>
 </template>
@@ -23,7 +23,4 @@ export default {
 </script>
 
 <style scoped>
-.blog__container {
-  padding-top: 175px;
-}
 </style>

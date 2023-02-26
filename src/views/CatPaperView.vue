@@ -1,8 +1,8 @@
 <template>
   <v-sheet
-    class="catpaper__container bg-black d-flex justify-center flex-column align-center"
+    class="bg-black d-flex justify-center flex-column align-center"
   >
-    <v-carousel hide-delimiter-background hide-delimiters height="800" v-model="onboarding">
+    <v-carousel hide-delimiter-background :show-arrows="!mobile" hide-delimiters :height="mobile ? 400 : 800" v-model="onboarding">
       <template v-slot:prev="{ props }">
         <v-btn
           variant="elevated"
@@ -26,9 +26,9 @@
         <div class="d-flex justify-center align-center">
           <v-img
             eager
-            height="800"
+            :height="mobile ? 400 : 800"
             class="rounded-xl"
-            :src="`/src/assets/deck_pngs/${n}.png`"
+            :src="`/deck_pngs/${n}.png`"
           />
         </div>
       </v-carousel-item>
@@ -49,29 +49,32 @@
           variant="text"
           icon="mdi:mdi-record"
           @click="toggle"
-        >{{n}}</v-btn>
+        >{{ n }}
+        </v-btn>
       </v-item>
     </v-item-group>
   </v-sheet>
 </template>
 
 <script>
+import { useDisplay } from "vuetify";
+
 export default {
   name: "CatPaperView",
+  setup() {
+    const { mobile } = useDisplay();
+    return { mobile };
+  },
   data() {
     return {
       onboarding: 0,
-      length: 29,
+      length: 29
     };
   }
 };
 </script>
 
 <style scoped>
-.catpaper__container {
-  padding-top: 150px;
-}
-
 .slide__active {
   color: black;
   background-color: lightgoldenrodyellow;

@@ -1,0 +1,77 @@
+@use 'vuetify/lib/styles/main.sass' with (
+$body-font-family: Cinzel
+);
+
+@import './base.css';
+@import './fonts.css';
+
+#app {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+.card-black-gradient {
+  background-image: linear-gradient(180deg, rgba(0,0,0,50), rgba(0,0,0,0));
+}
+
+.section-background {
+  /*background-image: url("/src/assets/Seamless-background.jpg");*/
+  /*background-size: 100%;*/
+  /*background-repeat: repeat-y;*/
+  background:
+          conic-gradient(at 62.5% 12.5%, #0d0d0d 25%, #0000 0) calc(17px/-8) calc(17px/2),
+          conic-gradient(at 62.5% 12.5%, #0d0d0d 25%, #0000 0) calc(-317px/8) calc(17px/4),
+          conic-gradient(at 87.5% 62.5%, #0d0d0d 25%, #0000 0) calc(317px/8) calc(17px/4),
+          conic-gradient(at 87.5% 62.5%, #0d0d0d 25%, #0000 0) calc(17px/-8) 0,
+          conic-gradient(at 25% 12.5%, #0d0d0d 25%, #0000 0) 0 calc(17px/-4),
+          conic-gradient(at 25% 12.5%, #0d0d0d 25%, #0000 0) calc(17px/-4) 0,
+          conic-gradient(at 87.5% 87.5%, #0d0d0d 25%, #0000 0) calc(17px/8) 0
+          #000000;
+  background-size: 17px 17px;
+}
+
+.v-overlay__scrim {
+  background: black;
+}
+
+a,
+.green {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.splide__arrows {
+  position: absolute;
+  top:50%;
+  width:100%;
+}
+
+@media (hover: hover) {
+  a:hover {
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    grid-template-columns: 1fr;
+    transition: width 1s, height 1s, transform 2s, display 1s, flex-grow 1s, flex 1s, flex-basis 1s;
+  }
+}

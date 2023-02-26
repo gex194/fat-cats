@@ -12,9 +12,9 @@
         color="gold"
       ></v-progress-circular>
     </v-overlay>
-    <v-main class="main__container">
-      <v-container fluid class="content__container">
-        <RouterView />
+    <v-main :class="mobile ? 'main__container-mobile' : 'main__container'">
+      <v-container fluid class="content__container" @load="on_load">
+        <RouterView :class="mobile ? '' : 'view'" />
       </v-container>
     </v-main>
     <FooterComponent />
@@ -26,17 +26,24 @@ import { RouterView } from "vue-router";
 import TopBar from "@/components/landingComponents/TopbarComponent.vue";
 import FooterComponent from "@/components/landingComponents/FooterComponent.vue";
 import { useLoader } from "@/stores/loader";
+import { useDisplay } from "vuetify";
 
 export default {
   name: "App",
   components: { FooterComponent, TopBar, RouterView },
   setup() {
+    const { mobile } = useDisplay();
     const loader = useLoader();
-    return { loader };
+    return { loader, mobile };
   },
   computed: {
     overlay() {
       return this.loader.load_state;
+    },
+  },
+  methods: {
+    on_load() {
+      return this.loader.disable_loader();
     },
   },
 };
@@ -46,14 +53,26 @@ export default {
 .app__container {
   width: 100%;
 }
+
 .content__container {
   width: 100%;
   padding: 0 !important;
 }
+
+.view {
+  padding-top: 160px;
+}
+
 .main__container {
   width: 100%;
   padding-top: 0 !important;
 }
+
+.main__container-mobile {
+  width: 100%;
+  top: 0;
+}
+
 .overlay__container {
   background: black !important;
   opacity: 1;

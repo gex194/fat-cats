@@ -1,11 +1,12 @@
 <template>
-  <v-sheet class="d-flex justify-center align-center flex-column team__container section-background">
+  <v-sheet
+    class="d-flex justify-center align-center flex-column section-background"
+  >
     <Transition name="fade" mode="out-in" appear>
-      <v-img src="/src/assets/gold_titles/FAT_CATS_2.png" height="200" width="900" />
+      <v-img src="/gold_titles/FAT_CATS_2.png" height="200" width="100%" />
     </Transition>
-
     <div class="text-center mt-3 mb-3 team-text-h4">Meet our team</div>
-    <TeamListComponent  />
+    <TeamListComponent />
   </v-sheet>
 </template>
 
@@ -19,10 +20,6 @@ export default {
 </script>
 
 <style scoped>
-.team__container {
-  padding-top: 150px;
-}
-
 .team-text-h1 {
   font-size: 120px;
   font-family: Cinzel, serif;

@@ -13,6 +13,7 @@
       </div>
       <v-btn
         v-for="link in links"
+        target="_blank"
         :key="link.value"
         :href="link.href"
         variant="elevated"
@@ -36,6 +37,7 @@
     <v-divider></v-divider>
     <div class="mt-2">
       <v-btn
+        target="_blank"
         v-for="icon in icons"
         :key="icon.id"
         :icon="icon.icon"

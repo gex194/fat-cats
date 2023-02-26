@@ -1,29 +1,35 @@
 <template>
   <v-card
-    class="w-100 h-100 mt-5 hidden bg-transparent"
+    class="w-100 h-100 mt-5 hidden bg-transparent flex-wrap"
     elevation="0"
     v-animate-onscroll="{ down: animation_style(index) }"
   >
     <div
-      class="d-flex align-center justify-center w-100 h-100"
+      class="d-flex align-center flex-wrap justify-center w-100 h-100"
       :class="is_even_or_zero(index) ? 'flex-row-reverse' : ''"
     >
-      <div class="v-col-6 d-flex align-center">
-        <Transition name="fade" mode="out-in" appear>
-          <img
+      <div class="v-col-lg-6 v-col-sm-12 d-flex align-center">
+        <v-lazy min-height="500" width="100%">
+          <v-img
             class="mx-auto rounded-xl"
             style="max-width: 500px; height: 500px"
             :src="img"
           />
-        </Transition>
+        </v-lazy>
       </div>
       <div
-        class="v-col-6 d-flex flex-column"
-        :class="is_even_or_zero(index) ? 'align-end' : 'align-start'"
+        class="v-col-lg-6 v-col-sm-12 d-flex flex-column align-sm-center"
+        :class="is_even_or_zero(index) ? 'align-lg-end' : 'align-lg-start'"
       >
         <v-card-item class="d-flex">
-          <v-card-title class="text-amber-accent-1"
-            ><h1>{{ name }}</h1></v-card-title
+          <v-card-title
+
+            >
+            <div class="text-amber-accent-1 text-lg-h3 text-md-h4 text-sm-h5">
+              {{ name }}
+            </div>
+
+          </v-card-title
           >
         </v-card-item>
         <v-card-item>

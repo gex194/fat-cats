@@ -1,5 +1,5 @@
 <template>
-  <v-sheet width="100%" class="section-background">
+  <v-sheet v-if="!mobile" width="100%" class="section-background">
     <section id="start_section">
       <StartSection />
     </section>
@@ -8,7 +8,7 @@
         <IntroSection />
       </v-lazy>
     </section>
-    <section id="slide_section" class="section__container" >
+    <section id="slide_section" class="section__container">
       <v-lazy>
         <SliderSection />
       </v-lazy>
@@ -19,8 +19,53 @@
       </v-lazy>
     </section>
     <section id="feature_section" class="section__container">
-        <FeatureSection />
+      <FeatureSection />
     </section>
+<!--    <section id="crown_section" class="section__container">-->
+<!--      <v-lazy :options="{ threshold: 0.5 }" :min-height="600">-->
+<!--        <CrownSection />-->
+<!--      </v-lazy>-->
+<!--    </section>-->
+  </v-sheet>
+  <v-sheet
+    class="section-background section__container-mobile d-flex flex-column align-center justify-center"
+    height="100%"
+    v-else
+  >
+    <v-sheet class="d-flex bg-transparent" width="80%">
+      <v-img src="/LOGO.png" class="pa-15" height="100%" width="100%" />
+    </v-sheet>
+    <v-btn
+      width="80%"
+      href="/deck"
+      prepend-icon="mdi:mdi-cards-outline"
+      class="mt-10"
+      >Deck</v-btn
+    >
+    <v-btn
+      width="80%"
+      href="/team"
+      prepend-icon="mdi:mdi-account-group-outline"
+      class="mt-10"
+      >Team</v-btn
+    >
+    <v-btn width="80%" disabled href="/" prepend-icon="mdi:mdi-book-open" class="mt-10"
+      >Lore</v-btn
+    >
+    <v-btn
+      width="80%"
+      href="/blog"
+      prepend-icon="mdi:mdi-post-outline"
+      class="mt-10"
+      >Blog</v-btn
+    >
+    <v-btn
+      width="80%"
+      href="/faq"
+      prepend-icon="mdi:mdi-help-rhombus-outline"
+      class="mt-10 mb-10"
+      >FAQ</v-btn
+    >
   </v-sheet>
 </template>
 
@@ -30,15 +75,32 @@ import SliderSection from "@/views/landingSections/SliderSection.vue";
 import FeatureSection from "@/views/landingSections/FeatureSection.vue";
 import IntroSection from "@/views/landingSections/IntroSection.vue";
 import TokenSection from "@/views/landingSections/TokenSection.vue";
+import CrownSection from "@/views/landingSections/CrownSection.vue";
+import { useDisplay } from "vuetify";
 
 export default {
   name: "LandingView",
-  components: { TokenSection, IntroSection, FeatureSection, StartSection, SliderSection },
+  components: {
+    CrownSection,
+    TokenSection,
+    IntroSection,
+    FeatureSection,
+    StartSection,
+    SliderSection,
+  },
+  setup() {
+    const { mobile } = useDisplay();
+    return { mobile };
+  },
 };
 </script>
 
 <style scoped>
 .section__container {
   margin-top: 120px;
+}
+
+.section__container-mobile {
+  margin-top: 0px;
 }
 </style>

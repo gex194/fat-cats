@@ -1,38 +1,37 @@
 <template>
   <v-sheet
-    max-height="960"
-    class="d-flex justify-center align-center flex-column bg-transparent pa-15"
+    class="d-flex justify-center align-center flex-column bg-transparent pr-10 pl-10"
   >
     <v-lazy
-      :min-height="200"
+      :min-height="80"
+      width="100%"
+      class="mb-lg-10"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
       v-animate-onscroll="'animated fadeInRight'"
     >
       <v-img
-        height="200"
-        src="/src/assets/gold_titles/Ecosystems_utility_token_ducats2.png"
-        width="1500"
+        src="/gold_titles/Ecosystems_utility_token_ducats2.png"
       />
     </v-lazy>
-
-    <div class="d-flex justify-space-evenly w-100">
-      <div class="v-col-6">
+    <div class="d-flex justify-space-evenly flex-wrap w-100">
+      <div class="v-col-lg-6 v-col-sm-12">
+        <Token3DViewer />
       </div>
-      <div class="v-col-6 d-flex justify-start flex-column">
+      <div class="v-col-lg-6 v-col-sm-12 d-flex justify-start flex-column">
         <div v-animate-onscroll="'animated fadeInRight'">
-          <div class="text-left tokens-title">TOTAL SUPPLY</div>
-          <div class="text-left tokens-text">100 million</div>
+          <div class="text-lg-left text-sm-center text-lg-h2 text-md-h3 text-sm-h4 tokens-title">TOTAL SUPPLY</div>
+          <div class="text-lg-left text-sm-center text-lg-h3 text-md-h4 text-sm-h5">100 million</div>
         </div>
         <v-spacer class="mt-10" />
         <div v-animate-onscroll="'animated fadeInRight'">
-          <div class="text-left tokens-title">TOTAL SUPPLY</div>
-          <div class="text-left tokens-text">CARDANO & BNB CHAIN</div>
+          <div class="text-lg-left text-sm-center text-lg-h2 text-md-h3 text-sm-h4 tokens-title">BLOCKCHAIN</div>
+          <div class="text-lg-left text-sm-center text-lg-h3 text-md-h4 text-sm-h5">CARDANO & BNB CHAIN</div>
         </div>
         <v-spacer class="mt-10" />
         <div v-animate-onscroll="'animated fadeInRight'">
-          <div class="text-left tokens-title">TOP ALLOCATION</div>
-          <div class="text-left tokens-text">FAT CAT TREASURY (22%)</div>
+          <div class="text-lg-left text-sm-center text-lg-h2 text-md-h3 text-sm-h4 tokens-title">TOP ALLOCATION</div>
+          <div class="text-lg-left text-sm-center text-lg-h3 text-md-h4 text-sm-h5">FAT CAT TREASURY (22%)</div>
         </div>
       </div>
     </div>
@@ -40,19 +39,21 @@
 </template>
 
 <script>
+
+import Token3DViewer from "@/components/landingComponents/Token3DViewer.vue";
+
 export default {
   name: "TokenSection",
+  components: { Token3DViewer },
+  data() {
+    return {
+    }
+  },
 };
 </script>
 
 <style scoped>
 .tokens-title {
   color: palegoldenrod;
-  font-family: Cinzel-black;
-  font-size: 60px;
-}
-
-.tokens-text {
-  font-size: 50px;
 }
 </style>

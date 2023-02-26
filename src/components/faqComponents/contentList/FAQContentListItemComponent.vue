@@ -1,14 +1,15 @@
 <template>
-  <v-expansion-panel :id="id" rounded="5" v-on:group:selected="is_panel_active" :class="panel_active ? 'expansion-panel__active' : ''">
+  <v-expansion-panel :id="id" rounded="5" v-on:group:selected="is_panel_active"
+                     :class="panel_active ? 'expansion-panel__active' : ''">
     <v-expansion-panel-title hide-actions class="faq-title">
       <template v-slot:default="{ expanded }">
         <div class="d-flex justify-start align-center">
           <span>{{ index }}. {{ title }}</span>
           <Transition mode="out-in" name="fade" appear>
-            <span v-if="expanded">
+            <span v-if="expanded && !mobile">
               <video
                 style="top: -25px"
-                src="/src/assets/webm_animations/Blue%20Sapphire%20alpha3.webm"
+                src="/webm_animations/blue_sapphire_2.webm"
                 class="bg-transparent position-absolute"
                 preload="auto"
                 muted
@@ -16,7 +17,7 @@
                 playsinline
                 loop
                 height="50"
-            /></span>
+              /></span>
           </Transition>
         </div>
       </template>
@@ -28,13 +29,19 @@
 </template>
 
 <script>
+import { useDisplay } from "vuetify";
+
 export default {
   name: "FAQContentListItemComponent",
   props: ["id", "title", "text", "index"],
+  setup() {
+    const { mobile } = useDisplay();
+    return { mobile };
+  },
   data() {
     return {
-      panel_active: false,
-    }
+      panel_active: false
+    };
   },
   methods: {
     is_panel_active(obj) {
@@ -48,6 +55,7 @@ export default {
 .faq-title {
   font-size: 20px;
 }
+
 .faq-text {
   overflow-wrap: break-word;
   white-space: break-spaces;
@@ -55,14 +63,15 @@ export default {
 }
 
 .expansion-panel__active {
-  -webkit-box-shadow: 0px 0px 13px 6px rgba(255,250,194,0.3);
-  -moz-box-shadow: 0px 0px 13px 6px rgba(255,250,194,0.3);
-  box-shadow: 0px 0px 13px 6px rgba(255,250,194,0.3);
+  -webkit-box-shadow: 0px 0px 13px 6px rgba(255, 250, 194, 0.3);
+  -moz-box-shadow: 0px 0px 13px 6px rgba(255, 250, 194, 0.3);
+  box-shadow: 0px 0px 13px 6px rgba(255, 250, 194, 0.3);
 }
 
 .hidden {
   visibility: hidden;
 }
+
 .visible {
   visibility: visible;
 }

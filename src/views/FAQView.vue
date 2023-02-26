@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="d-flex justify-center align-center section-background faq__container"
+    class="d-flex justify-center align-center section-background"
   >
     <FAQListComponent class="ma-5" />
   </v-sheet>
@@ -16,7 +16,4 @@ export default {
 </script>
 
 <style scoped>
-.faq__container {
-  padding-top: 175px;
-}
 </style>

@@ -40,7 +40,7 @@ const DEFAULT_OPTIONS = {
   },
   png: {
     // https://sharp.pixelplumbing.com/api-output#png
-    quality: 100,
+    quality: 85,
   },
   jpeg: {
     // https://sharp.pixelplumbing.com/api-output#jpeg

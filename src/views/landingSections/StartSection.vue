@@ -37,13 +37,13 @@ export default {
     const store = useLoader();
     const { mobile } = useDisplay();
     onBeforeMount(() => {
-      // store.enable_loader();
+      store.enable_loader();
     });
     return { store, mobile };
   },
   methods: {
     on_video_load() {
-      // this.store.disable_loader();
+      this.store.disable_loader();
     },
   },
 };

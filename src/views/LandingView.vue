@@ -1,5 +1,7 @@
 <template>
-  <v-sheet width="100%"
+  <v-sheet
+    v-if="!mobile"
+    width="100%"
            class="section-background">
     <section id="start_section">
       <StartSection :class="!mobile ? 'section__container' : 'section__container-mobile'" />
@@ -21,6 +23,52 @@
     <!--        <CrownSection />-->
     <!--      </v-lazy>-->
     <!--    </section>-->
+  </v-sheet>
+  <v-sheet
+    class="section-background d-flex flex-column align-center justify-center"
+    height="100%"
+    v-else
+  >
+    <v-sheet class="d-flex bg-transparent" width="80%">
+      <v-img src="/LOGO.png" class="pa-15" height="100%" width="100%" />
+    </v-sheet>
+    <v-btn
+      width="80%"
+      href="/deck"
+      prepend-icon="mdi:mdi-cards-outline"
+      class="mt-10"
+    >Deck
+    </v-btn
+    >
+    <v-btn
+      width="80%"
+      href="/cats"
+      prepend-icon="mdi:mdi-account-group-outline"
+      class="mt-10"
+    >Team
+    </v-btn
+    >
+    <v-btn width="80%" disabled href="/" prepend-icon="mdi:mdi-book-open" class="mt-10"
+    >Lore
+    </v-btn
+    >
+    <v-btn
+      width="80%"
+      href="/blog"
+      prepend-icon="mdi:mdi-post-outline"
+      class="mt-10"
+    >Blog
+    </v-btn
+    >
+    <v-btn
+      width="80%"
+      href="/faq"
+      prepend-icon="mdi:mdi-help-rhombus-outline"
+      class="mt-10 mb-10"
+    >FAQ
+    </v-btn
+    >
+    <p class="mb-10">Best experienced in desktop mode</p>
   </v-sheet>
 </template>
 

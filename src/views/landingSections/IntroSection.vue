@@ -21,7 +21,7 @@
         </kinesis-element>
       </kinesis-container>
     </div>
-    <v-lazy
+    <div
       class="d-flex justify-center align-center"
       :min-height="80"
       width="85%"
@@ -29,10 +29,11 @@
       transition="fade-transition"
       v-animate-onscroll="'animated fadeInUp'"
     >
-      <v-img
+      <img
+        class="w-75"
         src="/gold_titles/Luxury_powered_by_AI.png"
       />
-    </v-lazy>
+    </div>
     <div class="d-flex justify-space-evenly flex-wrap align-center mt-5 mt-sm-15 mt-lg-15">
       <IntroItemComponent
         v-for="item in constants.intro"

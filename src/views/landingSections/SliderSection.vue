@@ -4,6 +4,7 @@
     elevation="0"
   >
     <v-carousel
+      v-model="carousel_active_item"
       :height="carousel_height"
       cycle
       interval="10000"
@@ -15,6 +16,7 @@
       <v-carousel-item
         class="d-flex justify-center"
         v-for="item in carousel_items"
+        :value="item.id"
         :key="`wndw-${item.id}`"
       >
         <v-sheet
@@ -23,9 +25,8 @@
           <div class="d-flex align-content-center v-col-12 v-col-lg-6 v-col-md-6 v-col-sm-6 justify-end">
             <video
               preload="metadata"
+              :ref="play_video"
               :src="item.src"
-              autoplay
-              loop
               playsinline
               muted
               style="width: 100%;"
@@ -65,32 +66,20 @@ import { useDisplay } from "vuetify";
 export default {
   name: "SliderSection",
   setup() {
-    const { mobile, md, sm, lg, xl } = useDisplay();
+    const { mobile, md, sm } = useDisplay();
     return { mobile, md, sm };
+  },
+  mounted() {
+    console.log(this.$refs.slides);
   },
   computed: {
     carousel_height() {
       return this.calculate_height();
     }
   },
-  methods: {
-    calculate_height() {
-      if (this.lg) {
-        return 500;
-      }
-      if (this.md) {
-        return 400;
-      }
-      if (this.sm) {
-        return 300;
-      }
-      if (this.mobile) {
-        return 500;
-      }
-      return 500;
-    }
-  },
   data: () => ({
+    carousel_active_item: 0,
+    video_refs: [],
     length: 3,
     carousel_items: [
       {
@@ -129,7 +118,36 @@ export default {
         src: "/webm_animations/controller.webm"
       }
     ]
-  })
+  }),
+  methods: {
+    calculate_height() {
+      if (this.lg) {
+        return 500;
+      }
+      if (this.md) {
+        return 400;
+      }
+      if (this.sm) {
+        return 300;
+      }
+      if (this.mobile) {
+        return 500;
+      }
+      return 500;
+    },
+    play_video(el) {
+      if (el) {
+        el.style['opacity'] = '0';
+        el.pause();
+        el.currentTime = 0;
+        setTimeout(() => {
+
+          el.play();
+          el.style['opacity'] = '1';
+        }, 500)
+      }
+    }
+  }
 };
 </script>
 

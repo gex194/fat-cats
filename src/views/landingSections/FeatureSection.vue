@@ -2,9 +2,10 @@
   <v-sheet
     class="d-flex flex-column bg-transparent justify-center align-center pl-10 pr-10"
   >
-    <v-img src="/gold_titles/Fat_Cats_nfts.png" width="100%" v-animate-onscroll="'animated fadeInUp'" />
+    <img src="/gold_titles/Fat_Cats_nfts.png" style="width:80%" class="hidden" v-animate-onscroll="'animated fadeInUp'" />
     <div class="d-flex justify-space-evenly mt-15 v-col-12">
       <FeatureItemComponent
+        class="hidden"
         v-animate-onscroll="'animated fadeInUp'"
         v-for="card in cards"
         :key="card.id"

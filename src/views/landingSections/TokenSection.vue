@@ -4,7 +4,7 @@
   >
     <v-lazy
       :min-height="80"
-      width="100%"
+      width="80%"
       class="mb-lg-10"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"

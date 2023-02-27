@@ -24,7 +24,7 @@
         :key="n"
       >
         <div class="d-flex justify-center align-center">
-          <v-img
+          <img
             eager
             :height="mobile ? 400 : 800"
             class="rounded-xl"

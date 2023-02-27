@@ -10,7 +10,7 @@
     >
       <div class="v-col-lg-6 v-col-sm-12 d-flex align-center">
         <v-sheet class="bg-transparent" min-height="500" width="100%">
-          <v-img
+          <img
             class="mx-auto rounded-xl"
             style="max-width: 500px; height: 500px"
             :src="img"

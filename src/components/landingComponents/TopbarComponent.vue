@@ -68,37 +68,61 @@
   </v-app-bar>
   <v-app-bar v-else>
     <template v-slot:prepend>
-      <v-menu transition="slide-y-transition">
-        <template v-slot:activator="{ props }">
-          <v-app-bar-nav-icon
-            icon="mdi:mdi-menu"
-            v-bind="props"
-          ></v-app-bar-nav-icon>
-        </template>
-        <v-list>
-          <v-list-item href="/deck" prepend-icon="mdi:mdi-cards-outline">
-            <v-list-item-title>Deck</v-list-item-title>
-          </v-list-item>
-          <v-list-item
-            href="/cats"
-            prepend-icon="mdi:mdi-account-group-outline"
-          >
-            <v-list-item-title>Team</v-list-item-title>
-          </v-list-item>
-          <v-list-item disabled prepend-icon="mdi:mdi-book-open">
-            <v-list-item-title>Lore</v-list-item-title>
-          </v-list-item>
-          <v-list-item href="/blog" prepend-icon="mdi:mdi-post-outline">
-            <v-list-item-title>Blog</v-list-item-title>
-          </v-list-item>
-          <v-list-item href="/faq" prepend-icon="mdi:mdi-help-rhombus-outline">
-            <v-list-item-title>FAQ</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
+      <v-app-bar-nav-icon
+        icon="mdi:mdi-menu"
+        @click="drawer = !drawer"
+      ></v-app-bar-nav-icon>
     </template>
-    <v-app-bar-title>{{current_route_name}}</v-app-bar-title>
+    <v-app-bar-title>{{ current_route_name }}</v-app-bar-title>
   </v-app-bar>
+  <v-navigation-drawer v-if="mobile" temporary location="top" class="bg-transparent" v-model="drawer">
+    <v-sheet class="d-flex align-center justify-space-evenly flex-column" style="background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px)" height="100%" width="100%">
+      <v-btn
+        class="w-75"
+        prepend-icon="mdi:mdi-seat"
+        href="/"
+      >
+        Main
+      </v-btn>
+      <v-btn
+        class="w-75"
+        prepend-icon="mdi:mdi-cards-outline"
+        href="/deck"
+      >
+        Deck
+      </v-btn>
+      <v-btn
+        class="w-75"
+        prepend-icon="mdi:mdi-account-group-outline"
+        href="/cats"
+      >
+        Team
+      </v-btn>
+      <v-btn
+        class="w-75"
+        prepend-icon="mdi:mdi-book-open"
+        href="/lore"
+        disabled
+      >
+        Lore
+      </v-btn>
+      <v-btn
+        class="w-75"
+        prepend-icon="mdi:mdi-post-outline"
+        href="/blog"
+      >
+        Blog
+      </v-btn>
+      <v-btn
+        class="w-75"
+        prepend-icon="mdi:mdi-help-rhombus-outline"
+        href="/faq"
+      >
+        FAQ
+      </v-btn>
+    </v-sheet>
+  </v-navigation-drawer>
 </template>
 
 <script>
@@ -113,6 +137,7 @@ export default {
   data() {
     return {
       selected_tab: 0,
+      drawer: false,
       topbar_tabs: [
         {
           id: 1,
@@ -121,15 +146,15 @@ export default {
             {
               id: 1,
               title: "CatPaper Deck",
-              action: () => this.go_to("/deck"),
+              action: () => this.go_to("/deck")
             },
-            { id: 2, title: "Team", action: () => this.go_to("/cats") },
-          ],
+            { id: 2, title: "Team", action: () => this.go_to("/cats") }
+          ]
         },
         { id: 2, title: "Lore", href: "" },
         { id: 3, title: "Blog", href: "/blog" },
-        { id: 5, title: "FAQ", href: "/faq" },
-      ],
+        { id: 5, title: "FAQ", href: "/faq" }
+      ]
     };
   },
   computed: {
@@ -143,8 +168,8 @@ export default {
     },
     toggle_menu() {
       this.mobile_menu = !this.mobile_menu;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -175,5 +200,10 @@ export default {
 .v-btn:hover > .v-btn__overlay {
   background: unset;
   opacity: 1 !important;
+}
+
+.drawer-background {
+  background: rgba(0, 0, 0, 0.5);
+  filter: blur(8px)
 }
 </style>

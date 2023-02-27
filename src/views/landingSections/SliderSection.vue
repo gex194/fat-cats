@@ -1,26 +1,26 @@
 <template>
   <v-card
     class="d-flex flex-column align-center bg-transparent pr-10 pl-10"
-    width="100%"
     elevation="0"
   >
     <v-carousel
-      height="900"
+      :height="carousel_height"
       cycle
       interval="10000"
       delimiter-icon="mdi:mdi-circle"
       hide-delimiter-background
+      :hide-delimiters="mobile"
       :show-arrows="false"
     >
       <v-carousel-item
-        class="d-flex justify-center align-center"
+        class="d-flex justify-center"
         v-for="item in carousel_items"
         :key="`wndw-${item.id}`"
       >
         <v-sheet
-          class="d-flex flex-row justify-center align-center bg-transparent"
+          class="d-flex flex-row justify-center align-center flex-wrap bg-transparent"
         >
-          <div class="d-flex align-content-center v-col-6 justify-end">
+          <div class="d-flex align-content-center v-col-12 v-col-lg-6 v-col-md-6 v-col-sm-6 justify-end">
             <video
               preload="metadata"
               :src="item.src"
@@ -28,10 +28,11 @@
               loop
               playsinline
               muted
-              style="width: 100%; height: 100%"
+              style="width: 100%;"
+              :style="mobile ? 'height: 200px' :`height:${calculate_height() - 50}px`"
             />
           </div>
-          <div class="v-col-6">
+          <div class="v-col-12 v-col-lg-6 v-col-md-6 v-col-sm-6">
             <div class="d-flex flex-column align-baseline">
               <v-sheet
                 class="mb-10 bg-transparent"
@@ -45,8 +46,9 @@
                   :key="item.id"
                 />
               </v-sheet>
-              <div class="carousel-text__text">
-                <span class="text-lg-h5 text-md-h6 text-sm-body-1">{{ item.text }}</span>
+              <div class="carousel-text__text d-flex">
+                <span
+                  class="text-caption text-lg-h5 text-md-h6">{{ item.text }}</span>
               </div>
             </div>
           </div>
@@ -58,11 +60,36 @@
 
 <script>
 import constants from "@/constants/constants";
+import { useDisplay } from "vuetify";
 
 export default {
   name: "SliderSection",
-  computed: {},
-  methods: {},
+  setup() {
+    const { mobile, md, sm, lg, xl } = useDisplay();
+    return { mobile, md, sm };
+  },
+  computed: {
+    carousel_height() {
+      return this.calculate_height();
+    }
+  },
+  methods: {
+    calculate_height() {
+      if (this.lg) {
+        return 500;
+      }
+      if (this.md) {
+        return 400;
+      }
+      if (this.sm) {
+        return 300;
+      }
+      if (this.mobile) {
+        return 500;
+      }
+      return 500;
+    }
+  },
   data: () => ({
     length: 3,
     carousel_items: [

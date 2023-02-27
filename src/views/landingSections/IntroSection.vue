@@ -30,11 +30,10 @@
       v-animate-onscroll="'animated fadeInUp'"
     >
       <v-img
-        class="mt-15 mb-15"
         src="/gold_titles/Luxury_powered_by_AI.png"
       />
     </v-lazy>
-    <div class="d-flex justify-space-evenly flex-wrap align-center mt-15">
+    <div class="d-flex justify-space-evenly flex-wrap align-center mt-5 mt-sm-15 mt-lg-15">
       <IntroItemComponent
         v-for="item in constants.intro"
         :key="item.id"

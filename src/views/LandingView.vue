@@ -1,18 +1,19 @@
 <template>
-  <v-sheet v-if="!mobile" width="100%" class="section-background">
+  <v-sheet width="100%"
+           class="section-background">
     <section id="start_section">
-      <StartSection />
+      <StartSection :class="!mobile ? 'section__container' : 'section__container-mobile'" />
     </section>
-    <section id="intro_section" class="section__container">
+    <section id="intro_section" :class="!mobile ? 'section__container' : 'section__container-mobile'">
       <IntroSection />
     </section>
-    <section id="slide_section" class="section__container">
+    <section id="slide_section" :class="!mobile ? 'section__container' : 'section__container-mobile'">
       <SliderSection />
     </section>
-    <section id="token_section" class="section__container">
+    <section id="token_section" :class="!mobile ? 'section__container' : 'section__container-mobile'">
       <TokenSection />
     </section>
-    <section id="feature_section" class="section__container">
+    <section id="feature_section" :class="!mobile ? 'section__container' : 'section__container-mobile'">
       <FeatureSection />
     </section>
     <!--    <section id="crown_section" class="section__container">-->
@@ -20,51 +21,6 @@
     <!--        <CrownSection />-->
     <!--      </v-lazy>-->
     <!--    </section>-->
-  </v-sheet>
-  <v-sheet
-    class="section-background section__container-mobile d-flex flex-column align-center justify-center"
-    height="100%"
-    v-else
-  >
-    <v-sheet class="d-flex bg-transparent" width="80%">
-      <v-img src="/LOGO.png" class="pa-15" height="100%" width="100%" />
-    </v-sheet>
-    <v-btn
-      width="80%"
-      href="/deck"
-      prepend-icon="mdi:mdi-cards-outline"
-      class="mt-10"
-    >Deck
-    </v-btn
-    >
-    <v-btn
-      width="80%"
-      href="/cats"
-      prepend-icon="mdi:mdi-account-group-outline"
-      class="mt-10"
-    >Team
-    </v-btn
-    >
-    <v-btn width="80%" disabled href="/" prepend-icon="mdi:mdi-book-open" class="mt-10"
-    >Lore
-    </v-btn
-    >
-    <v-btn
-      width="80%"
-      href="/blog"
-      prepend-icon="mdi:mdi-post-outline"
-      class="mt-10"
-    >Blog
-    </v-btn
-    >
-    <v-btn
-      width="80%"
-      href="/faq"
-      prepend-icon="mdi:mdi-help-rhombus-outline"
-      class="mt-10 mb-10"
-    >FAQ
-    </v-btn
-    >
   </v-sheet>
 </template>
 
@@ -98,6 +54,6 @@ export default {
 }
 
 .section__container-mobile {
-  margin-top: 0px;
+  margin-top: 60px;
 }
 </style>

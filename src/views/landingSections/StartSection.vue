@@ -1,5 +1,9 @@
 <template>
-  <v-sheet class="d-flex align-center justify-center" style="margin-top:-160px" max-height="960">
+  <v-sheet
+    class="d-flex align-center justify-center"
+    :style="mobile ? 'margin-top:0px' : 'margin-top:-160px'"
+    max-height="960"
+  >
     <video
       preload="auto"
       id="video_background"
@@ -25,15 +29,17 @@
 <script>
 import { useLoader } from "@/stores/loader";
 import { onBeforeMount } from "vue";
+import { useDisplay } from "vuetify";
 
 export default {
   name: "StartSection",
   setup() {
     const store = useLoader();
+    const { mobile } = useDisplay();
     onBeforeMount(() => {
       // store.enable_loader();
     });
-    return { store };
+    return { store, mobile };
   },
   methods: {
     on_video_load() {

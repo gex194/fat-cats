@@ -12,7 +12,11 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      redirect: "/main"
+    },
+    {
+      path: "/main",
+      name: "main",
       component: () => import("@/views/LandingView.vue"),
       meta: {
         transition: "fade",

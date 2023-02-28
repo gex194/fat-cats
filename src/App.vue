@@ -29,6 +29,7 @@ import TopBar from "@/components/landingComponents/TopbarComponent.vue";
 import FooterComponent from "@/components/landingComponents/FooterComponent.vue";
 import { useLoader } from "@/stores/loader";
 import { useDisplay } from "vuetify";
+import { preload_imgs } from "@/helpers/helpers";
 
 export default {
   name: "App",
@@ -38,52 +39,14 @@ export default {
     const loader = useLoader();
     return { loader, mobile };
   },
-  data() {
-    return {
-      imagesToPreload: [
-        "/gold_titles/ADA_BNB_Bridge.png",
-        "/gold_titles/Art_Patronage.png",
-        "/gold_titles/Cardano_Visualised.png",
-        "/gold_titles/Ecosystems_utility_token_ducats2.png",
-        "/gold_titles/FAT_CATS.png",
-        "/gold_titles/FAT_CATS_2.png",
-        "/gold_titles/Fat_Cats_nfts.png",
-        "/gold_titles/Gaming_Platform.png",
-        "/gold_titles/Luxury_powered_by_AI.png",
-        "/gold_titles/NFT_COLLECTION.png",
-      ],
-    };
-  },
-  mounted() {
-    this.preload();
-  },
   computed: {
     overlay() {
-      return this.loader.$state.loading;
+      return this.loader.loading;
     },
   },
   methods: {
     on_load() {
       return this.loader.disable_loader();
-    },
-    preload() {
-      const images = this.imagesToPreload.map((imageSrc) => {
-        return new Promise((resolve, reject) => {
-          const img = new Image();
-          img.src = imageSrc;
-          img.onload = resolve;
-          img.onerror = reject;
-        });
-      });
-
-      Promise.all(images)
-        .then(() => {
-          console.log("Images loaded!");
-        })
-        .catch((error) => {
-          console.error("Some image(s) failed loading!");
-          console.error(error.message);
-        }).finally(() => this.loader.disable_loader());
     },
   },
 };

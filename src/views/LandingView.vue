@@ -1,21 +1,32 @@
 <template>
-  <v-sheet
-    v-if="!mobile"
-    width="100%"
-           class="section-background">
+  <v-sheet v-if="!mobile" width="100%" class="section-background">
     <section id="start_section">
-      <StartSection :class="!mobile ? 'section__container' : 'section__container-mobile'" />
+      <StartSection
+        :class="!mobile ? 'section__container' : 'section__container-mobile'"
+      />
     </section>
-    <section id="intro_section" :class="!mobile ? 'section__container' : 'section__container-mobile'">
+    <section
+      id="intro_section"
+      :class="!mobile ? 'section__container' : 'section__container-mobile'"
+    >
       <IntroSection />
     </section>
-    <section id="slide_section" :class="!mobile ? 'section__container' : 'section__container-mobile'">
+    <section
+      id="slide_section"
+      :class="!mobile ? 'section__container' : 'section__container-mobile'"
+    >
       <SliderSection />
     </section>
-    <section id="token_section" :class="!mobile ? 'section__container' : 'section__container-mobile'">
+    <section
+      id="token_section"
+      :class="!mobile ? 'section__container' : 'section__container-mobile'"
+    >
       <TokenSection />
     </section>
-    <section id="feature_section" :class="!mobile ? 'section__container' : 'section__container-mobile'">
+    <section
+      id="feature_section"
+      :class="!mobile ? 'section__container' : 'section__container-mobile'"
+    >
       <FeatureSection />
     </section>
     <!--    <section id="crown_section" class="section__container">-->
@@ -37,37 +48,37 @@
       href="/deck"
       prepend-icon="mdi:mdi-cards-outline"
       class="mt-10"
-    >Deck
-    </v-btn
-    >
+      >Deck
+    </v-btn>
     <v-btn
       width="80%"
       href="/cats"
       prepend-icon="mdi:mdi-account-group-outline"
       class="mt-10"
-    >Team
-    </v-btn
-    >
-    <v-btn width="80%" disabled href="/" prepend-icon="mdi:mdi-book-open" class="mt-10"
-    >Lore
-    </v-btn
-    >
+      >Team
+    </v-btn>
+    <v-btn
+      width="80%"
+      disabled
+      href="/"
+      prepend-icon="mdi:mdi-book-open"
+      class="mt-10"
+      >Lore
+    </v-btn>
     <v-btn
       width="80%"
       href="/blog"
       prepend-icon="mdi:mdi-post-outline"
       class="mt-10"
-    >Blog
-    </v-btn
-    >
+      >Blog
+    </v-btn>
     <v-btn
       width="80%"
       href="/faq"
       prepend-icon="mdi:mdi-help-rhombus-outline"
       class="mt-10 mb-10"
-    >FAQ
-    </v-btn
-    >
+      >FAQ
+    </v-btn>
     <p class="mb-10">Best experienced in desktop mode</p>
   </v-sheet>
 </template>
@@ -79,6 +90,8 @@ import FeatureSection from "@/views/landingSections/FeatureSection.vue";
 import IntroSection from "@/views/landingSections/IntroSection.vue";
 import TokenSection from "@/views/landingSections/TokenSection.vue";
 import { useDisplay } from "vuetify";
+import { preload_imgs } from "@/helpers/helpers";
+import { useLoader } from "@/stores/loader";
 
 export default {
   name: "LandingView",
@@ -87,12 +100,44 @@ export default {
     IntroSection,
     FeatureSection,
     StartSection,
-    SliderSection
+    SliderSection,
   },
   setup() {
+    const loader = useLoader();
     const { mobile } = useDisplay();
-    return { mobile };
-  }
+    return { mobile, loader };
+  },
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      vm.preload();
+    });
+  },
+  data() {
+    return {
+      imagesToPreload: [
+        "/gold_titles/ADA_BNB_Bridge.png",
+        "/gold_titles/Art_Patronage.png",
+        "/gold_titles/Cardano_Visualised.png",
+        "/gold_titles/Ecosystems_utility_token_ducats2.png",
+        "/gold_titles/FAT_CATS.png",
+        "/gold_titles/FAT_CATS_2.png",
+        "/gold_titles/Fat_Cats_nfts.png",
+        "/gold_titles/Gaming_Platform.png",
+        "/gold_titles/Luxury_powered_by_AI.png",
+        "/gold_titles/NFT_COLLECTION.png",
+        "/stacking_block_2.png",
+        "/airdrop_block_3.png",
+        "/game_pass_block_1.png",
+      ],
+    };
+  },
+  methods: {
+    async preload() {
+      if (!this.mobile) {
+        await preload_imgs(this.imagesToPreload, this.loader);
+      }
+    },
+  },
 };
 </script>
 

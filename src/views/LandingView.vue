@@ -48,14 +48,14 @@
       href="/deck"
       prepend-icon="mdi:mdi-cards-outline"
       class="mt-10"
-      >Deck
+    >Deck
     </v-btn>
     <v-btn
       width="80%"
       href="/cats"
       prepend-icon="mdi:mdi-account-group-outline"
       class="mt-10"
-      >Team
+    >Team
     </v-btn>
     <v-btn
       width="80%"
@@ -63,21 +63,21 @@
       href="/"
       prepend-icon="mdi:mdi-book-open"
       class="mt-10"
-      >Lore
+    >Lore
     </v-btn>
     <v-btn
       width="80%"
       href="/blog"
       prepend-icon="mdi:mdi-post-outline"
       class="mt-10"
-      >Blog
+    >Blog
     </v-btn>
     <v-btn
       width="80%"
       href="/faq"
       prepend-icon="mdi:mdi-help-rhombus-outline"
       class="mt-10 mb-10"
-      >FAQ
+    >FAQ
     </v-btn>
     <p class="mb-10">Best experienced in desktop mode</p>
   </v-sheet>
@@ -100,7 +100,7 @@ export default {
     IntroSection,
     FeatureSection,
     StartSection,
-    SliderSection,
+    SliderSection
   },
   setup() {
     const loader = useLoader();
@@ -127,17 +127,20 @@ export default {
         "/gold_titles/NFT_COLLECTION.png",
         "/stacking_block_2.png",
         "/airdrop_block_3.png",
-        "/game_pass_block_1.png",
-      ],
+        "/game_pass_block_1.png"
+      ]
     };
   },
   methods: {
     async preload() {
+      if (this.mobile) {
+        this.loader.disable_loader();
+      }
       if (!this.mobile) {
         await preload_imgs(this.imagesToPreload, this.loader);
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

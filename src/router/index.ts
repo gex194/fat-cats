@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { useLoader } from "@/stores/loader";
+import { useDisplay } from "vuetify";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior(to, from, savedPositions) {
     return {
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     };
   },
   routes: [
@@ -19,30 +20,30 @@ const router = createRouter({
       name: "main",
       component: () => import("@/views/LandingView.vue"),
       meta: {
-        transition: "fade",
-      },
+        transition: "fade"
+      }
     },
     {
       path: "/blog",
       name: "blog",
-      component: () => import("@/views/BlogView.vue"),
+      component: () => import("@/views/BlogView.vue")
     },
     {
       path: "/cats",
       name: "team",
-      component: () => import("@/views/TeamView.vue"),
+      component: () => import("@/views/TeamView.vue")
     },
     {
       path: "/faq",
       name: "faq",
-      component: () => import("@/views/FAQView.vue"),
+      component: () => import("@/views/FAQView.vue")
     },
     {
       path: "/deck",
       name: "deck",
-      component: () => import("@/views/CatPaperView.vue"),
-    },
-  ],
+      component: () => import("@/views/CatPaperView.vue")
+    }
+  ]
 });
 
 router.beforeResolve((to, from, next) => {

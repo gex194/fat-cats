@@ -55,7 +55,9 @@ router.beforeResolve((to, from, next) => {
 
 router.afterEach((to, from) => {
   const store = useLoader();
-  store.disable_loader();
+  if (to.name === "blog" || to.name === "faq") {
+    store.disable_loader();
+  }
 });
 
 export default router;

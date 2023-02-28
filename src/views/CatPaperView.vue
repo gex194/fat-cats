@@ -78,13 +78,13 @@ export default {
   },
   methods: {
     async preload() {
-      let imgs = []
+      let imgs = [];
       for (let i = 1; i <= 29; i++) {
-        imgs.push(`/deck_pngs/${i}.png`)
+        imgs.push(`/deck_pngs/${i}.png`);
       }
-      return await preload_imgs(imgs, this.loader);
-    }
-  }
+      await preload_imgs(imgs, this.loader);
+    },
+  },
 };
 </script>
 

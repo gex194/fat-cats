@@ -36,7 +36,7 @@ export default {
   methods: {
     async preload() {
       const img_srcs = constants.team.map((member) => member.img);
-      return await preload_imgs(img_srcs, this.loader);
+      await preload_imgs(img_srcs, this.loader);
     },
   },
 };

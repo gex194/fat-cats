@@ -1,11 +1,10 @@
 <template>
   <v-app full-height class="app__container">
-    <TopBar />
     <v-overlay
       :close-on-content-click="false"
       :close-on-back="false"
       scroll-strategy="block"
-      :model-value="overlay"
+      :model-value="loader.load_state"
       class="align-center justify-center bg-black overlay__container"
     >
       <v-progress-circular
@@ -14,6 +13,7 @@
         color="gold"
       ></v-progress-circular>
     </v-overlay>
+    <TopBar />
     <v-main :class="mobile ? 'main__container-mobile' : 'main__container'">
       <v-container fluid class="content__container">
         <RouterView :class="mobile ? '' : 'view'" />
@@ -29,7 +29,6 @@ import TopBar from "@/components/landingComponents/TopbarComponent.vue";
 import FooterComponent from "@/components/landingComponents/FooterComponent.vue";
 import { useLoader } from "@/stores/loader";
 import { useDisplay } from "vuetify";
-import { preload_imgs } from "@/helpers/helpers";
 
 export default {
   name: "App",

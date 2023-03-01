@@ -19,12 +19,12 @@
         </v-sheet>
       </div>
       <div
-        class="v-col-lg-6 v-col-sm-12 d-flex flex-column align-sm-center"
+        class="v-col-lg-6 v-col-sm-12 align-center d-flex flex-column align-sm-center"
         :class="is_even_or_zero(index) ? 'align-lg-end' : 'align-lg-start'"
       >
         <v-card-item class="d-flex">
           <v-card-title>
-            <div class="text-amber-accent-1 text-lg-h4 text-md-h4 text-sm-h5">
+            <div class="text-amber-accent-1 text-lg-h3 text-md-h4 text-sm-h4">
               {{ name }}
             </div>
           </v-card-title>

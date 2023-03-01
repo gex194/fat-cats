@@ -7,7 +7,7 @@
         eager
         src="/gold_titles/FAT_CATS_2.png"
         height="200"
-        width="100%"
+        width="80%"
       />
     </Transition>
     <div class="text-center mt-3 mb-3 team-text-h4">Meet our team</div>

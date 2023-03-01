@@ -19,18 +19,18 @@
       </div>
       <div class="v-col-lg-6 v-col-sm-12 d-flex justify-start flex-column">
         <div v-animate-onscroll="'animated fadeInRight'">
-          <div class="text-lg-left text-center text-sm-center text-lg-h2 text-md-h3 text-sm-h4 tokens-title">TOTAL SUPPLY</div>
-          <div class="text-lg-left text-center text-sm-center text-lg-h3 text-md-h4 text-sm-h5">100 million</div>
+          <div class="text-lg-left text-center text-sm-center text-lg-h4 text-md-h4 text-sm-h5 tokens-title">TOTAL SUPPLY</div>
+          <div class="text-lg-left text-center text-sm-center text-lg-h4 text-md-h4 text-sm-h5">100 MILLION</div>
         </div>
         <v-spacer class="mt-10" />
         <div v-animate-onscroll="'animated fadeInRight'">
-          <div class="text-lg-left text-center text-sm-center text-lg-h2 text-md-h3 text-sm-h4 tokens-title">BLOCKCHAIN</div>
-          <div class="text-lg-left text-center text-sm-center text-lg-h3 text-md-h4 text-sm-h5">CARDANO & BNB CHAIN</div>
+          <div class="text-lg-left text-center text-sm-center text-lg-h4 text-md-h4 text-sm-h5 tokens-title">BLOCKCHAIN</div>
+          <div class="text-lg-left text-center text-sm-center text-lg-h4 text-md-h4 text-sm-h5">CARDANO & BNB CHAIN</div>
         </div>
         <v-spacer class="mt-10" />
         <div v-animate-onscroll="'animated fadeInRight'">
-          <div class="text-lg-left text-center text-sm-center text-xs-center text-lg-h2 text-md-h3 text-sm-h4 tokens-title">TOP ALLOCATION</div>
-          <div class="text-lg-left text-center text-sm-center text-xs-center text-lg-h3 text-md-h4 text-sm-h5">FAT CAT TREASURY (22%)</div>
+          <div class="text-lg-left text-center text-sm-center text-xs-center text-lg-h4 text-md-h4 text-sm-h5 tokens-title">TOP ALLOCATION</div>
+          <div class="text-lg-left text-center text-sm-center text-xs-center text-lg-h4 text-md-h4 text-sm-h5">FAT CAT TREASURY (22%)</div>
         </div>
       </div>
     </div>
@@ -50,6 +50,7 @@ export default {
 
 <style scoped>
 .tokens-title {
+  font-family: Cinzel-bold;
   color: palegoldenrod;
 }
 </style>

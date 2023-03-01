@@ -14,7 +14,7 @@
       </KinesisElement>
     </KinesisContainer>
     <div
-      class="text-center mt-3 text-body-1 text-lg-h4 text-md-h4 text-sm-h5 text-yellow-lighten-4"
+      class="text-center mt-3 text-body-1 text-lg-h4 text-md-h4 text-sm-h5 text-yellow-lighten-4 mb-5"
     >
       {{ title }}
     </div>

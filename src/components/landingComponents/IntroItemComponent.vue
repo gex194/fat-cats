@@ -7,7 +7,7 @@
     elevation="10"
   >
     <v-sheet
-      :height="mobile ? 150 : 300"
+      :height="mobile ? 150 : 220"
       elevation="10"
       width="100%"
       class="d-flex align-center pa-5 rounded-xl intro-card-background"

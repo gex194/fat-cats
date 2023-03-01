@@ -79,7 +79,7 @@ export default {
   methods: {
     async preload() {
       let imgs = [];
-      for (let i = 1; i <= 29; i++) {
+      for (let i = 1; i <= 5; i++) {
         imgs.push(`/deck_pngs/${i}.png`);
       }
       await preload_imgs(imgs, this.loader);

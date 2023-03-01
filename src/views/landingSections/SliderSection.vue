@@ -22,18 +22,19 @@
         <v-sheet
           class="d-flex flex-row justify-center align-center flex-wrap bg-transparent"
         >
-          <div class="d-flex align-content-center v-col-12 v-col-lg-6 v-col-md-6 v-col-sm-6 justify-end">
+          <div class="v-col-2"></div>
+          <div class="d-flex align-end v-col-12 v-col-lg-4 v-col-md-4 v-col-sm-4 justify-end">
             <video
               preload="metadata"
               :ref="play_video"
               :src="item.src"
               playsinline
               muted
-              style="width: 100%;"
+              style="width:100%"
               :style="mobile ? 'height: 200px' :`height:${calculate_height() - 50}px`"
             />
           </div>
-          <div class="v-col-12 v-col-lg-6 v-col-md-6 v-col-sm-6">
+          <div class="v-col-12 v-col-lg-4 v-col-md-4 v-col-sm-4">
             <div class="d-flex flex-column align-baseline">
               <v-sheet
                 class="mb-10 bg-transparent"
@@ -53,6 +54,7 @@
               </div>
             </div>
           </div>
+          <div class="v-col-2"></div>
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
@@ -101,7 +103,7 @@ export default {
         width: 600,
         title_src: constants.slides.ada_bnb_bridge.title_src,
         text: constants.slides.ada_bnb_bridge.text,
-        src: "/webm_animations/ada_bnb_bridge.webm"
+        src: "/webm_animations/ada-bnb_bridge.webm"
       },
       {
         id: 4,
@@ -115,7 +117,7 @@ export default {
         width: 600,
         title_src: constants.slides.gaming_platform.title_src,
         text: constants.slides.gaming_platform.text,
-        src: "/webm_animations/controller.webm"
+        src: "/webm_animations/gaming_platform.webm"
       }
     ]
   }),
@@ -151,7 +153,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.v-carousel__controls__item{
+  margin-right: 20px;
+}
 .carousel-text__text {
   white-space: pre-line;
 }

@@ -141,18 +141,18 @@ export default {
       topbar_tabs: [
         {
           id: 1,
-          title: "Project",
+          title: "PROJECT",
           children: [
             {
               id: 1,
-              title: "CatPaper Deck",
+              title: "DECK",
               action: () => this.go_to("/deck")
             },
-            { id: 2, title: "Team", action: () => this.go_to("/cats") }
+            { id: 2, title: "TEAM", action: () => this.go_to("/cats") }
           ]
         },
-        { id: 2, title: "Lore", href: "" },
-        { id: 3, title: "Blog", href: "/blog" },
+        { id: 2, title: "LORE", href: "" },
+        { id: 3, title: "BLOG", href: "/blog" },
         { id: 5, title: "FAQ", href: "/faq" }
       ]
     };

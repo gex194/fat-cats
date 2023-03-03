@@ -1,6 +1,7 @@
 <template>
   <v-sheet
-    class="d-flex justify-center align-center section-background"
+    style="padding-top: 180px"
+    class="d-flex justify-center flex-column align-center section-background"
   >
     <FAQListComponent class="ma-5" />
   </v-sheet>
@@ -8,10 +9,11 @@
 
 <script>
 import FAQListComponent from "@/components/faqComponents/FAQListComponent.vue";
+import TopbarComponent from "@/components/landingComponents/TopbarComponent.vue";
 
 export default {
   name: "FAQView",
-  components: { FAQListComponent },
+  components: { TopbarComponent, FAQListComponent },
 };
 </script>
 

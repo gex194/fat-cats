@@ -1,20 +1,24 @@
 <template>
   <v-card
-    class="d-flex flex-column align-center bg-transparent pr-10 pl-10"
+    max-width="1920"
+    max-height="920"
+    width="100%"
+    height="100%"
+    class="d-flex flex-column align-center bg-transparent"
     elevation="0"
   >
     <v-carousel
       v-model="carousel_active_item"
-      :height="carousel_height"
-      cycle
+      height="100vh"
       interval="10000"
+      cycle
       delimiter-icon="mdi:mdi-circle"
       hide-delimiter-background
       :hide-delimiters="mobile"
       :show-arrows="false"
     >
       <v-carousel-item
-        class="d-flex justify-center"
+        class="d-flex justify-center align-center"
         v-for="item in carousel_items"
         :value="item.id"
         :key="`wndw-${item.id}`"
@@ -22,20 +26,18 @@
         <v-sheet
           class="d-flex flex-row justify-center align-center flex-wrap bg-transparent"
         >
-          <div class="v-col-2"></div>
-          <div class="d-flex align-end v-col-12 v-col-lg-4 v-col-md-4 v-col-sm-4 justify-end">
+          <div class="d-flex align-end v-col-6 v-col-lg-6 v-col-md-6 v-col-sm-6 justify-end">
             <video
               preload="metadata"
               :ref="play_video"
               :src="item.src"
               playsinline
               muted
-              style="width:100%"
-              :style="mobile ? 'height: 200px' :`height:${calculate_height() - 50}px`"
+              style="width:100%;max-width: 100vh"
             />
           </div>
-          <div class="v-col-12 v-col-lg-4 v-col-md-4 v-col-sm-4">
-            <div class="d-flex flex-column align-baseline">
+          <div class="v-col-6 v-col-lg-6 v-col-md-6 v-col-sm-6 d-flex flex-column justify-start align-baseline">
+            <div class="d-flex flex-column justify-start align-baseline">
               <v-sheet
                 class="mb-10 bg-transparent"
                 height="100%"
@@ -50,11 +52,11 @@
               </v-sheet>
               <div class="carousel-text__text d-flex">
                 <span
-                  class="text-caption text-lg-h5 text-md-h6">{{ item.text }}</span>
+                  class="text-caption carousel-text text-lg-h5 text-md-h6">{{ item.text }}</span>
               </div>
             </div>
           </div>
-          <div class="v-col-2"></div>
+<!--          <div class="v-col-2"></div>-->
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
@@ -70,9 +72,6 @@ export default {
   setup() {
     const { mobile, md, sm } = useDisplay();
     return { mobile, md, sm };
-  },
-  mounted() {
-    console.log(this.$refs.slides);
   },
   computed: {
     carousel_height() {
@@ -124,7 +123,7 @@ export default {
   methods: {
     calculate_height() {
       if (this.lg) {
-        return 500;
+        return 720;
       }
       if (this.md) {
         return 400;
@@ -135,7 +134,7 @@ export default {
       if (this.mobile) {
         return 500;
       }
-      return 500;
+      return 720;
     },
     play_video(el) {
       if (el) {
@@ -159,5 +158,11 @@ export default {
 }
 .carousel-text__text {
   white-space: pre-line;
+}
+
+.carousel-text {
+  font-family: Cinzel !important;
+  line-height: 50px;
+  font-weight: bolder;
 }
 </style>

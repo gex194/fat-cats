@@ -1,18 +1,18 @@
 <template>
   <v-sheet
     :rounded="150"
-    min-width="300"
-    class="d-flex justify-center align-center pa-5 mt-5 ma-lg-5 ma-md-3 mt-sm-5 mt-xs-5 v-col-3 flex-wrap border-t intro-card-outterbox"
+    width="30%"
+    class="d-flex justify-center align-center pa-5 mt-15 mt-sm-5 mt-xs-5 border-t intro-card-outterbox"
     v-animate-onscroll="{ down: 'animated fadeInUp delay-2s' }"
     elevation="10"
   >
     <v-sheet
-      :height="mobile ? 150 : 220"
+      height="30vh"
       elevation="10"
       width="100%"
       class="d-flex align-center pa-5 rounded-xl intro-card-background"
     >
-      <div class="text-center text-lg-h5 text-body-1">
+      <div class="intro-text text-center text-lg-h5 text-body-1">
         {{ title }}
       </div>
     </v-sheet>
@@ -34,8 +34,8 @@ export default {
 
 <style scoped>
 .intro-text {
-  font-family: Cinzel-black, serif;
-  font-size: 30px;
+  font-family: Cinzel, serif !important;
+  font-weight: bold;
 }
 
 .intro-card-background {

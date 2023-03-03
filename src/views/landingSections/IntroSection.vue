@@ -1,8 +1,10 @@
 <template>
   <v-sheet
-    class="d-flex flex-column align-center justify-center bg-transparent pr-10 pl-10"
+    width="100%"
+    min-height="100vh"
+    class="d-flex flex-column align-center justify-center bg-transparent"
   >
-    <div class="position-absolute d-flex justify-start align-center" style="right:-50px;z-index:3">
+    <div class="position-absolute d-flex justify-start align-center" style="right:-130px;z-index:3">
       <kinesis-container event="scroll">
         <kinesis-element
           type="translate"
@@ -22,31 +24,31 @@
       </kinesis-container>
     </div>
     <div
-      class="d-flex justify-center align-center"
+      class="d-flex justify-center align-center mb-15"
       :min-height="80"
-      width="85%"
+      width="90%"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
       v-animate-onscroll="'animated fadeInUp'"
     >
       <img
-        style="width:60%"
+        style="width:70%"
         src="/gold_titles/Luxury_powered_by_AI.png"
       />
     </div>
-    <div class="d-flex justify-space-evenly flex-wrap align-center mt-5 mt-sm-15 mt-lg-15">
+    <div class="d-flex justify-space-evenly flex-wrap align-center mt-15 mt-sm-15 mt-lg-15">
       <IntroItemComponent
         v-for="item in constants.intro"
         :key="item.id"
         v-bind="item"
       />
     </div>
-    <div class="position-absolute d-flex justify-end" style="left:-25px;z-index:3">
+    <div class="position-absolute d-flex justify-end" style="left:-130px;z-index:3">
       <kinesis-container event="scroll">
         <kinesis-element
           type="translate"
           :originX="0"
-          :originY="20"
+          :originY="40"
           :strength="-700"
         >
           <video

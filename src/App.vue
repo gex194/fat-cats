@@ -1,5 +1,6 @@
 <template>
   <v-app full-height class="app__container">
+    <TopBar v-if="$route.name !== 'main'" />
     <v-overlay
       :close-on-content-click="false"
       :close-on-back="false"
@@ -13,10 +14,10 @@
         color="gold"
       ></v-progress-circular>
     </v-overlay>
-    <TopBar />
+
     <v-main :class="mobile ? 'main__container-mobile' : 'main__container'">
       <v-container fluid class="content__container">
-        <RouterView :class="mobile ? '' : 'view'" />
+        <RouterView :class="mobile ? '' : ''" />
       </v-container>
     </v-main>
     <FooterComponent />

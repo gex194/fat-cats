@@ -9,7 +9,7 @@
     style="z-index: 1"
     class="appbar__container"
   >
-    <v-tabs fixed-tabs grow class="tabs__container" v-model="selected_tab">
+    <v-tabs grow class="tabs__container" v-model="selected_tab">
       <v-tab
         :value="0"
         selected-class="tab--selected"

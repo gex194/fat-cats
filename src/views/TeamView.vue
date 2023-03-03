@@ -1,5 +1,6 @@
 <template>
   <v-sheet
+    style="padding-top:180px"
     class="d-flex justify-center align-center flex-column section-background"
   >
     <Transition name="fade" mode="out-in" appear>
@@ -20,10 +21,11 @@ import TeamListComponent from "@/components/teamComponents/TeamListComponent.vue
 import { useLoader } from "@/stores/loader";
 import constants from "@/constants/constants";
 import { preload_imgs } from "@/helpers/helpers";
+import TopbarComponent from "@/components/landingComponents/TopbarComponent.vue";
 
 export default {
   name: "TeamView",
-  components: { TeamListComponent },
+  components: { TopbarComponent, TeamListComponent },
   setup() {
     const loader = useLoader();
     return { loader };

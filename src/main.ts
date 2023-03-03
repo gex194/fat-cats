@@ -23,6 +23,8 @@ import "animate.css";
 import emailjs from "@emailjs/browser";
 import { aliases, fa } from "vuetify/iconsets/fa";
 import { mdi } from "vuetify/iconsets/mdi";
+// @ts-ignore
+import VueMobileDetection from "vue-mobile-detection";
 
 const vuetify = createVuetify({
   components,
@@ -81,6 +83,7 @@ app.use(vuetify);
 app.use(VueKinesis);
 // @ts-ignore
 app.use(VueAnimateOnScroll);
+app.use(VueMobileDetection);
 app.directive("scroll", directives.Scroll);
 app.directive("intersect", directives.Intersect);
 app.mount("#app");

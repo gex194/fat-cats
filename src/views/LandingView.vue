@@ -1,39 +1,46 @@
 <template>
-  <v-sheet v-if="!mobile" width="100%" class="section-background">
-    <section id="start_section">
-      <StartSection
+  <v-sheet v-if="!$isMobile() && !mobile" width="100%" class="section-background landing__container">
+    <div ref="scroll">
+      <section>
+        <StartSection
+          :class="!mobile ? 'section__container' : 'section__container-mobile'"
+        />
+      </section>
+      <section
+        id="intro_section"
+        class="d-flex align-center justify-center"
         :class="!mobile ? 'section__container' : 'section__container-mobile'"
-      />
-    </section>
-    <section
-      id="intro_section"
-      :class="!mobile ? 'section__container' : 'section__container-mobile'"
-    >
-      <IntroSection />
-    </section>
-    <section
-      id="slide_section"
-      :class="!mobile ? 'section__container' : 'section__container-mobile'"
-    >
-      <SliderSection />
-    </section>
-    <section
-      id="token_section"
-      :class="!mobile ? 'section__container' : 'section__container-mobile'"
-    >
-      <TokenSection />
-    </section>
-    <section
-      id="feature_section"
-      :class="!mobile ? 'section__container' : 'section__container-mobile'"
-    >
-      <FeatureSection />
-    </section>
-    <!--    <section id="crown_section" class="section__container">-->
-    <!--      <v-lazy :options="{ threshold: 0.5 }" :min-height="600">-->
-    <!--        <CrownSection />-->
-    <!--      </v-lazy>-->
-    <!--    </section>-->
+      >
+        <IntroSection />
+      </section>
+      <section
+        id="slide_section"
+        class="d-flex align-center justify-center"
+        :class="!mobile ? 'section__container' : 'section__container-mobile'"
+      >
+        <SliderSection />
+      </section>
+      <section
+        id="token_section"
+        class="d-flex align-center justify-center"
+        :class="!mobile ? 'section__container' : 'section__container-mobile'"
+      >
+        <TokenSection />
+      </section>
+      <section
+        id="feature_section"
+        class="d-flex align-center justify-center"
+        :class="!mobile ? 'section__container' : 'section__container-mobile'"
+      >
+        <FeatureSection />
+      </section>
+      <section
+        id="crown_section" class="section__container">
+        <CrownSection />
+      </section>
+      <section></section>
+    </div>
+
   </v-sheet>
   <v-sheet
     class="section-background d-flex flex-column align-center justify-center"
@@ -92,10 +99,14 @@ import TokenSection from "@/views/landingSections/TokenSection.vue";
 import { useDisplay } from "vuetify";
 import { preload_imgs } from "@/helpers/helpers";
 import { useLoader } from "@/stores/loader";
+import scrollSnapPolyfill from "css-scroll-snap-polyfill";
+import PanelSnap from "panelsnap";
+import CrownSection from "@/views/landingSections/CrownSection.vue";
 
 export default {
   name: "LandingView",
   components: {
+    CrownSection,
     TokenSection,
     IntroSection,
     FeatureSection,
@@ -104,16 +115,34 @@ export default {
   },
   setup() {
     const loader = useLoader();
-    const { mobile } = useDisplay();
-    return { mobile, loader };
+    const { mobile, sm } = useDisplay();
+    return { mobile, sm, loader };
   },
   beforeRouteEnter(to, from, next) {
     next((vm) => {
       vm.preload();
     });
   },
+  mounted() {
+    scrollSnapPolyfill();
+    this.$nextTick(() => {
+      if (!this.$isMobile()) {
+        this.init_panel();
+        document.addEventListener("wheel", this.handle_wheel, { passive: false });
+        this.active_panel.on("snapStart", () => this.panel_moving = true);
+        this.active_panel.on("snapStop", () => this.panel_moving = false);
+      }
+    });
+  },
+  beforeUnmount() {
+    document.removeEventListener("wheel", this.handle_wheel, { passive: false });
+    this.active_panel.destroy();
+  },
   data() {
     return {
+      panel_moving: false,
+      panel_index: 0,
+      active_panel: "",
       imagesToPreload: [
         "/gold_titles/ADA_BNB_Bridge.png",
         "/gold_titles/Art_Patronage.png",
@@ -139,14 +168,59 @@ export default {
       if (!this.mobile) {
         await preload_imgs(this.imagesToPreload, this.loader);
       }
+    },
+    init_panel() {
+      const defaultOptions = {
+        panelSelector: "section",
+        directionThreshold: 20,
+        delay: 0,
+        duration: 1000,
+        easing: function(t) {
+          return t * t * t;
+        }
+      };
+      console.log("panel loaded");
+      this.active_panel = new PanelSnap(defaultOptions);
+    },
+    handle_wheel(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (this.panel_moving) {return false;}
+      console.log(e.deltaY);
+      if (e.deltaY > 0) {
+        this.panel_index += 1;
+      }
+
+      if (e.deltaY < 0) {
+        this.panel_index -= 1;
+      }
+
+      if (this.panel_index >= this.$refs.scroll.children.length) {
+        this.panel_index = this.$refs.scroll.children.length - 1;
+        return false;
+      }
+
+      if (this.panel_index < 0) {
+        this.panel_index = 0;
+        return false;
+      }
+
+      this.active_panel.snapToPanel(this.$refs.scroll.children[this.panel_index]);
+      return false;
     }
   }
 };
 </script>
 
 <style scoped>
+
 .section__container {
-  margin-top: 120px;
+  /*margin-top: 120px;*/
+}
+
+.landing__container {
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 .section__container-mobile {

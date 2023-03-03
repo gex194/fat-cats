@@ -1,9 +1,14 @@
 <template>
   <v-sheet
-    class="d-flex flex-column bg-transparent justify-center align-center pl-10 pr-10"
+    min-height="100vh"
+    max-width="1920"
+    width="100%"
+    class="d-flex flex-column bg-transparent justify-space-evenly align-center pt-15"
   >
-    <img src="/gold_titles/Fat_Cats_nfts.png" style="width:50%" v-animate-onscroll="'animated fadeInUp'" />
-    <div class="d-flex justify-space-evenly align-baseline mt-15 v-col-12">
+    <div class="d-flex justify-center align-center mb-15">
+      <img src="/gold_titles/Fat_Cats_nfts.png" style="width:50%" v-animate-onscroll="'animated fadeInUp'" />
+    </div>
+    <div class="d-flex justify-space-evenly align-baseline mt-5">
       <FeatureItemComponent
         v-animate-onscroll="'animated fadeInUp'"
         v-for="card in cards"
@@ -25,7 +30,7 @@ export default {
       cards: [
         {
           id: 1,
-          title: "Game Pass",
+          title: "GAME PASS",
           description: "Permanent access to Play2Earn games unhindered by game seasons",
           src: "/game_pass_block_1.png",
           delay: 100,

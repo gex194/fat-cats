@@ -1,28 +1,33 @@
 <template>
   <v-sheet
     class="d-flex align-center justify-center"
-    :style="mobile ? 'margin-top:0px' : 'margin-top:-160px'"
-    max-height="960"
+    width="100%"
+    min-height="90vh"
+    :style="mobile ? 'margin-top:0px' : ''"
   >
-    <video
-      preload="auto"
-      id="video_background"
-      v-on:loadeddata="on_video_load"
-      autoplay
-      muted
-      playsinline
-      loop
-      src="/webm_animations/Banner_Castle_alpha.webm"
-      style="max-width: 100%"
-    />
-    <video
-      preload="auto"
-      autoplay
-      muted
-      playsinline
-      src="/webm_animations/Enter_cat_world_alpha.webm"
-      style="max-width: 40%; position: absolute; top: 60%"
-    />
+    <TopbarComponent />
+    <div>
+      <video
+        preload="auto"
+        id="video_background"
+        v-on:loadeddata="on_video_load"
+        autoplay
+        muted
+        playsinline
+        loop
+        src="/webm_animations/Banner_Castle_alpha.webm"
+        style="object-fit: cover"
+      />
+      <video
+        preload="auto"
+        autoplay
+        muted
+        playsinline
+        src="/webm_animations/Enter_cat_world_alpha.webm"
+        class="enter_cat_world"
+      />
+    </div>
+
   </v-sheet>
 </template>
 
@@ -30,9 +35,11 @@
 import { useLoader } from "@/stores/loader";
 import { onBeforeMount } from "vue";
 import { useDisplay } from "vuetify";
+import TopbarComponent from "@/components/landingComponents/TopbarComponent.vue";
 
 export default {
   name: "StartSection",
+  components: { TopbarComponent },
   setup() {
     const store = useLoader();
     const { mobile } = useDisplay();
@@ -49,4 +56,14 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.enter_cat_world {
+  position: absolute;
+  max-width: 40%;
+  top: 60vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>

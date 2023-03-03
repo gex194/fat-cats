@@ -1,20 +1,19 @@
 <template>
   <v-sheet
-    width="400"
-    min-height="360"
-    class="d-flex bg-transparent align-center justify-center flex-column pa-5"
+    width="100%"
+    class="d-flex bg-transparent align-center justify-center flex-column"
   >
     <KinesisContainer :active="!mobile">
       <KinesisElement type="depth" :strength="15" class="d-flex justify-center">
         <img
           :src="src"
-          min-width="95"
-          class="feature-item__img w-75"
+          style="min-width: 100px"
+          class="feature-item__img"
         />
       </KinesisElement>
     </KinesisContainer>
     <div
-      class="text-center mt-3 text-body-1 text-lg-h4 text-md-h4 text-sm-h5 text-yellow-lighten-4 mb-5"
+      class="feature-item__title text-center mt-10 text-body-1 text-lg-h4 text-md-h4 text-sm-h5 text-yellow-lighten-4 mb-5"
     >
       {{ title }}
     </div>
@@ -39,9 +38,7 @@ export default {
 
 <style scoped>
 .feature-item__title {
-  font-family: Cinzel Bold;
-  color: lightgoldenrodyellow;
-  font-size: 30px;
+  font-family: Cinzel-bold !important;
 }
 
 .feature-item__description {

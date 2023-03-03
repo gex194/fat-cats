@@ -1,6 +1,8 @@
 <template>
-  <v-sheet class="bg-black d-flex justify-center flex-column align-center">
+  <v-sheet
+    class="bg-black d-flex justify-center flex-column align-center">
     <v-carousel
+      style="margin-top: 170px"
       hide-delimiter-background
       :show-arrows="!mobile"
       hide-delimiters
@@ -57,9 +59,11 @@
 import { useDisplay } from "vuetify";
 import { useLoader } from "@/stores/loader";
 import { preload_imgs } from "@/helpers/helpers";
+import TopbarComponent from "@/components/landingComponents/TopbarComponent.vue";
 
 export default {
   name: "CatPaperView",
+  components: { TopbarComponent },
   setup() {
     const loader = useLoader();
     const { mobile } = useDisplay();

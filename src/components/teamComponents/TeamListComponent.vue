@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="d-flex justify-center align-center flex-column mt-2 mb-2 w-75 bg-transparent"
+    class="d-flex justify-center align-center flex-column mt-2 mb-2 w-100 bg-transparent"
   >
     <TeamListItemComponent
       v-for="(member, index) in team"

@@ -1,5 +1,5 @@
 <template>
-    <v-sheet class="d-flex w-75 justify-center flex-column align-center bg-transparent">
+    <v-sheet class="d-flex justify-center flex-column align-center bg-transparent">
       <FAQContentListComponent :content="constants.faq" />
     </v-sheet>
 </template>

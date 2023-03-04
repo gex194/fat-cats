@@ -1,7 +1,6 @@
 <template>
   <v-sheet
-    style="padding-top: 180px"
-    class="d-flex justify-center h-100 flex-column align-center section-background view__container"
+    class="d-flex justify-center h-100 flex-column align-center section-background faq__container view__container"
   >
     <FAQListComponent class="ma-5" />
   </v-sheet>
@@ -17,4 +16,13 @@ export default {
 </script>
 
 <style scoped>
+.faq__container {
+  padding-top: 180px
+}
+
+@media screen and (max-width: 739px) {
+  .faq__container {
+    padding-top: 0px;
+  }
+}
 </style>

@@ -172,14 +172,13 @@ export default {
     init_panel() {
       const defaultOptions = {
         panelSelector: "section",
-        directionThreshold: 20,
+        directionThreshold: 200,
         delay: 0,
         duration: 800,
         easing: function(t) {
           return t * t * t * t;
         }
       };
-      console.log("panel loaded");
       this.active_panel = new PanelSnap(defaultOptions);
     },
     handle_wheel(e) {
@@ -189,7 +188,6 @@ export default {
       e.preventDefault();
       e.stopPropagation();
       if (this.panel_moving) {return false;}
-      console.log(e.deltaY);
       if (e.deltaY > 0) {
         this.panel_index += 1;
       }

@@ -1,8 +1,7 @@
 <template>
   <v-sheet
-    class="bg-black d-flex justify-center flex-column align-center h-100 view__container">
+    class="bg-black d-flex justify-center flex-column align-center h-100 view__container deck__container">
     <v-carousel
-      style="margin-top: 170px"
       hide-delimiter-background
       :show-arrows="!mobile"
       hide-delimiters
@@ -93,6 +92,15 @@ export default {
 </script>
 
 <style scoped>
+.deck__container {
+  padding-top: 180px;
+}
+
+@media screen and (max-width: 739px) {
+  .deck__container {
+    padding-top: 0px;
+  }
+}
 .slide__active {
   color: black;
   background-color: lightgoldenrodyellow;

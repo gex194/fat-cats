@@ -1,17 +1,16 @@
 <template>
   <v-sheet
-    style="padding-top:180px"
-    class="d-flex justify-center align-center flex-column section-background view__container"
+    class="d-flex justify-center align-center flex-column section-background team__container view__container"
   >
     <Transition name="fade" mode="out-in" appear>
       <v-img
         eager
         src="/gold_titles/FAT_CATS_2.png"
-        height="200"
         width="80%"
+        class="mt-5"
       />
     </Transition>
-    <div class="text-center mt-3 mb-3 team-text-h4">Meet our team</div>
+    <div class="text-center mt-3 mb-3 text-lg-h3 text-md-h5 text-sm-h5">Meet our team</div>
     <TeamListComponent />
   </v-sheet>
 </template>
@@ -21,11 +20,10 @@ import TeamListComponent from "@/components/teamComponents/TeamListComponent.vue
 import { useLoader } from "@/stores/loader";
 import constants from "@/constants/constants";
 import { preload_imgs } from "@/helpers/helpers";
-import TopbarComponent from "@/components/landingComponents/TopbarComponent.vue";
 
 export default {
   name: "TeamView",
-  components: { TopbarComponent, TeamListComponent },
+  components: { TeamListComponent },
   setup() {
     const loader = useLoader();
     return { loader };
@@ -50,8 +48,13 @@ export default {
   font-family: Cinzel, serif;
 }
 
-.team-text-h4 {
-  font-size: 40px;
-  font-family: Cinzel, serif;
+.team__container {
+  padding-top: 180px;
+}
+
+@media screen and (max-width: 739px) {
+  .team__container {
+    padding-top: 0px;
+  }
 }
 </style>

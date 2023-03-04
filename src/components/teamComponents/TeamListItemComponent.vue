@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="w-100 h-100 mt-5 hidden bg-transparent flex-wrap"
+    class="w-100 h-100 mt-lg-5 hidden bg-transparent flex-wrap"
     elevation="0"
     v-animate-onscroll="{ down: animation_style(index) }"
   >
@@ -9,11 +9,14 @@
       :class="is_even_or_zero(index) ? 'flex-row-reverse' : ''"
     >
       <div class="v-col-lg-6 v-col-sm-12 d-flex align-center">
-        <v-sheet class="bg-transparent" min-height="500" width="100%">
+        <v-sheet
+          class="d-flex bg-transparent align-center justify-center"
+          :class="is_even_or_zero(index) ? 'justify-lg-start align-lg-end' : 'justify-lg-end align-lg-start'"
+          width="100%">
           <v-img
             eager
-            class="mx-auto rounded-xl"
-            style="max-width: 500px; height: 500px"
+            class="rounded-xl"
+            style="max-width: 50vh;"
             :src="img"
           />
         </v-sheet>
@@ -29,9 +32,11 @@
             </div>
           </v-card-title>
         </v-card-item>
-        <v-card-item>
+        <v-card-item class="d-flex">
           <v-card-subtitle
-            ><h2>{{ role }}</h2></v-card-subtitle
+            >
+            <span class="text-subtitle-1 text-lg-h5 text-md-h5 text-sm-h5">{{ role }}</span>
+          </v-card-subtitle
           >
         </v-card-item>
         <div class="d-flex">

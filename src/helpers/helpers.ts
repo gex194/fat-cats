@@ -10,12 +10,9 @@ export const preload_imgs = (img_srcs: Array<string>, loader: any) => {
 
   return Promise.all(images)
     .then(() => {
-      console.log("Images loaded!");
       loader.disable_loader();
     })
     .catch((error) => {
-      console.error("Some image(s) failed loading!");
-      console.error(error.message);
       loader.disable_loader();
     });
 };

@@ -1,5 +1,5 @@
 <template>
-  <v-sheet width="100%" class="section-background h-100 view__container" style="padding-top: 180px">
+  <v-sheet width="100%" class="section-background h-100 view__container blog__container">
     <blog-list-component />
   </v-sheet>
 </template>
@@ -23,4 +23,13 @@ export default {
 </script>
 
 <style scoped>
+.blog__container {
+  padding-top: 180px;
+}
+
+@media screen and (max-width: 739px) {
+  .blog__container {
+    padding-top: 0px;
+  }
+}
 </style>

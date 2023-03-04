@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="bg-black d-flex justify-center flex-column align-center view__container">
+    class="bg-black d-flex justify-center flex-column align-center h-100 view__container">
     <v-carousel
       style="margin-top: 170px"
       hide-delimiter-background

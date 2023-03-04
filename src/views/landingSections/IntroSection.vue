@@ -2,6 +2,7 @@
   <v-sheet
     width="100%"
     min-height="100vh"
+    max-width="1920"
     class="d-flex flex-column align-center justify-center bg-transparent"
   >
     <div class="position-absolute d-flex justify-start align-center" style="right:-130px;z-index:3">

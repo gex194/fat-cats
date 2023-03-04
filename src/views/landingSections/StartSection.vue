@@ -2,11 +2,11 @@
   <v-sheet
     class="d-flex align-center justify-center bg-transparent"
     width="100%"
-    min-height="90vh"
+    height="100vh"
     :style="mobile ? 'margin-top:0px' : ''"
   >
     <TopbarComponent />
-    <div>
+    <div class="h-100 w-100" style="object-fit: fill">
       <video
         preload="auto"
         id="video_background"
@@ -15,8 +15,9 @@
         muted
         playsinline
         loop
+        class="w-100 h-100"
         src="/webm_animations/Banner_Castle_alpha.webm"
-        style="object-fit: cover"
+        style="object-fit: cover;"
       />
       <video
         preload="auto"

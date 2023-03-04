@@ -1,7 +1,6 @@
 <template>
   <v-card
     max-width="1920"
-    max-height="920"
     width="100%"
     height="100%"
     class="d-flex flex-column align-center bg-transparent"

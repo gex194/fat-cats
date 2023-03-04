@@ -42,11 +42,6 @@ export default {
   color: #ffec93;
 }
 
-.feature-item__description {
-  font-family: Montserrat;
-  font-size: 16px;
-}
-
 .feature-item__img {
   width: 100%;
 }

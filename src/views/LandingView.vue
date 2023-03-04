@@ -1,5 +1,5 @@
 <template>
-  <v-sheet v-if="!$isMobile() && !mobile" width="100%" class="section-background landing__container">
+  <v-sheet v-if="!$isMobile() && !mobile" width="100%" class="section-background">
     <div ref="scroll">
       <section>
         <StartSection
@@ -8,34 +8,34 @@
       </section>
       <section
         id="intro_section"
-        class="d-flex align-center justify-center"
+        class="d-flex align-center justify-center landing__container"
         :class="!mobile ? 'section__container' : 'section__container-mobile'"
       >
         <IntroSection />
       </section>
       <section
         id="slide_section"
-        class="d-flex align-center justify-center"
+        class="d-flex align-center justify-center landing__container"
         :class="!mobile ? 'section__container' : 'section__container-mobile'"
       >
         <SliderSection />
       </section>
       <section
         id="token_section"
-        class="d-flex align-center justify-center"
+        class="d-flex align-center justify-center landing__container"
         :class="!mobile ? 'section__container' : 'section__container-mobile'"
       >
         <TokenSection />
       </section>
       <section
         id="feature_section"
-        class="d-flex align-center justify-center"
+        class="d-flex align-center justify-center landing__container"
         :class="!mobile ? 'section__container' : 'section__container-mobile'"
       >
         <FeatureSection />
       </section>
       <section
-        id="crown_section" class="section__container">
+        id="crown_section" class="section__container landing__container">
         <CrownSection />
       </section>
       <section></section>
@@ -183,6 +183,9 @@ export default {
       this.active_panel = new PanelSnap(defaultOptions);
     },
     handle_wheel(e) {
+      if (e.ctrlKey) {
+        return true;
+      }
       e.preventDefault();
       e.stopPropagation();
       if (this.panel_moving) {return false;}

@@ -26,14 +26,15 @@
         <v-sheet
           class="d-flex flex-row justify-center align-center flex-wrap bg-transparent"
         >
-          <div class="d-flex align-end v-col-6 v-col-lg-6 v-col-md-6 v-col-sm-6 justify-end">
+          <div class="d-flex align-center v-col-6 v-col-lg-6 v-col-md-6 v-col-sm-6 justify-center">
             <video
               preload="metadata"
               :ref="play_video"
               :src="item.src"
               playsinline
               muted
-              style="width:100%;max-width: 100vh"
+              :style="`max-width: ${item.width}vh; width: ${item.current_width}%; left: ${this.md ? 0 : item.left}px`"
+              style="position: absolute;"
             />
           </div>
           <div class="v-col-6 v-col-lg-6 v-col-md-6 v-col-sm-6 d-flex flex-column justify-start align-baseline">
@@ -85,35 +86,45 @@ export default {
     carousel_items: [
       {
         id: 1,
-        width: 600,
+        width: 100,
+        current_width: 100,
+        left: 0,
         title_src: constants.slides.nft_collection.title_src,
         text: constants.slides.nft_collection.text,
         src: "/webm_animations/nft_collection.webm"
       },
       {
         id: 2,
-        width: 600,
+        width: 100,
+        current_width: 100,
+        left: 0,
         title_src: constants.slides.art_patronage.title_src,
         text: constants.slides.art_patronage.text,
         src: "/webm_animations/art_patronage.webm"
       },
       {
         id: 3,
-        width: 600,
+        width: 100,
+        current_width: 100,
+        left: 0,
         title_src: constants.slides.ada_bnb_bridge.title_src,
         text: constants.slides.ada_bnb_bridge.text,
         src: "/webm_animations/ada-bnb_bridge.webm"
       },
       {
         id: 4,
-        width: 600,
+        width: 100,
+        current_width: 100,
+        left: 0,
         title_src: constants.slides.cardano_visualized.title_src,
         text: constants.slides.cardano_visualized.text,
         src: "/webm_animations/cardano_visualised.webm"
       },
       {
         id: 5,
-        width: 600,
+        width: 190,
+        current_width: 120,
+        left: -125,
         title_src: constants.slides.gaming_platform.title_src,
         text: constants.slides.gaming_platform.text,
         src: "/webm_animations/gaming_platform.webm"
@@ -145,7 +156,7 @@ export default {
 
           el.play();
           el.style['opacity'] = '1';
-        }, 500)
+        }, 350)
       }
     }
   }

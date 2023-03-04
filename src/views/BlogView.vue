@@ -1,5 +1,5 @@
 <template>
-  <v-sheet width="100%" class="section-background" style="padding-top: 180px">
+  <v-sheet width="100%" class="section-background view__container" style="padding-top: 180px">
     <blog-list-component />
   </v-sheet>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <v-sheet
     style="padding-top: 180px"
-    class="d-flex justify-center flex-column align-center section-background"
+    class="d-flex justify-center flex-column align-center section-background view__container"
   >
     <FAQListComponent class="ma-5" />
   </v-sheet>

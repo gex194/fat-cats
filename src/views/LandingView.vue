@@ -174,9 +174,9 @@ export default {
         panelSelector: "section",
         directionThreshold: 20,
         delay: 0,
-        duration: 1000,
+        duration: 800,
         easing: function(t) {
-          return t * t * t;
+          return t * t * t * t;
         }
       };
       console.log("panel loaded");

@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="d-flex align-center justify-center"
+    class="d-flex align-center justify-center bg-transparent"
     width="100%"
     min-height="90vh"
     :style="mobile ? 'margin-top:0px' : ''"

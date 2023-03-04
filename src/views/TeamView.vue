@@ -1,7 +1,7 @@
 <template>
   <v-sheet
     style="padding-top:180px"
-    class="d-flex justify-center align-center flex-column section-background"
+    class="d-flex justify-center align-center flex-column section-background view__container"
   >
     <Transition name="fade" mode="out-in" appear>
       <v-img

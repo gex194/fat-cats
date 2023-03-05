@@ -1,9 +1,9 @@
 <template>
   <v-sheet
-    min-height="100vh"
+    height="100vh"
     max-width="1920"
     width="100%"
-    class="d-flex flex-column bg-transparent justify-space-evenly align-center pt-15"
+    class="d-flex flex-column bg-transparent justify-space-evenly align-center pt-10 pb-10"
   >
     <div class="d-flex justify-center align-center mb-15">
       <img src="/gold_titles/Fat_Cats_nfts.png" style="width:50%" v-animate-onscroll="'animated fadeInUp'" />

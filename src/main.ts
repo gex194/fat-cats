@@ -37,7 +37,7 @@ const vuetify = createVuetify({
     thresholds: {
       xs: 0,
       sm: 540,
-      md: 740,
+      md: 800,
       lg: 1000,
       xl: 1280,
     }

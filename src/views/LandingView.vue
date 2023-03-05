@@ -67,14 +67,6 @@
     </v-btn>
     <v-btn
       width="80%"
-      disabled
-      href="/"
-      prepend-icon="mdi:mdi-book-open"
-      class="mt-10"
-    >Lore
-    </v-btn>
-    <v-btn
-      width="80%"
       href="/blog"
       prepend-icon="mdi:mdi-post-outline"
       class="mt-10"
@@ -183,7 +175,8 @@ export default {
       this.active_panel = new PanelSnap(defaultOptions);
     },
     handle_wheel(e) {
-      if (e.deltaY < 102 && e.deltaY > 0 || e.deltaY > -102 && e.deltaY < 0) {
+      console.log(e.deltaY, 'deltaY');
+      if (e.deltaY < 100 && e.deltaY > 0 || e.deltaY > -100 && e.deltaY < 0) {
         return true;
       }
       if (e.ctrlKey) {
@@ -191,13 +184,13 @@ export default {
       }
       e.preventDefault();
       e.stopPropagation();
-      console.log(e.deltaY, 'deltaY');
+
       if (this.panel_moving) {return false;}
-      if (e.deltaY >= 102) {
+      if (e.deltaY >= 100) {
         this.panel_index += 1;
       }
 
-      if (e.deltaY <= -102) {
+      if (e.deltaY <= -100) {
         this.panel_index -= 1;
       }
 

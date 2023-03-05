@@ -35,16 +35,18 @@
       </v-btn>
     </div>
     <v-divider></v-divider>
-    <div class="mt-2">
+    <div class="mt-2 d-flex align-center justify-center" style="vertical-align: top">
       <v-btn
+        rounded
         target="_blank"
         v-for="icon in icons"
+        icon
         :key="icon.id"
-        :icon="icon.icon"
         :href="icon.href"
-        class="mx-3"
+        class="mx-5 d-flex justify-center align-center"
         variant="elevated"
       >
+        <i :class="icon.icon"></i>
       </v-btn>
     </div>
     <div class="pt-0">
@@ -76,7 +78,7 @@ export default {
       {
         id: 2,
         icon: "fas fa-brands fa-twitter",
-        href: "https://twitter.com/fat_cats_world",
+        href: "https://twitter.com/fatcats_world",
       },
       {
         id: 3,

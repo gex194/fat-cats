@@ -1,9 +1,9 @@
 <template>
   <v-sheet
     width="100%"
-    min-height="100vh"
+    height="100vh"
     max-width="1920"
-    class="d-flex flex-column align-center justify-center bg-transparent"
+    class="d-flex flex-column align-center justify-center bg-transparent pt-10 pb-10"
   >
     <div class="position-absolute d-flex justify-start align-center" style="right:-130px;z-index:3">
       <kinesis-container event="scroll">

@@ -101,14 +101,6 @@
       </v-btn>
       <v-btn
         class="w-75"
-        prepend-icon="mdi:mdi-book-open"
-        href="/lore"
-        disabled
-      >
-        Lore
-      </v-btn>
-      <v-btn
-        class="w-75"
         prepend-icon="mdi:mdi-post-outline"
         href="/blog"
       >
@@ -151,9 +143,8 @@ export default {
             { id: 2, title: "TEAM", action: () => this.go_to("/cats") }
           ]
         },
-        { id: 2, title: "LORE", href: "" },
-        { id: 3, title: "BLOG", href: "/blog" },
-        { id: 5, title: "FAQ", href: "/faq" }
+        { id: 2, title: "BLOG", href: "/blog" },
+        { id: 3, title: "FAQ", href: "/faq" }
       ]
     };
   },

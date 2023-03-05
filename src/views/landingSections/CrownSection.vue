@@ -1,27 +1,31 @@
 <template>
   <v-sheet
-    min-height="100vh"
+    height="100vh"
     max-width="1920"
     width="100%"
-    class="d-flex flex-column bg-transparent justify-center align-center pt-15"
+    class="d-flex flex-column bg-transparent justify-center align-center pt-10 pb-10"
   >
     <div class="d-flex justify-center align-center">
-      <span class="text-lg-h2 text-center">Building an ecosystem of luxury</span>
+      <img src="/gold_titles/building_an_ecosystem_of_luxury2.png" style="height: 100%; width: 100%" />
     </div>
     <div class="d-flex justify-center align-center">
-      <div class="v-col-4 d-flex justify-center align-center">
-        <span class="text-lg-h5 text-end">Conceptualization of Fat Cats line of products assisted by AI</span>
+      <video src="/webm_animations/crown.webm" style="width: 100%;max-width: 60vh;" autoplay loop playsinline muted />
+    </div>
+    <div class="d-flex flex-column justify-center align-start">
+      <div class="d-flex justify-center align-center">
+        <video src="/webm_animations/red_gem_50px.webm" loop autoplay playsinline muted />
+        <span class="text-lg-h5 text-left">Exclusive deals for NFT holders</span>
       </div>
-      <div class="v-col-4">
-        <video src="/webm_animations/crown.webm" style="width: 100%;max-width: 100vh;" autoplay loop playsinline muted />
+      <div class="d-flex justify-center align-center">
+        <video src="/webm_animations/blue_gem_50px.webm" loop autoplay playsinline muted />
+        <span class="text-lg-h5 text-left">Conceptualization of Fat Cats line of products assisted by AI</span>
       </div>
-      <div class="v-col-4">
-        <span class="text-lg-h5 text-center">exclusive deals for NFT holders</span>
+      <div class="d-flex justify-center align-center">
+        <video src="/webm_animations/red_gem_50px.webm" loop autoplay playsinline muted />
+        <span class="text-lg-h5 text-left">Online and in-store sales</span>
       </div>
     </div>
-    <div class="d-flex justify-center align-center">
-      <span class="text-lg-h5 text-center">Online and in-store sales</span>
-    </div>
+
   </v-sheet>
 </template>
 

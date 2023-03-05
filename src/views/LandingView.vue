@@ -183,7 +183,7 @@ export default {
       this.active_panel = new PanelSnap(defaultOptions);
     },
     handle_wheel(e) {
-      if (e.deltaY % 1 !== 0) {
+      if (e.deltaY < 102 && e.deltaY > 0 || e.deltaY > -102 && e.deltaY < 0) {
         return true;
       }
       if (e.ctrlKey) {

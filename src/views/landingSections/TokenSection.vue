@@ -2,7 +2,8 @@
   <v-sheet
     max-width="1920"
     width="100%"
-    height="100vh"
+    height="100%"
+    min-height="100vh"
     class="d-flex justify-center align-center flex-column bg-transparent pt-10 pb-10"
   >
     <v-lazy
@@ -11,7 +12,7 @@
       class="mb-5"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
-      v-animate-onscroll="'animated fadeInRight'"
+      v-animate-onscroll="'animated fadeInUp'"
     >
       <v-img src="/gold_titles/Ecosystems_utility_token_ducats2.png" />
     </v-lazy>

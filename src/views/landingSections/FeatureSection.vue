@@ -1,6 +1,7 @@
 <template>
   <v-sheet
-    height="100vh"
+    min-height="100vh"
+    height="100%"
     max-width="1920"
     width="100%"
     class="d-flex flex-column bg-transparent justify-space-evenly align-center pt-10 pb-10"

@@ -2,7 +2,8 @@
   <v-card
     max-width="1920"
     width="100%"
-    height="100vh"
+    height="100%"
+    min-height="100vh"
     class="d-flex flex-column align-center bg-transparent"
     elevation="0"
   >

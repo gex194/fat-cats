@@ -1,7 +1,8 @@
 <template>
   <v-sheet
     width="100%"
-    height="100vh"
+    height="100%"
+    min-height="100vh"
     max-width="1920"
     class="d-flex flex-column align-center justify-center bg-transparent pt-10 pb-10"
   >

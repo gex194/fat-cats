@@ -1,5 +1,5 @@
 <template>
-  <v-sheet v-if="!$isMobile() && !mobile" width="100%" class="section-background">
+  <v-sheet v-if="!$isMobile() && !mobile" width="100%" class="section-background" ref="sheet">
     <div ref="scroll">
       <section>
         <StartSection
@@ -173,7 +173,7 @@ export default {
     init_panel() {
       const defaultOptions = {
         panelSelector: "section",
-        directionThreshold: 200,
+        directionThreshold: 250,
         delay: 0,
         duration: 800,
         easing: function(t) {
@@ -183,6 +183,9 @@ export default {
       this.active_panel = new PanelSnap(defaultOptions);
     },
     handle_wheel(e) {
+      if (e.deltaY % 1 !== 0) {
+        return true;
+      }
       if (e.ctrlKey) {
         return true;
       }

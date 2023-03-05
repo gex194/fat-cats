@@ -17,7 +17,7 @@
 
     <v-main :class="mobile ? 'main__container-mobile' : 'main__container'">
       <v-container fluid class="content__container">
-        <RouterView :class="mobile ? '' : ''" />
+        <RouterView :class="mobile ? '' : ''"/>
       </v-container>
     </v-main>
     <FooterComponent />

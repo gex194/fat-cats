@@ -35,7 +35,8 @@
         <FeatureSection />
       </section>
       <section
-        id="crown_section" class="section__container landing__container">
+        id="crown_section"
+        class="d-flex align-center justify-center landing__container">
         <CrownSection />
       </section>
       <section></section>
@@ -187,12 +188,13 @@ export default {
       }
       e.preventDefault();
       e.stopPropagation();
+      console.log(e.deltaY, 'deltaY');
       if (this.panel_moving) {return false;}
-      if (e.deltaY > 0) {
+      if (e.deltaY >= 102) {
         this.panel_index += 1;
       }
 
-      if (e.deltaY < 0) {
+      if (e.deltaY <= -102) {
         this.panel_index -= 1;
       }
 

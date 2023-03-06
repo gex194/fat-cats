@@ -1,5 +1,10 @@
 <template>
-  <v-sheet v-if="!$isMobile() && !mobile" width="100%" class="section-background" ref="sheet">
+  <v-sheet
+    v-if="!$isMobile() && !mobile"
+    width="100%"
+    class="section-background"
+    ref="sheet"
+  >
     <div ref="scroll">
       <section>
         <StartSection
@@ -36,12 +41,12 @@
       </section>
       <section
         id="crown_section"
-        class="d-flex align-center justify-center landing__container">
+        class="d-flex align-center justify-center landing__container"
+      >
         <CrownSection />
       </section>
       <section></section>
     </div>
-
   </v-sheet>
   <v-sheet
     class="section-background d-flex flex-column align-center justify-center"
@@ -56,28 +61,28 @@
       href="/deck"
       prepend-icon="mdi:mdi-cards-outline"
       class="mt-10"
-    >Deck
+      >Deck
     </v-btn>
     <v-btn
       width="80%"
       href="/cats"
       prepend-icon="mdi:mdi-account-group-outline"
       class="mt-10"
-    >Team
+      >Team
     </v-btn>
     <v-btn
       width="80%"
       href="/blog"
       prepend-icon="mdi:mdi-post-outline"
       class="mt-10"
-    >Blog
+      >Blog
     </v-btn>
     <v-btn
       width="80%"
       href="/faq"
       prepend-icon="mdi:mdi-help-rhombus-outline"
       class="mt-10 mb-10"
-    >FAQ
+      >FAQ
     </v-btn>
     <p class="mb-10">Best experienced in desktop mode</p>
   </v-sheet>
@@ -104,7 +109,7 @@ export default {
     IntroSection,
     FeatureSection,
     StartSection,
-    SliderSection
+    SliderSection,
   },
   setup() {
     const loader = useLoader();
@@ -121,14 +126,18 @@ export default {
     this.$nextTick(() => {
       if (!this.$isMobile()) {
         this.init_panel();
-        document.addEventListener("wheel", this.handle_wheel, { passive: false });
-        this.active_panel.on("snapStart", () => this.panel_moving = true);
-        this.active_panel.on("snapStop", () => this.panel_moving = false);
+        document.addEventListener("wheel", this.handle_wheel, {
+          passive: false,
+        });
+        this.active_panel.on("snapStart", () => (this.panel_moving = true));
+        this.active_panel.on("snapStop", () => (this.panel_moving = false));
       }
     });
   },
   beforeUnmount() {
-    document.removeEventListener("wheel", this.handle_wheel, { passive: false });
+    document.removeEventListener("wheel", this.handle_wheel, {
+      passive: false,
+    });
     this.active_panel.destroy();
   },
   data() {
@@ -149,8 +158,8 @@ export default {
         "/gold_titles/NFT_COLLECTION.png",
         "/stacking_block_2.png",
         "/airdrop_block_3.png",
-        "/game_pass_block_1.png"
-      ]
+        "/game_pass_block_1.png",
+      ],
     };
   },
   methods: {
@@ -168,15 +177,17 @@ export default {
         directionThreshold: 250,
         delay: 0,
         duration: 800,
-        easing: function(t) {
+        easing: function (t) {
           return t * t * t * t;
-        }
+        },
       };
       this.active_panel = new PanelSnap(defaultOptions);
     },
     handle_wheel(e) {
-      console.log(e.deltaY, 'deltaY');
-      if (e.deltaY < 100 && e.deltaY > 0 || e.deltaY > -100 && e.deltaY < 0) {
+      if (
+        (e.deltaY < 100 && e.deltaY > 0) ||
+        (e.deltaY > -100 && e.deltaY < 0)
+      ) {
         return true;
       }
       if (e.ctrlKey) {
@@ -185,7 +196,9 @@ export default {
       e.preventDefault();
       e.stopPropagation();
 
-      if (this.panel_moving) {return false;}
+      if (this.panel_moving) {
+        return false;
+      }
       if (e.deltaY >= 100) {
         this.panel_index += 1;
       }
@@ -204,15 +217,16 @@ export default {
         return false;
       }
 
-      this.active_panel.snapToPanel(this.$refs.scroll.children[this.panel_index]);
+      this.active_panel.snapToPanel(
+        this.$refs.scroll.children[this.panel_index]
+      );
       return false;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
-
 .section__container {
   /*margin-top: 120px;*/
 }

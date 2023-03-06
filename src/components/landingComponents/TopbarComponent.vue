@@ -12,6 +12,7 @@
     <v-tabs grow fixed-tabs class="tabs__container" v-model="selected_tab">
       <v-tab
         :value="0"
+        style="opacity: 1"
         selected-class="tab--selected"
         :ripple="false"
         variant="plain"
@@ -19,7 +20,6 @@
       >
         <div class="h-100">
           <v-img
-            style="opacity: 1 !important"
             src="/LOGO.png"
             class="mx-auto"
             height="100%"

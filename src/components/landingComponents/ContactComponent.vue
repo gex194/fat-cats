@@ -76,7 +76,7 @@ export default {
     send_email() {
       this.loading = true;
       emailjs
-        .send("service_rjk7m3g", "template_8fol8sl", {
+        .send("service_h4noogm", "template_8fol8sl", {
           from_name: this.user_name,
           from_email: this.user_email,
           message: this.user_message,

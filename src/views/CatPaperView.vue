@@ -81,7 +81,7 @@ export default {
     async preload() {
       let imgs = [];
       for (let i = 1; i <= 5; i++) {
-        imgs.push(`/deck_pngs/${i}.png`);
+        imgs.push(`/deck_pngs/${i}.webp`);
       }
       await preload_imgs(imgs, this.loader);
     },

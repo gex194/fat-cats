@@ -34,7 +34,7 @@ export default {
 
 <style scoped>
 .intro-text {
-  font-family: Cinzel, serif !important;
+  font-family: "Book Antiqua", serif !important;
   font-weight: bold;
 }
 

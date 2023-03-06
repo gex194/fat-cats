@@ -1,56 +1,66 @@
 const nft_collection = {
   title_src: "/gold_titles/NFT_COLLECTION.png",
   text:
-    "7,500 1/1 Fat Cats\n" +
-    "NFT visuals created by artists utilizing AI technology\n" +
-    "Exclusive access to games\n" +
-    "Fat Cats brand VIP membership\n" +
-    "Regularly receive in-game resources in your wallet\n" +
-    "Numerous other utilities\n",
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>7,500 1/1 Fat Cats</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>NFT visuals created by artists</span>" +
+    "<span>utilizing AI technology</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Exclusive access to games</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Fat Cats brand VIP membership</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Regularly receive in-game resources</span>" +
+    "<span>in your wallet</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Numerous other utilities</span>"
 };
 const art_patronage = {
   title_src: "/gold_titles/Art_Patronage.png",
   text:
-    "Sponsoring artists worthy of support\n" +
-    "Funded by project revenue streams\n" +
-    "Decision making is a community activity\n",
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Sponsoring artists worthy of support</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Funded by project revenue streams</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Decision making is a community activity</span>"
 };
 const gaming_platform = {
   title_src: "/gold_titles/Gaming_Platform.png",
   text:
-    "Select and play one of many multiplayer games and minigames\n" +
-    "Get $DUCATS as a reward for playing Fat Cats games\n" +
-    "Communicate with other gamers, make parties, guilds and practice events\n",
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Select and play one of many</span>" +
+    "<span>multiplayer games and minigames</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Get $DUCATS as a reward</span>" +
+    "<span>for playing Fat Cats games</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Communicate with other gamers,</span>" +
+    "<span>make parties, guilds and practice events</span>"
 };
 
 const cardano_visualized = {
   title_src: "/gold_titles/Cardano_Visualised.png",
   text:
-    "Understand what is happening within the ADA ecosystem\n" +
-    "Use our data graph visualizers and select parameters\n" +
-    "Modify parameters with algorithms for additional insight\n",
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Understand what is happening</span>" +
+    "<span>within the ADA ecosystem</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Use our data graph visualizers</span>" +
+    "<span>and select parameters</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Modify parameters with algorithms</span>" +
+    "<span>for additional insight</span>"
 };
 
 const ada_bnb_bridge = {
   title_src: "/gold_titles/ADA_BNB_Bridge.png",
   text:
-    "Transfer Fat Cats assets between ADA and BNB\n" +
-    "List your NFTs on either jpg.store or OpenSea\n" +
-    "Centralized bridge ensures maximal security\n",
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Transfer Fat Cats assets between</span>" +
+    "<span>ADA and BNB</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>List your NFTs on either jpg.store</span> " +
+    "<span>or OpenSea</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Centralized bridge ensures maximal security</span>"
 };
 
 const card_one = {
   id: 1,
-  title: "Changing the world of luxury with a new AI model",
+  title: "Changing the world of luxury with a new AI model"
 };
 const card_two = {
   id: 2,
   title:
-    "Maximal utilization of multiple AI technologies in the Fat Cats ecosystem",
+    "Maximal utilization of multiple AI technologies in the Fat Cats ecosystem"
 };
 const card_three = {
   id: 3,
-  title: "Helping teams & brands with AI tooling",
+  title: "Helping teams & brands with AI tooling"
 };
 
 const team = [
@@ -63,14 +73,14 @@ const team = [
       {
         id: 1,
         url: "https://www.linkedin.com/in/filip-milnersic-b17560227/",
-        icon: "fa-brands fa-linkedin",
+        icon: "fa-brands fa-linkedin"
       },
       {
         id: 2,
         url: "https://twitter.com/Catus_Maximus_",
-        icon: "fa-brands fa-twitter",
-      },
-    ],
+        icon: "fa-brands fa-twitter"
+      }
+    ]
   },
   {
     id: 2,
@@ -81,14 +91,14 @@ const team = [
       {
         id: 1,
         url: "https://www.linkedin.com/in/tina-bregovi%C4%87-8149a71a8/",
-        icon: "fa-brands fa-linkedin",
+        icon: "fa-brands fa-linkedin"
       },
       {
         id: 2,
         url: "https://twitter.com/TinaDunno",
-        icon: "fa-brands fa-twitter",
-      },
-    ],
+        icon: "fa-brands fa-twitter"
+      }
+    ]
   },
   {
     id: 3,
@@ -99,14 +109,14 @@ const team = [
       {
         id: 1,
         url: "https://www.linkedin.com/in/joao-pedro-martins-2a8201248/",
-        icon: "fa-brands fa-linkedin",
+        icon: "fa-brands fa-linkedin"
       },
       {
         id: 2,
         url: "https://twitter.com/Cardawesome2026",
-        icon: "fa-brands fa-twitter",
-      },
-    ],
+        icon: "fa-brands fa-twitter"
+      }
+    ]
   },
   {
     id: 4,
@@ -117,14 +127,14 @@ const team = [
       {
         id: 1,
         url: "https://www.linkedin.com/in/teo-franov-11300b251/",
-        icon: "fa-brands fa-linkedin",
+        icon: "fa-brands fa-linkedin"
       },
       {
         id: 2,
         url: "https://twitter.com/Cardano_man1",
-        icon: "fa-brands fa-twitter",
-      },
-    ],
+        icon: "fa-brands fa-twitter"
+      }
+    ]
   },
   {
     id: 5,
@@ -135,14 +145,9 @@ const team = [
       {
         id: 1,
         url: "https://www.linkedin.com/in/minina-annette/",
-        icon: "fa-brands fa-linkedin",
+        icon: "fa-brands fa-linkedin"
       },
-      {
-        id: 2,
-        url: "https://twitter.com/une__miserable",
-        icon: "fa-brands fa-twitter",
-      },
-    ],
+    ]
   },
   {
     id: 5,
@@ -153,14 +158,14 @@ const team = [
       {
         id: 1,
         url: "https://www.linkedin.com/in/andrew-vasilev-1a4604158/",
-        icon: "fa-brands fa-linkedin",
+        icon: "fa-brands fa-linkedin"
       },
       {
         id: 2,
         url: "https://twitter.com/gex194",
-        icon: "fa-brands fa-twitter",
-      },
-    ],
+        icon: "fa-brands fa-twitter"
+      }
+    ]
   },
   {
     id: 6,
@@ -171,9 +176,9 @@ const team = [
       {
         id: 1,
         url: "https://www.behance.net/radujkovic8fd2/projects",
-        icon: "fa-brands fa-behance",
-      },
-    ],
+        icon: "fa-brands fa-behance"
+      }
+    ]
   },
   {
     id: 7,
@@ -184,9 +189,9 @@ const team = [
       {
         id: 1,
         url: "https://www.behance.net/mirzakurbegovic",
-        icon: "fa-brands fa-behance",
-      },
-    ],
+        icon: "fa-brands fa-behance"
+      }
+    ]
   },
   {
     id: 7,
@@ -197,10 +202,10 @@ const team = [
       {
         id: 1,
         url: "https://www.behance.net/tamaramikler",
-        icon: "fa-brands fa-behance",
-      },
-    ],
-  },
+        icon: "fa-brands fa-behance"
+      }
+    ]
+  }
 ];
 
 const faq = [
@@ -210,7 +215,7 @@ const faq = [
     text:
       "Fat Cats are art patrons and a multichain NFT art collection. " +
       "In the near future Fat Cats will also be a gaming project, " +
-      "a luxury brand and offer a variety of AI & data services.\n",
+      "a luxury brand and offer a variety of AI & data services.\n"
   },
   {
     id: "faq_2",
@@ -224,7 +229,7 @@ const faq = [
       "\n" +
       "\n" +
       "•  The gaming world is in danger as the industry grows and bigger emphasis on monetization is ruining " +
-      "what made gaming an unstoppable phenomenon.\n",
+      "what made gaming an unstoppable phenomenon.\n"
   },
   {
     id: "faq_3",
@@ -249,7 +254,7 @@ const faq = [
       "• Freely accessible visualized databases—will contain gathered & processed data\n" +
       "• Art patronage platform\n" +
       "\n" +
-      "These segments will be added over time, each being built one-by-one.\n",
+      "These segments will be added over time, each being built one-by-one.\n"
   },
   {
     id: "faq_4",
@@ -266,7 +271,7 @@ const faq = [
       "In other words, this means that NFT owners can exchange a fraction of their NFT’s utilities which they possess," +
       " and NFT owners can likewise acquire specific utilities on " +
       "the open market and imbue their Fat Cat NFT with these" +
-      " specific, desired, utilities.\n",
+      " specific, desired, utilities.\n"
   },
   {
     id: "faq_5",
@@ -291,7 +296,7 @@ const faq = [
       "\n" +
       "• Regular resources airdrop\n" +
       "• Bigger chance to receive physical luxury item airdrop\n" +
-      "• Higher staking rewards\n",
+      "• Higher staking rewards\n"
   },
   {
     id: "faq_6",
@@ -301,7 +306,7 @@ const faq = [
       "\n" +
       "This AI will allow generation of second and third collection Fat Cats visuals as well as modification of existing NFTs to add or remove items. \n" +
       "\n" +
-      "The other AI is intended to detect-and-match gaming “best-buddies”. The development of this AI is planned to begin once we have the first minigames rolled out. This is planned for Q2 2026.\n",
+      "The other AI is intended to detect-and-match gaming “best-buddies”. The development of this AI is planned to begin once we have the first minigames rolled out. This is planned for Q2 2026.\n"
   },
   {
     id: "faq_7",
@@ -316,7 +321,7 @@ const faq = [
       "• New Mints (Fat Cats + Peasant Cats + Data Cards)\n" +
       "• Physical & digital items auctions\n" +
       "• Revenue from physical product sales\n" +
-      "• Software licensing, Data Selling, AI services\n",
+      "• Software licensing, Data Selling, AI services\n"
   },
   {
     id: "faq_8",
@@ -330,7 +335,7 @@ const faq = [
       "\n" +
       "Previous two paragraphs refer to the data mining and processing of said data for the purpose of pairing gaming individuals which are most likely to have a very entertaining gaming session. This is years from now.\n" +
       "\n" +
-      "Website usage data is not collected, should it ever be collected, it will not be resold, and it will be stored and handled in a safe manner.\n",
+      "Website usage data is not collected, should it ever be collected, it will not be resold, and it will be stored and handled in a safe manner.\n"
   },
   {
     id: "faq_9",
@@ -345,12 +350,12 @@ const faq = [
       "Even though they expire as the game passes, you, of course, get to keep your NFT.\n" +
       "\n" +
       "Owning Peasant Cats will not provide any of the Fat Cats NFT utilities, " +
-      "such as receiving a parcel airdrop, ability to participate in exclusive auctions etc.\n",
+      "such as receiving a parcel airdrop, ability to participate in exclusive auctions etc.\n"
   },
   {
     id: "faq_10",
     title: "What are $DUCATS tokens?",
-    text: "$DUCATS tokens are the tokens that allow participation in the Fat Cats ecosystem.",
+    text: "$DUCATS tokens are the tokens that allow participation in the Fat Cats ecosystem."
   },
   {
     id: "faq_11",
@@ -362,7 +367,7 @@ const faq = [
       "• Merchandise purchase with discount\n" +
       "• Exclusive merchandise purchase\n" +
       "• Bid for high-value items through auctions exclusively with $DUCATS\n" +
-      "• and more!\n",
+      "• and more!\n"
   },
   {
     id: "faq_12",
@@ -377,12 +382,12 @@ const faq = [
       "• Playing exclusive and non-exclusive games\n" +
       "• Being a top player in Fat Cats exclusive game\n" +
       "• Owning physical Fat Cats items\n" +
-      "• Being an advisor to the project\n",
+      "• Being an advisor to the project\n"
   },
   {
     id: "faq_13",
     title: "Where can I find the $DUCATS tokenomics table?",
-    text: "The $DUCATS tokenomics table is available within our <a href='/deck'>deck</a> at page 15.",
+    text: "The $DUCATS tokenomics table is available within our <a href='/deck'>deck</a> at page 15."
   },
   {
     id: "faq_14",
@@ -392,12 +397,12 @@ const faq = [
       "\n" +
       "That is why the team’s $DUCATS allocation is locked until certain successes are reached.\n" +
       "\n" +
-      "You can view the exact parameters and token unlock milestones <a href='/deck'> here </a> at page 27.\n",
+      "You can view the exact parameters and token unlock milestones <a href='/deck'> here </a> at page 27.\n"
   },
   {
     id: "faq_15",
     title: "Where can I find the Fat Cats roadmap?",
-    text: "You can find our whole roadmap in our <a href='/deck'>deck</a> on page 16",
+    text: "You can find our whole roadmap in our <a href='/deck'>deck</a> on page 16"
   },
   {
     id: "faq_16",
@@ -409,7 +414,7 @@ const faq = [
       "\n" +
       "Everything else is here to improve our experience of the wonderful thing called life.\n" +
       "\n" +
-      "And Fat Cats will excel in exactly that. Providing new experiences, excitement and opportunities to Fat Cats community members.",
+      "And Fat Cats will excel in exactly that. Providing new experiences, excitement and opportunities to Fat Cats community members."
   },
   {
     id: "faq_17",
@@ -427,7 +432,7 @@ const faq = [
       "\n" +
       "In the future it is planned to decentralize the process, however the team will always have a right and ability to veto a patronage, with the purpose of protecting the Fat Cats brand.\n" +
       "\n" +
-      "Aside from the clear mission of Fat Cats to assist talented & passionate individuals, another utility of this program is the increased exposure of the Fat Cats ecosystem.\n",
+      "Aside from the clear mission of Fat Cats to assist talented & passionate individuals, another utility of this program is the increased exposure of the Fat Cats ecosystem.\n"
   },
   {
     id: "faq_18",
@@ -439,7 +444,7 @@ const faq = [
       "\n" +
       "At a later stage of the project, owners of NFTs will be able to extract or add items via our platform, thereby acquiring new utilities or selling a portion of the utilities provided by their Fat Cat. These extractions or additions will be reflected visually. This feature will be powered by our proprietary AI tech. The items will be extracted in an NFT form, hence it will be possible to buy and sell the items on the Fat Cats marketplace or any other Cardano and BNB NFT marketplace.\n" +
       "\n" +
-      "Ownership of the NFT will not provide commercial rights to the image, however, owners are welcome to use the Fat Cats visuals to create their own designs and memes. These cannot be for commercial purposes, and ultimately the Fat Cats team has the right to decide whether someone should cease-and-desist in using our visuals, NFT owner or not.\n",
+      "Ownership of the NFT will not provide commercial rights to the image, however, owners are welcome to use the Fat Cats visuals to create their own designs and memes. These cannot be for commercial purposes, and ultimately the Fat Cats team has the right to decide whether someone should cease-and-desist in using our visuals, NFT owner or not.\n"
   },
   {
     id: "faq_19",
@@ -447,7 +452,7 @@ const faq = [
     text:
       "Initial supply that will be deployed via the first mint is 7,500 unique 1/1 Fat Cats. \n" +
       "\n" +
-      "Some time after, a new collection of 7,500 Fat Cats will be launched.\n",
+      "Some time after, a new collection of 7,500 Fat Cats will be launched.\n"
   },
   {
     id: "faq_20",
@@ -455,7 +460,7 @@ const faq = [
     text:
       "Yes there will be an “OG mint” called the Treasure mint before the main collection launch.\n" +
       "\n" +
-      "More will be announced via our articles soon.\n",
+      "More will be announced via our articles soon.\n"
   },
   {
     id: "faq_21",
@@ -472,18 +477,18 @@ const faq = [
       "\n" +
       "The rewards will be proportional to the $ADA staked, however—every $ADA counts! Use only one stake address to stake as we will treat every address as a unique person. If you do not do so and you are discovered, you will not receive any rewards.\n" +
       "\n" +
-      "Simply put—the Fat Cats team will never forget the OG supporters, and their Cardano addresses ;)\n",
+      "Simply put—the Fat Cats team will never forget the OG supporters, and their Cardano addresses ;)\n"
   },
   {
     id: "faq_22",
     title: "How can I get whitelisted for Fat Cats?",
-    text: "To get a chance at getting a whitelist for both the OG mint and the main collection Fat Cats—stake your $ADA towards Fat Cats via Teiki.\n",
+    text: "To get a chance at getting a whitelist for both the OG mint and the main collection Fat Cats—stake your $ADA towards Fat Cats via Teiki.\n"
   },
   {
     id: "faq_23",
     title: "Are there any open positions within the Fat Cats team?",
-    text: "We are looking for mathematicians, AI developers and Aiken developers. Contact our community managers if you feel you would be a good fit.",
-  },
+    text: "We are looking for mathematicians, AI developers and Aiken developers. Contact our community managers if you feel you would be a good fit."
+  }
 ];
 export default {
   slides: {
@@ -491,13 +496,13 @@ export default {
     art_patronage,
     gaming_platform,
     cardano_visualized,
-    ada_bnb_bridge,
+    ada_bnb_bridge
   },
   intro: {
     max_util: card_one,
     model_ai: card_two,
-    member: card_three,
+    member: card_three
   },
   team,
-  faq,
+  faq
 };

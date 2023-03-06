@@ -40,3 +40,9 @@
     font-weight: 900;
 }
 
+@font-face {
+    font-family: "Book Antiqua";
+    src: local("Book Antiqua"),
+    url(/src/assets/fonts/BookAntiqua/Book-Antiqua-Font.ttf) format("truetype");
+}
+

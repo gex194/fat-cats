@@ -6,12 +6,12 @@
     max-width="1920"
     class="d-flex flex-column align-center justify-center bg-transparent pt-10 pb-10"
   >
-    <div class="position-absolute d-flex justify-start align-center" style="right:-130px;z-index:3">
+    <div class="position-absolute d-flex justify-start align-center" style="right:-155px;z-index:3">
       <kinesis-container event="scroll">
         <kinesis-element
           type="translate"
           :originX="0"
-          :originY="70"
+          :originY="77"
           :strength="-900"
         >
           <video
@@ -45,7 +45,7 @@
         v-bind="item"
       />
     </div>
-    <div class="position-absolute d-flex justify-end" style="left:-130px;z-index:3">
+    <div class="position-absolute d-flex justify-end" style="left:-70px;z-index:3">
       <kinesis-container event="scroll">
         <kinesis-element
           type="translate"
@@ -58,7 +58,7 @@
             playsinline
             loop
             muted
-            height="250"
+            height="200"
             src="/webm_animations/red_ruby_slow.webm"
           />
         </kinesis-element>

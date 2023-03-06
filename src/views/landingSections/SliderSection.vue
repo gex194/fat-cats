@@ -2,7 +2,6 @@
   <v-card
     max-width="1920"
     width="100%"
-    height="100%"
     min-height="100vh"
     class="d-flex flex-column align-center bg-transparent"
     elevation="0"
@@ -11,6 +10,7 @@
       v-model="carousel_active_item"
       height="100vh"
       interval="10000"
+      class="pb-10 pt-10"
       cycle
       delimiter-icon="mdi:mdi-circle"
       hide-delimiter-background
@@ -48,12 +48,13 @@
                 <v-img
                   eager
                   :src="item.title_src"
+                  width="100%"
                   :key="item.id"
                 />
               </v-sheet>
               <div class="carousel-text__text d-flex">
-                <span
-                  class="text-caption carousel-text text-lg-h5 text-md-h6">{{ item.text }}</span>
+                <span v-html="item.text" class="text-caption carousel-text text-lg-h5 text-md-h6"></span>
+<!--                <span class="text-caption carousel-text text-lg-h5 text-md-h6">{{ item.text }}</span>-->
               </div>
             </div>
           </div>
@@ -172,7 +173,7 @@ export default {
 }
 
 .carousel-text {
-  font-family: Cinzel !important;
+  font-family: "Book Antiqua" !important;
   line-height: 50px;
   font-weight: bolder;
 }

@@ -1,5 +1,7 @@
 <template>
   <v-overlay
+    scrim
+    scroll-strategy="reposition"
     :model-value="overlay"
     @click:outside="close_overlay"
     class="justify-center align-center"

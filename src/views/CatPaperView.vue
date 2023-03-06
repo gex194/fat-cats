@@ -30,7 +30,7 @@
             eager
             :height="mobile ? 400 : 800"
             class="rounded-xl"
-            :src="`/deck_pngs/${n}.png`"
+            :src="`/deck_pngs/${n}.webp`"
           />
         </div>
       </v-carousel-item>
@@ -58,11 +58,9 @@
 import { useDisplay } from "vuetify";
 import { useLoader } from "@/stores/loader";
 import { preload_imgs } from "@/helpers/helpers";
-import TopbarComponent from "@/components/landingComponents/TopbarComponent.vue";
 
 export default {
   name: "CatPaperView",
-  components: { TopbarComponent },
   setup() {
     const loader = useLoader();
     const { mobile } = useDisplay();
@@ -76,7 +74,7 @@ export default {
   data() {
     return {
       onboarding: 0,
-      length: 29,
+      length: 28,
     };
   },
   methods: {

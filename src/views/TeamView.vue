@@ -2,15 +2,7 @@
   <v-sheet
     class="d-flex justify-center align-center flex-column section-background team__container view__container"
   >
-    <Transition name="fade" mode="out-in" appear>
-      <v-img
-        eager
-        src="/gold_titles/FAT_CATS_2.png"
-        width="80%"
-        class="mt-5"
-      />
-    </Transition>
-    <div class="text-center mt-3 mb-3 text-lg-h3 text-md-h5 text-sm-h5">Meet our team</div>
+    <div class="text-center mt-3 mb-3 text-h3 text-lg-h2 text-md-h3 text-sm-h3">Meet our team</div>
     <TeamListComponent />
   </v-sheet>
 </template>

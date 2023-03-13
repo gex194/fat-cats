@@ -3,11 +3,11 @@ const nft_collection = {
   text:
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>7,500 1/1 Fat Cats</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>NFT visuals created by artists</span>" +
-    "<span>utilizing AI technology</span>" +
+    "<span class='ml-8'>utilizing AI technology</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Exclusive access to games</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Fat Cats brand VIP membership</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Regularly receive in-game resources</span>" +
-    "<span>in your wallet</span>" +
+    "<span class='ml-8'>in your wallet</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Numerous other utilities</span>",
 };
 const art_patronage = {
@@ -21,31 +21,31 @@ const gaming_platform = {
   title_src: "/gold_titles/Gaming_Platform.png",
   text:
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Select and play one of many</span>" +
-    "<span>multiplayer games and minigames</span>" +
+    "<span class='ml-8'>multiplayer games and minigames</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Get $DUCATS as a reward</span>" +
-    "<span>for playing Fat Cats games</span>" +
+    "<span class='ml-8'>for playing Fat Cats games</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Communicate with other gamers,</span>" +
-    "<span>make parties, guilds and practice events</span>",
+    "<span class='ml-8'>make parties, guilds and practice events</span>",
 };
 
 const cardano_visualized = {
   title_src: "/gold_titles/Cardano_Visualised.png",
   text:
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Understand what is happening</span>" +
-    "<span>within the ADA ecosystem</span>" +
+    "<span class='ml-8'>within the ADA ecosystem</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Use our data graph visualizers</span>" +
-    "<span>and select parameters</span>" +
+    "<span class='ml-8'>and select parameters</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Modify parameters with algorithms</span>" +
-    "<span>for additional insight</span>",
+    "<span class='ml-8'>for additional insight</span>",
 };
 
 const ada_bnb_bridge = {
   title_src: "/gold_titles/ADA_BNB_Bridge.png",
   text:
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Transfer Fat Cats assets between</span>" +
-    "<span>ADA and BNB</span>" +
+    "<span class='ml-8'>ADA and BNB</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>List your NFTs on either jpg.store</span> " +
-    "<span>or OpenSea</span>" +
+    "<span class='ml-8'>or OpenSea</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Centralized bridge ensures maximal security</span>",
 };
 

@@ -47,6 +47,7 @@
           >
             <v-btn
               :icon="link.icon"
+              target="_blank"
               :href="link.url"
               color="amber-accent-1"
               class="text-black"

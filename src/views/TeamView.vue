@@ -46,7 +46,7 @@ export default {
 
 @media screen and (max-width: 739px) {
   .team__container {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 </style>

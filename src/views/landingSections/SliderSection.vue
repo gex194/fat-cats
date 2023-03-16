@@ -8,7 +8,8 @@
   >
     <v-carousel
       v-model="carousel_active_item"
-      height="90vh"
+      cycle
+      height="85vh"
       interval="10000"
       delimiter-icon="mdi:mdi-circle"
       hide-delimiters
@@ -40,9 +41,9 @@
             />
           </div>
           <div
-            class="v-col-6 v-col-lg-6 v-col-md-6 v-col-sm-6 d-flex flex-column justify-start align-baseline"
+            class="v-col-6 v-col-lg-6 v-col-md-6 v-col-sm-6 d-flex flex-column justify-center align-center"
           >
-            <div class="d-flex flex-column justify-start align-baseline">
+            <div class="d-flex flex-column justify-center align-center">
               <v-sheet
                 class="mb-10 bg-transparent"
                 height="100%"
@@ -69,7 +70,7 @@
     </v-carousel>
 
     <v-item-group
-      style="height: 10vh"
+      style="height: 15vh"
       v-model="carousel_active_item"
       class="text-center"
       mandatory
@@ -83,6 +84,8 @@
         <v-btn
           :variant="isSelected ? 'tonal' : 'text'"
           icon="mdi:mdi-record"
+          class="mx-auto ml-5"
+          size="30"
           @click="toggle"
         ></v-btn>
       </v-item>

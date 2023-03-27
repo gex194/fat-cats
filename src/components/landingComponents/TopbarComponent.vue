@@ -19,24 +19,20 @@
         @click="go_to('/')"
       >
         <div class="h-100">
-          <v-img
-            src="/LOGO.png"
-            class="mx-auto"
-            height="100%"
-            width="220"
-          />
+          <v-img src="/LOGO.png" class="mx-auto" height="100%" width="220" />
         </div>
       </v-tab>
       <template v-for="tab in topbar_tabs" :key="tab.id">
         <v-tab
           v-if="!tab?.children"
           selected-class="tab--selected"
-          :disabled="!tab.href"
+          :target="tab.target"
+          :href="tab.href"
           :ripple="false"
           :value="tab.id"
           variant="plain"
           class="tab"
-          @click="go_to(tab.href)"
+          @click="tab.action"
         >
           <p class="text-h5">{{ tab.title }}</p>
         </v-tab>
@@ -50,7 +46,7 @@
               :value="tab.id"
               class="tab"
             >
-              <p class="text-h6">{{ tab.title }}</p>
+              <p class="text-h5">{{ tab.title }}</p>
             </v-tab>
           </template>
           <v-list>
@@ -75,21 +71,21 @@
     </template>
     <v-app-bar-title>{{ current_route_name }}</v-app-bar-title>
   </v-app-bar>
-  <v-navigation-drawer v-if="mobile" temporary location="top" class="bg-transparent" v-model="drawer">
-    <v-sheet class="d-flex align-center justify-space-evenly flex-column" style="background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px)" height="100%" width="100%">
-      <v-btn
-        class="w-75"
-        prepend-icon="mdi:mdi-seat"
-        href="/"
-      >
-        Main
-      </v-btn>
-      <v-btn
-        class="w-75"
-        prepend-icon="mdi:mdi-cards-outline"
-        href="/deck"
-      >
+  <v-navigation-drawer
+    v-if="mobile"
+    temporary
+    location="top"
+    class="bg-transparent"
+    v-model="drawer"
+  >
+    <v-sheet
+      class="d-flex align-center justify-space-evenly flex-column"
+      style="background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(8px)"
+      height="100%"
+      width="100%"
+    >
+      <v-btn class="w-75" prepend-icon="mdi:mdi-seat" href="/"> Main </v-btn>
+      <v-btn class="w-75" prepend-icon="mdi:mdi-cards-outline" href="/deck">
         Deck
       </v-btn>
       <v-btn
@@ -99,11 +95,7 @@
       >
         Team
       </v-btn>
-      <v-btn
-        class="w-75"
-        prepend-icon="mdi:mdi-post-outline"
-        href="/blog"
-      >
+      <v-btn class="w-75" prepend-icon="mdi:mdi-post-outline" href="/blog">
         Blog
       </v-btn>
       <v-btn
@@ -138,20 +130,26 @@ export default {
             {
               id: 1,
               title: "DECK",
-              action: () => this.go_to("/deck")
+              action: () => this.go_to("/deck"),
             },
-            { id: 2, title: "TEAM", action: () => this.go_to("/cats") }
-          ]
+            { id: 2, title: "TEAM", action: () => this.go_to("/cats") },
+          ],
         },
-        { id: 2, title: "BLOG", href: "/blog" },
-        { id: 3, title: "FAQ", href: "/faq" }
-      ]
+        { id: 2, title: "BLOG", action: () => this.go_to("/blog") },
+        {
+          id: 3,
+          title: "WHITELIST",
+          href: "https://beta.kreate.community/k/fat-cats",
+          target: "_blank"
+        },
+        { id: 4, title: "FAQ", action: () => this.go_to("/faq") },
+      ],
     };
   },
   computed: {
     current_route_name() {
       return this.$route.name;
-    }
+    },
   },
   methods: {
     go_to(href) {
@@ -159,8 +157,8 @@ export default {
     },
     toggle_menu() {
       this.mobile_menu = !this.mobile_menu;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -195,6 +193,6 @@ export default {
 
 .drawer-background {
   background: rgba(0, 0, 0, 0.5);
-  filter: blur(8px)
+  filter: blur(8px);
 }
 </style>

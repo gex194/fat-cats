@@ -106,14 +106,36 @@ const team = [
     name: "Nathan Kanapi",
     role: "Operations",
     img: "/team/Nathan.webp",
-    links: [],
+    links: [
+      {
+        id: 1,
+        url: "https://twitter.com/LopezKanapi",
+        icon: "fa-brands fa-twitter",
+      },
+      {
+        id: 2,
+        url: "https://www.instagram.com/nathankanapi/",
+        icon: "fa-brands fa-instagram",
+      },
+      {
+        id: 3,
+        url: " https://www.youtube.com/c/DIYLearningandEducation",
+        icon: "fa-brands fa-youtube",
+      },
+    ],
   },
   {
     id: 4,
     name: "Damian Tornature",
     role: "Operations",
     img: "/team/Damian.webp",
-    links: [],
+    links: [
+      {
+        id: 1,
+        url: "https://www.linkedin.com/in/cesar-tornatore-458301194/",
+        icon: "fa-brands fa-linkedin",
+      },
+    ],
   },
   {
     id: 5,

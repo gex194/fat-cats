@@ -49,7 +49,7 @@ const router = createRouter({
 router.beforeResolve((to, from, next) => {
   const store = useLoader();
   if (to.name) {
-    store.enable_loader();
+    // store.enable_loader();
   }
   next();
 });

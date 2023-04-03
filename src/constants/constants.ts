@@ -421,7 +421,7 @@ const faq = [
   {
     id: "faq_15",
     title: "Where can I find the Fat Cats roadmap?",
-    text: "You can find our whole roadmap in our <a href='/deck'>deck</a> on page 16",
+    text: "The roadmap will be available at a later date",
   },
   {
     id: "faq_16",

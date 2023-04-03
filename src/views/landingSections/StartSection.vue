@@ -10,7 +10,6 @@
       <video
         preload="auto"
         id="video_background"
-        v-on:loadeddata="on_video_load"
         autoplay
         muted
         playsinline
@@ -34,7 +33,6 @@
 
 <script>
 import { useLoader } from "@/stores/loader";
-import { onBeforeMount } from "vue";
 import { useDisplay } from "vuetify";
 import TopbarComponent from "@/components/landingComponents/TopbarComponent.vue";
 
@@ -44,15 +42,7 @@ export default {
   setup() {
     const store = useLoader();
     const { mobile } = useDisplay();
-    onBeforeMount(() => {
-      store.enable_loader();
-    });
     return { store, mobile };
-  },
-  methods: {
-    on_video_load() {
-      this.store.disable_loader();
-    },
   },
 };
 </script>

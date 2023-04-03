@@ -57,7 +57,7 @@
 <script>
 import { useDisplay } from "vuetify";
 import { useLoader } from "@/stores/loader";
-import { preload_imgs } from "@/helpers/helpers";
+import { preload } from "@/helpers/helpers";
 
 export default {
   name: "CatPaperView",
@@ -83,7 +83,7 @@ export default {
       for (let i = 1; i <= 5; i++) {
         imgs.push(`/deck_pngs/${i}.webp`);
       }
-      await preload_imgs(imgs, this.loader);
+      await preload(imgs, this.loader);
     },
   },
 };

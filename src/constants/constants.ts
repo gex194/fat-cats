@@ -1,3 +1,5 @@
+import type PreloadLandingInterface from "@/interfaces/PreloadLandingInterface";
+
 const nft_collection = {
   title_src: "/gold_titles/NFT_COLLECTION.png",
   text:
@@ -321,7 +323,7 @@ const faq = [
     id: "faq_6",
     title: "What does our AI do?",
     text:
-      "We plan to build two different types of AIs. Both will be proprietary. One is related to image generation type of AIs with the cutting edge exception that our AI will enable the possibility for users of the AI to retain full exclusive copyright over the image.\n" +
+      "We plan to build two different interfaces of AIs. Both will be proprietary. One is related to image generation type of AIs with the cutting edge exception that our AI will enable the possibility for users of the AI to retain full exclusive copyright over the image.\n" +
       "\n" +
       "This AI will allow generation of second and third collection Fat Cats visuals as well as modification of existing NFTs to add or remove items. \n" +
       "\n" +
@@ -459,7 +461,7 @@ const faq = [
     text:
       "First and foremost, Fat Cats NFTs are AI-generated 1/1 art pieces, representing very rich cats, that have been hand-picked by the team. The majority of visuals contained within the Fat Cats NFTs have been brushed up by our artists to rectify some AI mistakes.\n" +
       "\n" +
-      "Each Fat Cat will have up to 3 items of various rarity: Legendary, Epic and Rare. These items will provide different types of utilities such as earning larger amounts of in-game resources or gaining a bigger chance to win physical luxury items.\n" +
+      "Each Fat Cat will have up to 3 items of various rarity: Legendary, Epic and Rare. These items will provide different interfaces of utilities such as earning larger amounts of in-game resources or gaining a bigger chance to win physical luxury items.\n" +
       "\n" +
       "At a later stage of the project, owners of NFTs will be able to extract or add items via our platform, thereby acquiring new utilities or selling a portion of the utilities provided by their Fat Cat. These extractions or additions will be reflected visually. This feature will be powered by our proprietary AI tech. The items will be extracted in an NFT form, hence it will be possible to buy and sell the items on the Fat Cats marketplace or any other Cardano and BNB NFT marketplace.\n" +
       "\n" +
@@ -509,6 +511,28 @@ const faq = [
     text: "We are looking for mathematicians, AI developers and Aiken developers. Contact our community managers if you feel you would be a good fit.",
   },
 ];
+const preload_landing: PreloadLandingInterface = {
+  images: [
+    "/gold_titles/ADA_BNB_Bridge.png",
+    "/gold_titles/Art_Patronage.png",
+    "/gold_titles/Cardano_Visualised.png",
+    "/gold_titles/Ecosystems_utility_token_ducats2.png",
+    "/gold_titles/FAT_CATS.png",
+    "/gold_titles/FAT_CATS_2.png",
+    "/gold_titles/Fat_Cats_nfts.png",
+    "/gold_titles/Gaming_Platform.png",
+    "/gold_titles/Luxury_powered_by_AI.png",
+    "/gold_titles/NFT_COLLECTION.png",
+    "/stacking_block_2.png",
+    "/airdrop_block_3.png",
+    "/game_pass_block_1.png",
+  ],
+  videos: [
+    "/webm_animations/Banner_Castle_alpha.webm",
+    "/webm_animations/Enter_cat_world_alpha.webm",
+  ],
+};
+const preload_team: string[] = [...team.map((member) => member.img)];
 export default {
   slides: {
     nft_collection,
@@ -524,4 +548,6 @@ export default {
   },
   team,
   faq,
+  preload_landing,
+  preload_team,
 };

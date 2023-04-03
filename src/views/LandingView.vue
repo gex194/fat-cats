@@ -95,7 +95,6 @@ import FeatureSection from "@/views/landingSections/FeatureSection.vue";
 import IntroSection from "@/views/landingSections/IntroSection.vue";
 import TokenSection from "@/views/landingSections/TokenSection.vue";
 import { useDisplay } from "vuetify";
-import { preload_imgs } from "@/helpers/helpers";
 import { useLoader } from "@/stores/loader";
 import scrollSnapPolyfill from "css-scroll-snap-polyfill";
 import PanelSnap from "panelsnap";
@@ -115,11 +114,6 @@ export default {
     const loader = useLoader();
     const { mobile, sm } = useDisplay();
     return { mobile, sm, loader };
-  },
-  beforeRouteEnter(to, from, next) {
-    next((vm) => {
-      vm.preload();
-    });
   },
   mounted() {
     scrollSnapPolyfill();
@@ -145,32 +139,9 @@ export default {
       panel_moving: false,
       panel_index: 0,
       active_panel: "",
-      imagesToPreload: [
-        "/gold_titles/ADA_BNB_Bridge.png",
-        "/gold_titles/Art_Patronage.png",
-        "/gold_titles/Cardano_Visualised.png",
-        "/gold_titles/Ecosystems_utility_token_ducats2.png",
-        "/gold_titles/FAT_CATS.png",
-        "/gold_titles/FAT_CATS_2.png",
-        "/gold_titles/Fat_Cats_nfts.png",
-        "/gold_titles/Gaming_Platform.png",
-        "/gold_titles/Luxury_powered_by_AI.png",
-        "/gold_titles/NFT_COLLECTION.png",
-        "/stacking_block_2.png",
-        "/airdrop_block_3.png",
-        "/game_pass_block_1.png",
-      ],
     };
   },
   methods: {
-    async preload() {
-      if (this.mobile) {
-        this.loader.disable_loader();
-      }
-      if (!this.mobile) {
-        await preload_imgs(this.imagesToPreload, this.loader);
-      }
-    },
     init_panel() {
       const defaultOptions = {
         panelSelector: "section",

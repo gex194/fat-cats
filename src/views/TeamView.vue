@@ -2,7 +2,9 @@
   <v-sheet
     class="d-flex justify-center align-center flex-column section-background team__container view__container"
   >
-    <div class="text-center mt-3 mb-3 text-h3 text-lg-h2 text-md-h3 text-sm-h3">Meet our team</div>
+    <div class="text-center mt-3 mb-3 text-h3 text-lg-h2 text-md-h3 text-sm-h3">
+      Meet our team
+    </div>
     <TeamListComponent />
   </v-sheet>
 </template>
@@ -11,7 +13,7 @@
 import TeamListComponent from "@/components/teamComponents/TeamListComponent.vue";
 import { useLoader } from "@/stores/loader";
 import constants from "@/constants/constants";
-import { preload_imgs } from "@/helpers/helpers";
+import { preload } from "@/helpers/helpers";
 
 export default {
   name: "TeamView",
@@ -19,17 +21,6 @@ export default {
   setup() {
     const loader = useLoader();
     return { loader };
-  },
-  beforeRouteEnter(to, from, next) {
-    next((vm) => {
-      vm.preload();
-    });
-  },
-  methods: {
-    async preload() {
-      const img_srcs = constants.team.map((member) => member.img);
-      await preload_imgs(img_srcs, this.loader);
-    },
   },
 };
 </script>

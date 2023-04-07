@@ -1,18 +1,45 @@
-export const preload_imgs = (img_srcs: Array<string>, loader: any) => {
-  const images = img_srcs.map((imageSrc: string) => {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.src = imageSrc;
-      img.onload = resolve;
-      img.onerror = reject;
-    });
-  });
+export const preload = (
+  img_srcs: string[] = [],
+  video_srcs: string[] = [],
+  loader: any = null
+) => {
+  let images: Promise<any>[] = [];
+  let videos: Promise<any>[] = [];
 
-  return Promise.all(images)
+  if (img_srcs.length > 0) {
+    images = img_srcs.map((imageSrc: string) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+  }
+
+  if (video_srcs.length > 0) {
+    videos = video_srcs.map((videoSrc: string) => {
+      return new Promise((resolve, reject) => {
+        const video = document.createElement("video");
+        video.src = videoSrc;
+        video.oncanplaythrough = resolve;
+        video.onerror = reject;
+        video.load();
+      });
+    });
+  }
+
+  const promises: Promise<any>[] = [...images, ...videos];
+
+  return Promise.all(promises)
     .then(() => {
-      loader.disable_loader();
+      if (loader) {
+        loader.disable_loader();
+      }
     })
-    .catch((error) => {
-      loader.disable_loader();
+    .catch(() => {
+      if (loader) {
+        loader.disable_loader();
+      }
     });
 };

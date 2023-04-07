@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { useLoader } from "@/stores/loader";
-import { useDisplay } from "vuetify";
 import { preload } from "@/helpers/helpers";
 import constants from "@/constants/constants";
 

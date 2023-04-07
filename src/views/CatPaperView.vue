@@ -74,7 +74,7 @@ export default {
   data() {
     return {
       onboarding: 0,
-      length: 24,
+      length: 25,
     };
   },
   methods: {

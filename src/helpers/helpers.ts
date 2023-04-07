@@ -30,7 +30,6 @@ export const preload = (
   }
 
   const promises: Promise<any>[] = [...images, ...videos];
-  console.log(promises)
 
   return Promise.all(promises)
     .then(() => {

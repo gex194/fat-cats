@@ -1,6 +1,7 @@
 <template>
   <v-sheet
-    class="bg-black d-flex justify-center flex-column align-center h-100 view__container deck__container">
+    class="bg-black d-flex justify-center flex-column align-center h-100 view__container deck__container"
+  >
     <v-carousel
       hide-delimiter-background
       :show-arrows="!mobile"
@@ -57,7 +58,6 @@
 <script>
 import { useDisplay } from "vuetify";
 import { useLoader } from "@/stores/loader";
-import { preload } from "@/helpers/helpers";
 
 export default {
   name: "CatPaperView",
@@ -66,25 +66,11 @@ export default {
     const { mobile } = useDisplay();
     return { mobile, loader };
   },
-  beforeRouteEnter(to, from, next) {
-    next((vm) => {
-      vm.preload();
-    });
-  },
   data() {
     return {
       onboarding: 0,
       length: 25,
     };
-  },
-  methods: {
-    async preload() {
-      let imgs = [];
-      for (let i = 1; i <= 5; i++) {
-        imgs.push(`/deck_pngs/${i}.webp`);
-      }
-      await preload(imgs, this.loader);
-    },
   },
 };
 </script>
@@ -96,7 +82,7 @@ export default {
 
 @media screen and (max-width: 739px) {
   .deck__container {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 .slide__active {

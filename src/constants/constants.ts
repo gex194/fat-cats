@@ -533,6 +533,14 @@ const preload_landing: PreloadLandingInterface = {
   ],
 };
 const preload_team: string[] = [...team.map((member) => member.img)];
+const preload_deck: string[] = [
+  "/deck_pngs/1.webp",
+  "/deck_pngs/2.webp",
+  "/deck_pngs/3.webp",
+  "/deck_pngs/4.webp",
+  "/deck_pngs/5.webp",
+  "/deck_pngs/6.webp",
+]
 export default {
   slides: {
     nft_collection,
@@ -550,4 +558,5 @@ export default {
   faq,
   preload_landing,
   preload_team,
+  preload_deck,
 };

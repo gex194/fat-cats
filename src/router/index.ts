@@ -65,6 +65,10 @@ router.afterEach((to, from) => {
     preload(constants.preload_team)
       .then(() => store.disable_loader())
       .catch(() => store.disable_loader());
+  } else if (to.name === "deck") {
+    preload(constants.preload_deck)
+      .then(() => store.disable_loader())
+      .catch(() => store.disable_loader());
   } else {
     store.disable_loader();
   }

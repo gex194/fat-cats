@@ -227,6 +227,12 @@ const team = [
       },
     ],
   },
+  {
+    id: 11,
+    name: "Artificial Intelligence",
+    role: "Game developer",
+    img: "/team/AI.webp",
+  },
 ];
 
 const faq = [

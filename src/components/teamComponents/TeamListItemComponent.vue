@@ -27,7 +27,7 @@
       >
         <v-card-item class="d-flex">
           <v-card-title>
-            <div class="text-amber-accent-1 text-lg-h3 text-md-h4 text-sm-h4">
+            <div class="text-amber-accent-1 text-xl-h3 text-lg-h4  text-md-h4 text-sm-h4">
               {{ name }}
             </div>
           </v-card-title>

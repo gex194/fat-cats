@@ -12,12 +12,11 @@
       class="mb-5"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
-      v-animate-onscroll="'animated fadeInUp'"
     >
       <v-img src="/gold_titles/Ecosystems_utility_token_ducats2.png" />
     </v-lazy>
     <div class="d-flex justify-space-evenly flex-wrap w-100">
-      <div class="d-flex align-center justify-center v-col-7 v-col-lg-7">
+      <div class="d-flex align-center justify-center v-col-12 v-col-lg-12">
         <video
           src="/webm_animations/token.webm"
           autoplay
@@ -28,9 +27,9 @@
         />
       </div>
       <div
-        class="v-col-5 v-col-lg-5 d-flex justify-center align-start flex-column"
+        class="v-col-12 v-col-lg-12 d-flex justify-center align-center flex-column"
       >
-        <div v-animate-onscroll="'animated fadeInRight'">
+        <div>
           <div
             class="mb-2 text-lg-left text-center text-sm-center text-lg-h4 text-md-h5 text-sm-h5 tokens-title"
           >
@@ -43,7 +42,6 @@
           </div>
         </div>
         <div
-          v-animate-onscroll="'animated fadeInRight'"
           class="mt-15 d-flex flex-column justify-space-evenly"
         >
           <div
@@ -57,7 +55,7 @@
             CARDANO & BNB CHAIN
           </div>
         </div>
-        <div v-animate-onscroll="'animated fadeInRight'" class="mt-15">
+        <div class="mt-15">
           <div
             class="mb-2 text-lg-left text-center text-sm-center text-xs-center text-lg-h4 text-md-h5 text-sm-h5 tokens-title"
           >
@@ -69,7 +67,7 @@
             FAT CAT TREASURY (22%)
           </div>
         </div>
-        <div v-animate-onscroll="'animated fadeInRight'" class="mt-15">
+        <div class="mt-15">
           <div
             class="mb-2 text-lg-left text-center text-sm-center text-xs-center text-lg-h4 text-md-h5 text-sm-h5 tokens-title"
           >
@@ -98,11 +96,11 @@ export default {
 <style scoped>
 .tokens-title {
   font-family: Cinzel-bold !important;
-  font-size: 4vh !important;
+  font-size: 3vh !important;
   color: palegoldenrod;
 }
 
 .tokens-text {
-  font-size: 3vh !important;
+  font-size: 2vh !important;
 }
 </style>

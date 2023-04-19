@@ -8,9 +8,10 @@
   >
     <v-carousel
       v-model="carousel_active_item"
+      progress
       cycle
-      height="85vh"
-      interval="10000"
+      height="90vh"
+      interval="7000"
       delimiter-icon="mdi:mdi-circle"
       hide-delimiters
       hide-delimiter-background
@@ -26,7 +27,13 @@
           class="d-flex flex-row justify-center align-center flex-wrap bg-transparent w-100"
         >
           <div
-            class="d-flex align-center v-col-6 v-col-lg-6 v-col-md-6 v-col-sm-6 justify-center"
+            class="d-flex align-center v-col-12 v-col-lg-12 v-col-md-12 v-col-sm-12 justify-center bg-transparent"
+          >
+            <v-img eager :src="item.title_src" width="100%" :key="item.id" />
+          </div>
+
+          <div
+            class="d-flex align-center v-col-12 v-col-lg-12 v-col-md-12 v-col-sm-12 justify-center"
           >
             <video
               preload="metadata"
@@ -34,33 +41,17 @@
               :src="item.src"
               playsinline
               muted
-              :style="`max-width: ${item.width}vh; width: ${
-                item.current_width
-              }%; left: ${this.md ? 0 : item.left}px`"
-              style="position: absolute"
+              :style="`max-width: ${item.width}vh; width: ${item.current_width}%; height: 33vh`"
             />
           </div>
           <div
-            class="v-col-6 v-col-lg-6 v-col-md-6 v-col-sm-6 d-flex flex-column justify-center align-center"
+            class="v-col-12 v-col-lg-12 v-col-md-12 v-col-sm-12 d-flex flex-column justify-center align-center"
           >
             <div class="d-flex flex-column justify-center align-center">
-              <v-sheet
-                class="mb-10 bg-transparent"
-                height="100%"
-                width="100%"
-                transition="slide-x-reverse-transition"
-              >
-                <v-img
-                  eager
-                  :src="item.title_src"
-                  width="100%"
-                  :key="item.id"
-                />
-              </v-sheet>
-              <div class="carousel-text__text d-flex">
+              <div class="carousel-text__text d-flex" style="height: 40vh">
                 <span
                   v-html="item.text"
-                  class="text-caption carousel-text text-lg-h5 text-md-h6"
+                  class="carousel-text d-flex flex-column align-baseline justify-center text-lg-h5 text-md-h6"
                 ></span>
               </div>
             </div>
@@ -68,28 +59,6 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
-
-    <v-item-group
-      style="height: 15vh"
-      v-model="carousel_active_item"
-      class="text-center"
-      mandatory
-    >
-      <v-item
-        v-for="n in carousel_items.length"
-        :key="`btn-${n}`"
-        v-slot="{ isSelected, toggle }"
-        :value="n"
-      >
-        <v-btn
-          :variant="isSelected ? 'tonal' : 'text'"
-          icon="mdi:mdi-record"
-          class="mx-auto ml-5"
-          size="30"
-          @click="toggle"
-        ></v-btn>
-      </v-item>
-    </v-item-group>
   </v-card>
 </template>
 
@@ -118,8 +87,8 @@ export default {
         width: 100,
         current_width: 100,
         left: 0,
-        title_src: constants.slides.nft_collection.title_src,
-        text: constants.slides.nft_collection.text,
+        title_src: constants.slides.nft_collection_mobile.title_src,
+        text: constants.slides.nft_collection_mobile.text,
         src: "/webm_animations/nft_collection.webm",
       },
       {
@@ -127,8 +96,8 @@ export default {
         width: 100,
         current_width: 100,
         left: 0,
-        title_src: constants.slides.art_patronage.title_src,
-        text: constants.slides.art_patronage.text,
+        title_src: constants.slides.art_patronage_mobile.title_src,
+        text: constants.slides.art_patronage_mobile.text,
         src: "/webm_animations/art_patronage.webm",
       },
       {
@@ -136,8 +105,8 @@ export default {
         width: 100,
         current_width: 100,
         left: 0,
-        title_src: constants.slides.ada_bnb_bridge.title_src,
-        text: constants.slides.ada_bnb_bridge.text,
+        title_src: constants.slides.ada_bnb_bridge_mobile.title_src,
+        text: constants.slides.ada_bnb_bridge_mobile.text,
         src: "/webm_animations/ada-bnb_bridge.webm",
       },
       {
@@ -145,8 +114,8 @@ export default {
         width: 190,
         current_width: 130,
         left: -125,
-        title_src: constants.slides.gaming_platform.title_src,
-        text: constants.slides.gaming_platform.text,
+        title_src: constants.slides.gaming_platform_mobile.title_src,
+        text: constants.slides.gaming_platform_mobile.text,
         src: "/webm_animations/gaming_platform.webm",
       },
     ],
@@ -191,6 +160,7 @@ export default {
 }
 
 .carousel-text {
+    font-size: 2.25vh !important;
   font-family: "Book Antiqua" !important;
   line-height: 50px;
   font-weight: bolder;

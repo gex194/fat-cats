@@ -1,18 +1,18 @@
 <template>
   <v-sheet
     :rounded="150"
-    width="30%"
+    :width="mobile ? '100%' : '30%'"
     class="d-flex justify-center align-center pa-5 mt-15 mt-sm-5 mt-xs-5 border-t intro-card-outterbox"
-    v-animate-onscroll="{ down: 'animated fadeInUp delay-2s' }"
+    v-animate-onscroll="{ down: mobile ? '' : 'animated fadeInUp delay-2s' }"
     elevation="10"
   >
     <v-sheet
-      height="30vh"
+      :height="mobile ? '30vh' : '50vh'"
       elevation="10"
       width="100%"
       class="d-flex align-center pa-5 rounded-xl intro-card-background"
     >
-      <div class="intro-text text-center text-lg-h5 text-body-1">
+      <div class="intro-text text-center text-lg-h5 text-sm-h7 text-xs-h4 text-body-1">
         {{ title }}
       </div>
     </v-sheet>

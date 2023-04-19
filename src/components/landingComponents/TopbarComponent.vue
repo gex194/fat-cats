@@ -136,13 +136,7 @@ export default {
           ],
         },
         { id: 2, title: "BLOG", action: () => this.go_to("/blog") },
-        {
-          id: 3,
-          title: "WHITELIST",
-          href: "https://beta.kreate.community/k/fat-cats",
-          target: "_blank"
-        },
-        { id: 4, title: "FAQ", action: () => this.go_to("/faq") },
+        { id: 3, title: "FAQ", action: () => this.go_to("/faq") },
       ],
     };
   },

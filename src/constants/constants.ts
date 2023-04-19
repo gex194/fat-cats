@@ -16,7 +16,7 @@ import { faq } from "@/constants/faq";
 
 const card_one = {
   id: 1,
-  title: "Economy game that introduces gamified trading of in-game assets which can be exchanged for other cryptocurrencies or fiat currencies",
+  title: "Economy game that introduces gamified trading of in-game assets which can be exchanged for other cryptocurrencies",
 };
 const card_two = {
   id: 2,

@@ -60,7 +60,8 @@ export const nft_collection_mobile = {
     "<span class='ml-8'>utilizing AI technology</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Exclusive access to games</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Fat Cats brand VIP membership</span>" +
-    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Regularly receive in-game resources in your wallet</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Regularly receive in-game resources</span>" +
+    "<span class='ml-8'>in your wallet</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'> Numerous other utilities</span>",
 };
 export const art_patronage_mobile = {
@@ -68,7 +69,8 @@ export const art_patronage_mobile = {
   text:
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Sponsoring artists worthy of support</span>" +
     "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Funded by project revenue streams</span>" +
-    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Decision making is a community activity</span>",
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Decision making is a community</span>" +
+    "<span class='ml-8'>activity</span>",
 };
 export const gaming_platform_mobile = {
   title_src: "/gold_titles/Gaming_Platform.png",
@@ -95,7 +97,10 @@ export const cardano_visualized_mobile = {
 export const ada_bnb_bridge_mobile = {
   title_src: "/gold_titles/ADA_BNB_Bridge.png",
   text:
-    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Transfer Fat Cats assets between ADA and BNB</span>" +
-    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>List your NFTs on either jpg.store or OpenSea</span> " +
-    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Centralized bridge ensures maximal security</span>",
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Transfer Fat Cats assets between</span>" +
+    "<span class='ml-8'>ADA and BNB</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>List your NFTs on either jpg.store</span>" +
+    "<span class='ml-8'>or OpenSea</span>" +
+    "<span class='d-flex align-center'><img class='mr-2' src='/small_bulletpoint.png'>Centralized bridge ensures</span>" +
+    "<span class='ml-8'>maximal security</span>",
 };

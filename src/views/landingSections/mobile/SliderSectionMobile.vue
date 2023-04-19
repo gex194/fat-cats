@@ -8,9 +8,10 @@
   >
     <v-carousel
       v-model="carousel_active_item"
+      progress
       cycle
-      height="100vh"
-      interval="10000"
+      height="90vh"
+      interval="7000"
       delimiter-icon="mdi:mdi-circle"
       hide-delimiters
       hide-delimiter-background
@@ -40,7 +41,7 @@
               :src="item.src"
               playsinline
               muted
-              :style="`max-width: ${item.width}vh; width: ${item.current_width}%; height: 40vh`"
+              :style="`max-width: ${item.width}vh; width: ${item.current_width}%; height: 33vh`"
             />
           </div>
           <div

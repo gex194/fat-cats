@@ -25,13 +25,10 @@
         <v-sheet
           class="d-flex flex-row justify-center align-center flex-wrap bg-transparent w-100"
         >
-          <div class="d-flex align-center v-col-12 v-col-lg-12 v-col-md-12 v-col-sm-12 justify-center bg-transparent">
-              <v-img
-                eager
-                :src="item.title_src"
-                width="100%"
-                :key="item.id"
-              />
+          <div
+            class="d-flex align-center v-col-12 v-col-lg-12 v-col-md-12 v-col-sm-12 justify-center bg-transparent"
+          >
+            <v-img eager :src="item.title_src" width="100%" :key="item.id" />
           </div>
 
           <div
@@ -43,9 +40,7 @@
               :src="item.src"
               playsinline
               muted
-              :style="`max-width: ${item.width}vh; width: ${
-                item.current_width
-              }%; height: 40vh`"
+              :style="`max-width: ${item.width}vh; width: ${item.current_width}%; height: 40vh`"
             />
           </div>
           <div
@@ -115,15 +110,6 @@ export default {
       },
       {
         id: 4,
-        width: 100,
-        current_width: 100,
-        left: 0,
-        title_src: constants.slides.cardano_visualized_mobile.title_src,
-        text: constants.slides.cardano_visualized_mobile.text,
-        src: "/webm_animations/cardano_visualised.webm",
-      },
-      {
-        id: 5,
         width: 190,
         current_width: 130,
         left: -125,
@@ -173,6 +159,7 @@ export default {
 }
 
 .carousel-text {
+    font-size: 2.25vh !important;
   font-family: "Book Antiqua" !important;
   line-height: 50px;
   font-weight: bolder;

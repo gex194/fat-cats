@@ -16,7 +16,7 @@ import { faq } from "@/constants/faq";
 
 const card_one = {
   id: 1,
-  title: "Changing the world of luxury with a new AI model",
+  title: "Economy game that introduces gamified trading of in-game assets which can be exchanged for other cryptocurrencies or fiat currencies",
 };
 const card_two = {
   id: 2,
@@ -25,7 +25,7 @@ const card_two = {
 };
 const card_three = {
   id: 3,
-  title: "Helping teams & brands with AI tooling",
+  title: "Exclusive access to luxury physical items made in-house as well as art made by patroned artists",
 };
 
 const preload_landing: PreloadLandingInterface = {

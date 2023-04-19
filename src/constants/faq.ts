@@ -3,9 +3,7 @@ export const faq = [
     id: "faq_1",
     title: "What are Fat Cats?",
     text:
-      "Fat Cats are art patrons and a multichain NFT art collection. " +
-      "In the near future Fat Cats will also be a gaming project, " +
-      "a luxury brand and offer a variety of AI & data services.\n",
+      "Fat Cats is a multichain project focused on gaming, AI, art and luxury, with an NFT art collection at its center.",
   },
   {
     id: "faq_2",
@@ -14,7 +12,7 @@ export const faq = [
       "There are two main reasons why the Fat Cats team started their project.\n" +
       "\n" +
       "•  The power of AI has the ability to change the way brands are built, and also perceived, for the better. " +
-      "Likewise, it has the power to bring back the joy that was experienced with older game titles, " +
+      "Likewise, it also has the power to bring back the joy that was experienced with older game titles, " +
       "when it was all about fun and connecting with fellow gamers.\n" +
       "\n" +
       "\n" +
@@ -31,17 +29,13 @@ export const faq = [
       "\n" +
       "We are building an AI generated NFT collection, related luxury brand, " +
       "gaming platform with games and minigames and an art patronage mechanism. " +
-      "We are also in the process of creating our own proprietary AI as well as data services that will be made available to any interested customer.\n\n" +
       "\n" +
       "Our platform will include:\n" +
       "\n" +
-      "• Our very own NFT marketplace\n" +
       "• NFT modification room\n" +
-      "• Centralized ADA<>BNB bridge exclusively for our NFTs and token\n" +
       "• Webshop for our luxury products\n" +
       "• Auction house for one-of-a-kind luxury objects\n" +
-      "• Gaming platform\n" +
-      "• Freely accessible visualized databases—will contain gathered & processed data\n" +
+      "• Games\n" +
       "• Art patronage platform\n" +
       "\n" +
       "These segments will be added over time, each being built one-by-one.\n",
@@ -70,15 +64,13 @@ export const faq = [
       "Fat Cat NFT utilities (non-transferrable):\n" +
       "\n" +
       "• Ability to stake the NFT to acquire $DUCATS\n" +
-      "• Ability to access exclusive Play2Earn games\n" +
+      "• Ability to access an exclusive Play&Earn game\n" +
       "• Fat Cat Market access\n" +
       "• Access to one-of-a-kind physical objects and art auctions\n" +
       "• Automatic participation in randomized physical & NFT art airdrop \n" +
       "• Automatic participation in randomized physical luxury items airdrop\n" +
-      "• Parcel airdrop when the parcel expansion is released\n" +
       "• meowDAO vote weight\n" +
       "• Access to exclusive merchandise\n" +
-      "• Access to exclusive data services\n" +
       "• Exclusive whitelist for every following Fat Cats mint\n" +
       "• Exclusive metaverse events access\n" +
       "\n" +
@@ -90,65 +82,27 @@ export const faq = [
   },
   {
     id: "faq_6",
-    title: "What does our AI do?",
+    title: "On which chain is the Fat Cats team building?",
     text:
-      "We plan to build two different interfaces of AIs. Both will be proprietary. One is related to image generation type of AIs with the cutting edge exception that our AI will enable the possibility for users of the AI to retain full exclusive copyright over the image.\n" +
+      "Our primary focus is Polygon, hence our whitelisting process as well as the first mint will be hosted on Polygon. The Fat Cats project is a multi-chain project, hence, the second mint will be hosted on Cardano, and the third will be a cross-chain event.\n" +
       "\n" +
-      "This AI will allow generation of second and third collection Fat Cats visuals as well as modification of existing NFTs to add or remove items. \n" +
-      "\n" +
-      "The other AI is intended to detect-and-match gaming “best-buddies”. The development of this AI is planned to begin once we have the first minigames rolled out. This is planned for Q2 2026.\n",
+      "Our first game—the Economy game, will be compatible with Polygon, Cardano and Milkomeda, on release.\n",
   },
   {
     id: "faq_7",
-    title: "How will the project make money and stay operational?",
+    title: "What are Peasant Cats?",
     text:
-      "We will focus on building revenue streams, and make sure what we build is also creating our first user-base once we release the first version of our AI products.\n" +
+      "Peasant Cats are a planned expansion to Fat Cats. They are soulbound game passes and hence—non-transferrable. They will provide access to games on the Fat Cats gaming platform.\n" +
       "\n" +
-      "Once our AIs are developed, we will offer our AI's services through API to brands as well as gaming companies.\n" +
-      "\n" +
-      "The revenue streams that are planned to be established are:\n" +
-      "• NFT royalties\n" +
-      "• New Mints (Fat Cats + Peasant Cats + Data Cards)\n" +
-      "• Physical & digital items auctions\n" +
-      "• Revenue from physical product sales\n" +
-      "• Software licensing, Data Selling, AI services\n",
+      "Owning Peasant Cats will not provide any of the Fat Cats NFT utilities, such as receiving a parcel airdrop, ability to participate in exclusive auctions etc.\n",
   },
   {
     id: "faq_8",
-    title: "What is included in the “Data selling” revenue stream?",
-    text:
-      "Mainly data gathered from various blockchains. \n" +
-      "\n" +
-      "All user-acquired data will be handled in the strictest possible manner, according to all regulations and with the highest ethical considerations.\n" +
-      "\n" +
-      "Any data harvesting that involves data which could potentially be resold will come with very clear and recurrent disclaimers that data is being harvested for resale. Should sales occur, users will benefit somehow in a yet undisclosed manner.\n" +
-      "\n" +
-      "Previous two paragraphs refer to the data mining and processing of said data for the purpose of pairing gaming individuals which are most likely to have a very entertaining gaming session. This is years from now.\n" +
-      "\n" +
-      "Website usage data is not collected, should it ever be collected, it will not be resold, and it will be stored and handled in a safe manner.\n",
-  },
-  {
-    id: "faq_9",
-    title: "What are Peasant Cats?",
-    text:
-      "Peasant Cats are a planned expansion to Fat Cats. " +
-      "They are NFTs that will allow people to “work” for Fat Cats by playing minigames." +
-      " This will generate $DUCATS for both Fat Cats and Peasant Cats. \n" +
-      "\n" +
-      "Unlike Fat Cats, Peasant Cats expire. In other words, peasant cats are " +
-      "seasonal game passes whilst Fat Cats are permanent game passes. " +
-      "Even though they expire as the game passes, you, of course, get to keep your NFT.\n" +
-      "\n" +
-      "Owning Peasant Cats will not provide any of the Fat Cats NFT utilities, " +
-      "such as receiving a parcel airdrop, ability to participate in exclusive auctions etc.\n",
-  },
-  {
-    id: "faq_10",
     title: "What are $DUCATS tokens?",
     text: "$DUCATS tokens are the tokens that allow participation in the Fat Cats ecosystem.",
   },
   {
-    id: "faq_11",
+    id: "faq_9",
     title: "What will I be able to use the $DUCATS token for?",
     text:
       "• Purchasing items or Fat Cats\n" +
@@ -160,27 +114,25 @@ export const faq = [
       "• and more!\n",
   },
   {
-    id: "faq_12",
+    id: "faq_10",
     title: "How can I acquire the $DUCATS token?",
     text:
       "$DUCATS tokens can be acquired in the following ways:\n" +
       "\n" +
       "• Staking Fat Cats\n" +
-      "• Staking $ADA towards Fat Cats via Teiki\n" +
-      "• Buying them on the first and only $DUCATS sale set for Q3 2023\n" +
+      "• Staking MATIC towards Fat Cats via Kreate\n" +
+      "• Buying them on the first and only $DUCATS sale set for Q4 2023\n" +
       "• Buying them on the open market after the first and only $DUCATS sale\n" +
-      "• Playing exclusive and non-exclusive games\n" +
-      "• Being a top player in Fat Cats exclusive game\n" +
       "• Owning physical Fat Cats items\n" +
-      "• Being an advisor to the project\n",
+      "• Playing games\n",
   },
   {
-    id: "faq_13",
+    id: "faq_11",
     title: "Where can I find the $DUCATS tokenomics table?",
     text: "The $DUCATS tokenomics table is available within our <a href='/deck'>deck</a> at page 15.",
   },
   {
-    id: "faq_14",
+    id: "faq_12",
     title: "What is the “dynamic unlock” mentioned in the deck?",
     text:
       "The success of a project can best be determined through the demand for its utility token, whilst the demand for said token can best be determined through its market cap and market price.\n" +
@@ -190,12 +142,12 @@ export const faq = [
       "You can view the exact parameters and token unlock milestones <a href='/deck'> here </a> at page 27.\n",
   },
   {
-    id: "faq_15",
+    id: "faq_13",
     title: "Where can I find the Fat Cats roadmap?",
     text: "The roadmap will be available at a later date",
   },
   {
-    id: "faq_16",
+    id: "faq_14",
     title: "Why are Fat Cats needed?",
     text:
       "Why is a Lamborghini needed? Why were cars needed if there were horses? Why is AI needed? \n" +
@@ -207,7 +159,7 @@ export const faq = [
       "And Fat Cats will excel in exactly that. Providing new experiences, excitement and opportunities to Fat Cats community members.",
   },
   {
-    id: "faq_17",
+    id: "faq_15",
     title: "What's the whole patronage system about?",
     text:
       "In the ‘old times’ artists and inventors were provided support in the form of patronage by the high society to simply exist and create amazing art and incredible inventions—without being forced to monetize it.\n" +
@@ -225,7 +177,7 @@ export const faq = [
       "Aside from the clear mission of Fat Cats to assist talented & passionate individuals, another utility of this program is the increased exposure of the Fat Cats ecosystem.\n",
   },
   {
-    id: "faq_18",
+    id: "faq_16",
     title: "What to expect from NFTs?",
     text:
       "First and foremost, Fat Cats NFTs are AI-generated 1/1 art pieces, representing very rich cats, that have been hand-picked by the team. The majority of visuals contained within the Fat Cats NFTs have been brushed up by our artists to rectify some AI mistakes.\n" +
@@ -237,7 +189,7 @@ export const faq = [
       "Ownership of the NFT will not provide commercial rights to the image, however, owners are welcome to use the Fat Cats visuals to create their own designs and memes. These cannot be for commercial purposes, and ultimately the Fat Cats team has the right to decide whether someone should cease-and-desist in using our visuals, NFT owner or not.\n",
   },
   {
-    id: "faq_19",
+    id: "faq_17",
     title: "What is the initial and maximum supply of Fat Cats NFTs?",
     text:
       "Initial supply that will be deployed via the first mint is 7,500 unique 1/1 Fat Cats. \n" +
@@ -245,38 +197,29 @@ export const faq = [
       "Some time after, a new collection of 7,500 Fat Cats will be launched.\n",
   },
   {
-    id: "faq_20",
-    title: "Will there be a mint before the mint of the main collection?",
-    text:
-      "Yes there will be an “OG mint” called the Treasure mint before the main collection launch.\n" +
-      "\n" +
-      "More will be announced via our articles soon.\n",
-  },
-  {
-    id: "faq_21",
+    id: "faq_18",
     title: "How can I support the project?",
     text:
-      "The Fat Cats project & team can be supported via the Teiki platform. By staking your $ADA towards the Fat Cats team you are will receive one or more of the following rewards:\n" +
+      "The Fat Cats project & team can be supported via the Kreate platform. By staking your MATIC towards the Fat Cats team you are will receive one or more of the following rewards:\n" +
       "\n" +
       "• Private Zeppelin\n" +
       "• Private Train Cart\n" +
-      "• Royal Card\n" +
       "• Whitelist spots\n" +
       "• $DUCATS tokens\n" +
       "• Other rewards\n" +
       "\n" +
-      "The rewards will be proportional to the $ADA staked, however—every $ADA counts! Use only one stake address to stake as we will treat every address as a unique person. If you do not do so and you are discovered, you will not receive any rewards.\n" +
+      "The rewards will be proportional to the MATIC staked as well as the duration, however—every MATIC counts! Use only one stake address to stake as we will treat every address as a unique person. If you do not do so and you are discovered, you will not receive any rewards.\n" +
       "\n" +
-      "Simply put—the Fat Cats team will never forget the OG supporters, and their Cardano addresses ;)\n",
+      "Simply put—the Fat Cats team will never forget the OG supporters, and their Polygon addresses ;)\n",
   },
   {
-    id: "faq_22",
+    id: "faq_19",
     title: "How can I get whitelisted for Fat Cats?",
-    text: "To get a chance at getting a whitelist for both the OG mint and the main collection Fat Cats—stake your $ADA towards Fat Cats via Teiki.\n",
+    text: "Whitelisting process begins on 5th of May, via the Kreate platform.\n",
   },
   {
-    id: "faq_23",
+    id: "faq_20",
     title: "Are there any open positions within the Fat Cats team?",
-    text: "We are looking for mathematicians, AI developers and Aiken developers. Contact our community managers if you feel you would be a good fit.",
+    text: "We are looking for mathematicians, AI developers and game developers. Contact our community managers if you feel you would be a good fit.",
   },
 ];

@@ -142,15 +142,6 @@ export default {
       },
       {
         id: 4,
-        width: 100,
-        current_width: 100,
-        left: 0,
-        title_src: constants.slides.cardano_visualized.title_src,
-        text: constants.slides.cardano_visualized.text,
-        src: "/webm_animations/cardano_visualised.webm",
-      },
-      {
-        id: 5,
         width: 190,
         current_width: 130,
         left: -125,

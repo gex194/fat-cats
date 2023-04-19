@@ -32,14 +32,14 @@ export default {
         {
           id: 1,
           title: "GAME PASS",
-          description: "Permanent access to Play2Earn games unhindered by game seasons",
+          description: "Permanent access to the exclusive Play & Earn Economy game",
           src: "/game_pass_block_1.png",
           delay: 100,
         },
         {
           id: 2,
           title: "Staking",
-          description: "Stake your Fat Cat via our platform to get $DUCATS on a monthly basis\n",
+          description: "Stake your Fat Cat via the Economy game to get $DUCATS on a monthly basis\n",
           src: "/stacking_block_2.png",
           delay: 200,
         },

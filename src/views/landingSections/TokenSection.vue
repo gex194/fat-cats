@@ -78,7 +78,7 @@
           <div
             class="text-lg-left text-center text-sm-center text-xs-center text-lg-h4 text-md-h5 text-sm-h5 tokens-text"
           >
-            Q3 2023
+            Q4 2023
           </div>
         </div>
       </div>

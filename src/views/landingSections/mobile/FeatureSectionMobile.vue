@@ -7,11 +7,10 @@
     class="d-flex flex-column bg-transparent justify-space-evenly align-center pt-10 pb-10"
   >
     <div class="d-flex justify-center align-center mb-15">
-      <img src="/gold_titles/Fat_Cats_nfts.png" style="width:100%" v-animate-onscroll="'animated fadeInUp'" />
+      <img src="/gold_titles/Fat_Cats_nfts.png" style="width:100%" />
     </div>
     <div class="d-flex flex-column justify-space-evenly align-baseline mt-5">
       <FeatureItemComponent
-        v-animate-onscroll="'animated fadeInUp'"
         v-for="card in cards"
         :key="card.id"
         v-bind="card"

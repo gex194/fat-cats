@@ -3,7 +3,7 @@
     :rounded="150"
     :width="mobile ? '100%' : '30%'"
     class="d-flex justify-center align-center pa-5 mt-15 mt-sm-5 mt-xs-5 border-t intro-card-outterbox"
-    v-animate-onscroll="{ down: 'animated fadeInUp delay-2s' }"
+    v-animate-onscroll="{ down: mobile ? '' : 'animated fadeInUp delay-2s' }"
     elevation="10"
   >
     <v-sheet

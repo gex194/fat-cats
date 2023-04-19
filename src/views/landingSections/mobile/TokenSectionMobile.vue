@@ -12,7 +12,6 @@
       class="mb-5"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
-      v-animate-onscroll="'animated fadeInUp'"
     >
       <v-img src="/gold_titles/Ecosystems_utility_token_ducats2.png" />
     </v-lazy>
@@ -30,7 +29,7 @@
       <div
         class="v-col-12 v-col-lg-12 d-flex justify-center align-center flex-column"
       >
-        <div v-animate-onscroll="'animated fadeInRight'">
+        <div>
           <div
             class="mb-2 text-lg-left text-center text-sm-center text-lg-h4 text-md-h5 text-sm-h5 tokens-title"
           >
@@ -43,7 +42,6 @@
           </div>
         </div>
         <div
-          v-animate-onscroll="'animated fadeInRight'"
           class="mt-15 d-flex flex-column justify-space-evenly"
         >
           <div
@@ -57,7 +55,7 @@
             CARDANO & BNB CHAIN
           </div>
         </div>
-        <div v-animate-onscroll="'animated fadeInRight'" class="mt-15">
+        <div class="mt-15">
           <div
             class="mb-2 text-lg-left text-center text-sm-center text-xs-center text-lg-h4 text-md-h5 text-sm-h5 tokens-title"
           >
@@ -69,7 +67,7 @@
             FAT CAT TREASURY (22%)
           </div>
         </div>
-        <div v-animate-onscroll="'animated fadeInRight'" class="mt-15">
+        <div class="mt-15">
           <div
             class="mb-2 text-lg-left text-center text-sm-center text-xs-center text-lg-h4 text-md-h5 text-sm-h5 tokens-title"
           >
